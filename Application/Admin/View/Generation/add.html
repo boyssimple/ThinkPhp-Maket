@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Gentelella Alela! | </title>
+
+    <!-- Bootstrap -->
+    <link href="<literal>__UI__</literal>/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="<literal>__UI__</literal>/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="<literal>__UI__</literal>/vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- iCheck -->
+    <link href="<literal>__UI__</literal>/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+    <!-- bootstrap-wysiwyg -->
+    <link href="<literal>__UI__</literal>/vendors/google-code-prettify/bin/prettify.min.css" rel="stylesheet">
+    <!-- Select2 -->
+    <link href="<literal>__UI__</literal>/vendors/select2/dist/css/select2.min.css" rel="stylesheet">
+    <!-- Switchery -->
+    <link href="<literal>__UI__</literal>/vendors/switchery/dist/switchery.min.css" rel="stylesheet">
+    <!-- starrr -->
+    <link href="<literal>__UI__</literal>/vendors/starrr/dist/starrr.css" rel="stylesheet">
+    <!-- bootstrap-daterangepicker -->
+    <link href="<literal>__UI__</literal>/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="<literal>__UI__</literal>/build/css/custom.min.css" rel="stylesheet">
+</head>
+
+<body class="nav-md">
+<div class="container body">
+    <div class="main_container">
+        <literal><include file="Public:lefttop" /></literal>
+
+        <!-- page content -->
+        <div class="right_col" role="main">
+            <div class="">
+                <div class="clearfix"></div>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <h2>添加资源 <small>添加资源</small></h2>
+
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                                <br />
+                                <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" action="<literal>__APP__/</literal>{$tableUC}/save">
+
+
+                                    <volist name="fields" id="vo">
+                                        <if condition="$vo eq 'id' ">
+                                            <literal>
+                                            <if condition="$model">
+                                                <input type="hidden" id="id" name="id" value="</literal><literal>{$model.id}</literal><literal>">
+
+                                                <else/>
+
+                                                <input type="hidden" id="id" name="id" >
+
+                                            </if></literal>
+
+                                            <else />
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">{$vo} </label>
+                                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                                    <literal>
+                                                        <if condition="$model">
+                                                            <input type="text" id="</literal>{$vo}<literal>" name="</literal>{$vo}<literal>" value="{$model.</literal>{$vo}<literal>}"  required="required" class="form-control col-md-7 col-xs-12">
+                                                            <else />
+                                                            <input type="text" id="</literal>{$vo}<literal>" name="</literal>{$vo}<literal>"  required="required" class="form-control col-md-7 col-xs-12">
+                                                        </if>
+                                                    </literal>
+                                                </div>
+                                            </div>
+
+                                        </if>
+
+                                    </volist>
+
+                                    <div class="ln_solid"></div>
+                                    <div class="form-group">
+                                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                                            <button class="btn btn-primary" type="reset">重置</button>
+                                            <button type="submit" class="btn btn-success">保存</button>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <!-- /page content -->
+
+        <!-- footer content -->
+        <footer>
+            <div class="pull-right">
+                Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+            </div>
+            <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+    </div>
+</div>
+
+<!-- jQuery -->
+<script src="<literal>__UI__</literal>_/vendors/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="<literal>__UI__</literal>/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- FastClick -->
+<script src="<literal>__UI__</literal>/vendors/fastclick/lib/fastclick.js"></script>
+<!-- NProgress -->
+<script src="<literal>__UI__</literal>/vendors/nprogress/nprogress.js"></script>
+<!-- bootstrap-progressbar -->
+<script src="<literal>__UI__</literal>/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+<!-- iCheck -->
+<script src="<literal>__UI__</literal>/vendors/iCheck/icheck.min.js"></script>
+<!-- bootstrap-daterangepicker -->
+<script src="<literal>__UI__</literal>/vendors/moment/min/moment.min.js"></script>
+<script src="<literal>__UI__</literal>/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+<!-- bootstrap-wysiwyg -->
+<script src="<literal>__UI__</literal>/vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
+<script src="<literal>__UI__</literal>/vendors/jquery.hotkeys/jquery.hotkeys.js"></script>
+<script src="<literal>__UI__</literal>/vendors/google-code-prettify/src/prettify.js"></script>
+<!-- jQuery Tags Input -->
+<script src="<literal>__UI__/vendors/jquery.tagsinput/src/jquery.tagsinput.js"></script>
+<!-- Switchery -->
+<script src="<literal>__UI__</literal>/vendors/switchery/dist/switchery.min.js"></script>
+<!-- Select2 -->
+<script src="<literal>__UI__</literal>/vendors/select2/dist/js/select2.full.min.js"></script>
+<!-- Parsley -->
+<script src="<literal>__UI__</literal>/vendors/parsleyjs/dist/parsley.min.js"></script>
+<!-- Autosize -->
+<script src="<literal>__UI__</literal>/vendors/autosize/dist/autosize.min.js"></script>
+<!-- jQuery autocomplete -->
+<script src="<literal>__UI__</literal>/vendors/devbridge-autocomplete/dist/jquery.autocomplete.min.js"></script>
+<!-- starrr -->
+<script src="<literal>__UI__</literal>/vendors/starrr/dist/starrr.js"></script>
+<!-- Custom Theme Scripts -->
+<script src="<literal>__UI__</literal>/build/js/custom.min.js"></script>
+
+</body>
+</html>

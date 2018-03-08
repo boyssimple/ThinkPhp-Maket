@@ -1,0 +1,1 @@
+<?php if (!defined('THINK_PATH')) exit();?><literal>需防止被解析的内容</literal>

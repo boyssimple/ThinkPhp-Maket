@@ -1,0 +1,1953 @@
+[ 2018-03-06T14:16:15+08:00 ] ::1 /Supermaket/mobile.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000868s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000936s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001021s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000073s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000162s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031563s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031651s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000190s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000232s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000680s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000733s ]
+
+[ 2018-03-06T14:16:45+08:00 ] ::1 /Supermaket/mobile.php/Login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001109s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001668s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001747s ]
+ERR: 无法加载控制器:Login
+
+[ 2018-03-06T14:16:52+08:00 ] ::1 /Supermaket/mobile.php/Login/Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000435s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000570s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000616s ]
+ERR: 无法加载控制器:Login
+
+[ 2018-03-06T14:16:55+08:00 ] ::1 /Supermaket/mobile.php/Login/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000518s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000510s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000554s ]
+ERR: 无法加载控制器:Login
+
+[ 2018-03-06T14:18:31+08:00 ] ::1 /Supermaket/mobile.php/Login/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000605s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000556s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000602s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.105577s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.105679s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.040497s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.040574s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001028s ]
+
+[ 2018-03-06T14:42:15+08:00 ] ::1 /Supermaket/mobile.php/Login/login?code=061fHWHZ0EywvZ1W7xJZ0TFZHZ0fHWHN
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000064s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002033s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001032s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001115s ]
+NOTIC: [8] Undefined index: openid /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/LoginController.class.php 第 37 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.014856s ]
+INFO: [ app_end ] --END-- [ RunTime:0.014945s ]
+
+[ 2018-03-06T14:42:51+08:00 ] ::1 /Supermaket/mobile.php/Login/login?code=0619enM31hnkUO16trJ31JRuM319enM6
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000732s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001727s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002110s ]
+NOTIC: [8] Undefined index: openid /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/LoginController.class.php 第 37 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.020792s ]
+INFO: [ app_end ] --END-- [ RunTime:0.020939s ]
+
+[ 2018-03-06T14:43:25+08:00 ] ::1 /Supermaket/mobile.php/Login/login?code=021a6uIZ0CSYuZ1QMiIZ0wZBIZ0a6uIQ
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000860s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001282s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001373s ]
+NOTIC: [8] Undefined index: openid /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/LoginController.class.php 第 37 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001121s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001191s ]
+
+[ 2018-03-06T14:44:35+08:00 ] ::1 /Supermaket/mobile.php/Login/login?code=001RJ7FP1fLhZ81qneGP1bpXEP1RJ7F5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000923s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000867s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000940s ]
+NOTIC: [8] Undefined index: openid /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/LoginController.class.php 第 37 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.019407s ]
+INFO: [ app_end ] --END-- [ RunTime:0.019486s ]
+
+[ 2018-03-06T14:44:48+08:00 ] ::1 /Supermaket/mobile.php/Login/login?code=011Qz3Sv14pcj90Dd1Rv1rZ7Sv1Qz3SH
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000619s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000635s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000701s ]
+NOTIC: [8] Undefined index: openid /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/LoginController.class.php 第 37 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001110s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001188s ]
+
+[ 2018-03-06T14:46:04+08:00 ] ::1 /Supermaket/mobile.php/Login/login?code=081bfsqN0WuKo42AxzrN0u5SqN0bfsqe
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000923s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001540s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001729s ]
+NOTIC: [8] Undefined index: openid /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/LoginController.class.php 第 37 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.024114s ]
+INFO: [ app_end ] --END-- [ RunTime:0.024249s ]
+
+[ 2018-03-06T14:47:28+08:00 ] ::1 /Supermaket/mobile.php/Login/login?code=071ssGQw12I2ka0NRWRw1GWFQw1ssGQc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.019974s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001032s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001123s ]
+NOTIC: [8] Undefined index: openid /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/LoginController.class.php 第 37 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.015639s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015762s ]
+
+[ 2018-03-06T14:47:58+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=071GE9pq1SMvpq01MRmq1725pq1GE9pO
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.040101s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.014266s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014368s ]
+NOTIC: [8] Undefined index: openid /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/LoginController.class.php 第 37 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.056970s ]
+INFO: [ app_end ] --END-- [ RunTime:0.057055s ]
+
+[ 2018-03-06T14:48:31+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=0710zgZ91G7sMR1cXI0a1wJlZ910zgZQ
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000479s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000579s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000627s ]
+NOTIC: [8] Undefined index: openid /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/LoginController.class.php 第 37 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000954s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001039s ]
+
+[ 2018-03-06T14:49:18+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=061RXo0v0rQeJc15qBWu0fjp0v0RXo0q
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000797s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001126s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001224s ]
+NOTIC: [8] Undefined index: openid /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/LoginController.class.php 第 37 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.019010s ]
+INFO: [ app_end ] --END-- [ RunTime:0.019099s ]
+
+[ 2018-03-06T14:50:02+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=001jfuiY1ZjsOT0P6EiY1UPpiY1jfui9
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000684s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001054s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001143s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.081619s ]
+INFO: [ app_end ] --END-- [ RunTime:0.081722s ]
+
+[ 2018-03-06T14:50:26+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000495s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000617s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000678s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001397s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001664s ]
+
+[ 2018-03-06T14:50:43+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000354s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000460s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000503s ]
+NOTIC: [8] Undefined index: openid /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/LoginController.class.php 第 40 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000761s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000869s ]
+
+[ 2018-03-06T14:50:52+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000410s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000547s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000597s ]
+NOTIC: [8] Undefined index: openid /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/LoginController.class.php 第 37 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000732s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000791s ]
+
+[ 2018-03-06T14:51:16+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=001CGV912B65MX0aHe812vnN912CGV9l
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000383s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000458s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000495s ]
+NOTIC: [8] Undefined index: openid /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/LoginController.class.php 第 37 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.041634s ]
+INFO: [ app_end ] --END-- [ RunTime:0.041726s ]
+
+[ 2018-03-06T14:51:48+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=071ugl7H1lWkR60WBG8H1A3v7H1ugl7b
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.011698s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001252s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001356s ]
+NOTIC: [8] Undefined index: openid /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/LoginController.class.php 第 37 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.018360s ]
+INFO: [ app_end ] --END-- [ RunTime:0.018462s ]
+
+[ 2018-03-06T14:52:09+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=0117OiFj0fEN3o18QEHj0mIAFj07OiFo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001006s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000624s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000692s ]
+NOTIC: [8] Undefined index: openid /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/LoginController.class.php 第 37 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000699s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000757s ]
+
+[ 2018-03-06T14:53:56+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=071jd73E1vS7Y30I7r6E122T2E1jd73h
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000623s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000871s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000944s ]
+NOTIC: [8] Undefined index: openid /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/LoginController.class.php 第 37 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001317s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001420s ]
+
+[ 2018-03-06T14:54:28+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=081Gefby07BrNf1kzkcy0X46by0Gefbe
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000674s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000894s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000964s ]
+NOTIC: [8] Undefined index: openid /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/LoginController.class.php 第 37 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.019943s ]
+INFO: [ app_end ] --END-- [ RunTime:0.020032s ]
+
+[ 2018-03-06T15:07:06+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=0711ss9D1QSQ04027g9D1Q5K9D11ss9t
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000662s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000792s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000881s ]
+NOTIC: [8] Undefined index: openid /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/LoginController.class.php 第 37 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.015513s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015604s ]
+
+[ 2018-03-06T15:12:42+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=081mvE9E1zhsR30MWzaE1gIT9E1mvE9s
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000658s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000824s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000894s ]
+NOTIC: [8] Undefined index: openid /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/LoginController.class.php 第 37 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.014117s ]
+INFO: [ app_end ] --END-- [ RunTime:0.014230s ]
+
+[ 2018-03-06T15:13:27+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=071Ju81V0DoQPU1Owd0V0He21V0Ju81z
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003247s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.039151s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.039246s ]
+NOTIC: [8] Undefined index: openid /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/LoginController.class.php 第 37 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.012282s ]
+INFO: [ app_end ] --END-- [ RunTime:0.012398s ]
+
+[ 2018-03-06T15:22:32+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=0115rktw1g0AYa0YzYuw1mIBtw15rktg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.009243s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001097s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001210s ]
+NOTIC: [8] Undefined index: openid /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/LoginController.class.php 第 37 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.020688s ]
+INFO: [ app_end ] --END-- [ RunTime:0.020798s ]
+
+[ 2018-03-06T15:23:22+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=0016DseJ1gOrB50He7iJ1qL8eJ16Dsec
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.041031s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000931s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001009s ]
+NOTIC: [8] Undefined index: openid /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/LoginController.class.php 第 37 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.015504s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015600s ]
+
+[ 2018-03-06T15:39:03+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=0613zIuJ1ohvL40wYrsJ1sdFuJ13zIu-
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000777s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001169s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001303s ]
+ERR: syntax error, unexpected 'openid' (T_STRING)
+
+[ 2018-03-06T15:40:47+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=011aaYZE1cWob00ADLYE1QHJZE1aaYZL
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001886s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001168s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001277s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.010931s ]
+INFO: [ app_end ] --END-- [ RunTime:0.011064s ]
+
+[ 2018-03-06T15:41:42+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=011jT9Q31YAuQO1soSN317SSP31jT9Qv
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000476s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000972s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001072s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.008295s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008421s ]
+
+[ 2018-03-06T15:42:47+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=021ROlek1U7Uvl0Idzek1E0gek1ROler
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005527s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001136s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001225s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001263s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001385s ]
+
+[ 2018-03-06T16:00:53+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=001rukXS0nuusX16RyXS0SvvXS0rukX1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000775s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000874s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000945s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.015254s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015366s ]
+
+[ 2018-03-06T16:03:34+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=011NqOoM0KBBr32KvAqM0akRoM0NqOo0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001004s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001260s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001354s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.013653s ]
+INFO: [ app_end ] --END-- [ RunTime:0.013787s ]
+
+[ 2018-03-06T16:06:04+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=001gBcBf1FemWy0kScBf1NZoBf1gBcBB
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001301s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.081547s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.081631s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006531s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006651s ]
+
+[ 2018-03-06T16:06:25+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=021V36Go1Rt0Sp0uK7Io1R78Go1V36G4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000756s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000874s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000750s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000832s ]
+
+[ 2018-03-06T16:06:48+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=0115IpcS0e4GZ82M8waS0xWycS05IpcU
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000728s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001123s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001221s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000990s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001081s ]
+
+[ 2018-03-06T16:07:04+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=081zLCFV0S4BsU1d5JEV0jcqFV0zLCFu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000478s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000972s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001055s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000853s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000941s ]
+
+[ 2018-03-06T16:07:24+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=061c1Mz60dyQeK1vI8y60MaEz60c1Mza
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000077s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001448s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006071s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006323s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000995s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001093s ]
+
+[ 2018-03-06T16:07:45+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=061668Ll0UnuGl1l5kIl0FEqLl0668Lj
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000571s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000879s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000960s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001047s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001147s ]
+
+[ 2018-03-06T16:09:16+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=071uEfoy1g5urg0Z2soy1jd3oy1uEfoF
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000539s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000749s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000813s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001041s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001139s ]
+
+[ 2018-03-06T16:14:34+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=021XT1y410AM0L1su5w41AQ1y41XT1yI
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000667s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000911s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000994s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.017336s ]
+INFO: [ app_end ] --END-- [ RunTime:0.017432s ]
+
+[ 2018-03-06T16:28:32+08:00 ] ::1 /Supermaket/mobile.php/User/saveUser?nickName=luowei&ender=1&address=hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000799s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000795s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000871s ]
+NOTIC: [8] Use of undefined constant ISGET - assumed 'ISGET' /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 15 行.
+ERR: 没有定义数据库配置
+
+[ 2018-03-06T16:29:01+08:00 ] ::1 /Supermaket/mobile.php/User/saveUser?nickName=luowei&ender=1&address=hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000530s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000540s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000589s ]
+NOTIC: [8] Use of undefined constant ISGET - assumed 'ISGET' /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 15 行.
+ERR: 没有定义数据库配置
+
+[ 2018-03-06T16:29:04+08:00 ] ::1 /Supermaket/mobile.php/User/saveUser?nickName=luowei&ender=1&address=hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000378s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000521s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000564s ]
+NOTIC: [8] Use of undefined constant ISGET - assumed 'ISGET' /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 15 行.
+ERR: 没有定义数据库配置
+
+[ 2018-03-06T16:30:57+08:00 ] ::1 /Supermaket/mobile.php/User/saveUser?nickName=luowei&ender=1&address=hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000576s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000650s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000718s ]
+NOTIC: [8] Use of undefined constant ISGET - assumed 'ISGET' /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 15 行.
+ERR: 系统不支持:mysql
+
+[ 2018-03-06T16:32:29+08:00 ] ::1 /Supermaket/mobile.php/User/saveUser?nickName=luowei&ender=1&address=hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000775s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000872s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000943s ]
+NOTIC: [8] Use of undefined constant ISGET - assumed 'ISGET' /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 15 行.
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.031753s ]
+
+[ 2018-03-06T16:34:00+08:00 ] ::1 /Supermaket/mobile.php/User/saveUser?nickName=luowei&ender=1&address=hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000712s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000948s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001025s ]
+ERR: syntax error, unexpected '"错误"' (T_CONSTANT_ENCAPSED_STRING)
+
+[ 2018-03-06T16:34:26+08:00 ] ::1 /Supermaket/mobile.php/User/saveUser?nickName=luowei&ender=1&address=hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000445s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000652s ]
+NOTIC: [8] Use of undefined constant ISGET - assumed 'ISGET' /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 15 行.
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.019479s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php:20) /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 22 行.
+
+[ 2018-03-06T16:34:48+08:00 ] ::1 /Supermaket/mobile.php/User/saveUser?nickName=luowei&ender=1&address=hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000726s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001100s ]
+NOTIC: [8] Use of undefined constant ISGET - assumed 'ISGET' /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 15 行.
+SQL: SHOW COLUMNS FROM `s_s__user` [ RunTime:0.034194s ]
+ERR: 1146:Table 'supermarket.s_s__user' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `s_s__user`
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php:20) /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 22 行.
+
+[ 2018-03-06T16:34:57+08:00 ] ::1 /Supermaket/mobile.php/User/saveUser?nickName=luowei&ender=1&address=hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000519s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000563s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000605s ]
+NOTIC: [8] Use of undefined constant ISGET - assumed 'ISGET' /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 15 行.
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.002069s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php:20) /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 22 行.
+
+[ 2018-03-06T16:35:57+08:00 ] ::1 /Supermaket/mobile.php/User/saveUser?nickName=luowei&ender=1&address=hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000625s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000952s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001018s ]
+NOTIC: [8] Use of undefined constant ISGET - assumed 'ISGET' /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 15 行.
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.019249s ]
+NOTIC: [4096] Object of class Think\Model could not be converted to string /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 18 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php:18) /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 23 行.
+
+[ 2018-03-06T16:36:58+08:00 ] ::1 /Supermaket/mobile.php/User/saveUser?nickName=luowei&ender=1&address=hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000654s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003753s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003839s ]
+NOTIC: [8] Use of undefined constant ISGET - assumed 'ISGET' /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 15 行.
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.001976s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php:20) /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 22 行.
+
+[ 2018-03-06T16:37:04+08:00 ] ::1 /Supermaket/mobile.php/User/saveUser?nickName=luowei&ender=1&address=hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000435s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000535s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000579s ]
+NOTIC: [8] Use of undefined constant ISGET - assumed 'ISGET' /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 15 行.
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.012663s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php:20) /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 22 行.
+
+[ 2018-03-06T16:37:52+08:00 ] ::1 /Supermaket/mobile.php/User/saveUser?nickName=luowei&ender=1&address=hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000432s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000525s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000579s ]
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.002424s ]
+SQL: INSERT INTO `s_user` (`nickName`,`gender`) VALUES ('ThinkPHP',0) [ RunTime:0.091244s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.040751s ]
+INFO: [ app_end ] --END-- [ RunTime:0.040828s ]
+
+[ 2018-03-06T16:40:22+08:00 ] ::1 /Supermaket/mobile.php/User/saveUser?nickName=luowei&ender=1&address=hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000553s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000893s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000968s ]
+NOTIC: [8] Use of undefined constant ISGET - assumed 'ISGET' /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 15 行.
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.019086s ]
+
+[ 2018-03-06T16:40:38+08:00 ] ::1 /Supermaket/mobile.php/User/saveUser?nickName=luowei&ender=1&address=hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000366s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000594s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000645s ]
+NOTIC: [8] Use of undefined constant ISPOST - assumed 'ISPOST' /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 15 行.
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.001552s ]
+
+[ 2018-03-06T16:42:44+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=021MPf8C1QhQ230Hbj9C13f28C1MPf8X
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000673s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001240s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001353s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.011381s ]
+INFO: [ app_end ] --END-- [ RunTime:0.011480s ]
+
+[ 2018-03-06T16:42:45+08:00 ] 192.168.0.10 /Supermaket/mobile.php/User/saveUser?nickName=%E7%BD%97%E4%BC%9F
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000699s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001699s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001799s ]
+NOTIC: [8] Use of undefined constant ISPOST - assumed 'ISPOST' /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 15 行.
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.103788s ]
+
+[ 2018-03-06T16:43:23+08:00 ] ::1 /Supermaket/mobile.php/User/saveUser?nickName=luowei&ender=1&address=hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000336s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000446s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000486s ]
+NOTIC: [8] Use of undefined constant ISPOST - assumed 'ISPOST' /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 15 行.
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.002160s ]
+
+[ 2018-03-06T16:43:34+08:00 ] ::1 /Supermaket/mobile.php/User/saveUser?nickName=luowei&ender=1&address=hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000740s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000678s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000730s ]
+NOTIC: [8] Use of undefined constant ISPOST - assumed 'ISPOST' /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 15 行.
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.002007s ]
+
+[ 2018-03-06T16:54:55+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=001irmJX0KO8V024ulJX0ATdJX0irmJ8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000883s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.043747s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.043848s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.008597s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008715s ]
+
+[ 2018-03-06T16:54:55+08:00 ] 192.168.0.10 /Supermaket/mobile.php/User/saveUser?nickName=%E5%AF%BB%E6%89%BE%E9%82%A3%E4%BB%BD&gender=1&language=zh_CN&country=China&province=Chongqing&city=Dianjiang&avatarUrl=https%3A%2F%2Fwx.qlogo.cn%2Fmmopen%2Fvi_32%2FDYAIOgq83eqO9hgOpJckewQnrE2XnlicAdmdOUbGG506n1ManE3CKGqjgHotiatx89Q2EAaEGHXkghSU2hn4ibueQ%2F0&openId=oojut4rdkvXQl7f9kKJTJa3q86Hg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000479s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000610s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000678s ]
+NOTIC: [8] Use of undefined constant ISPOST - assumed 'ISPOST' /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 14 行.
+NOTIC: [2] date() expects at least 1 parameter, 0 given /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 22 行.
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.018829s ]
+SQL: INSERT INTO `s_user` (`nickName`,`gender`,`language`,`country`,`province`,`city`,`avatarUrl`,`regDate`,`openId`) VALUES ('',0,'','','','','',0,'') [ RunTime:0.021108s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000874s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000935s ]
+
+[ 2018-03-06T16:56:16+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=081togEe1q2Fvs02nJEe1zNiEe1togES
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.022248s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.041607s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.041722s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.015670s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015931s ]
+
+[ 2018-03-06T16:56:17+08:00 ] 192.168.0.10 /Supermaket/mobile.php/User/saveUser
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000741s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000537s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000593s ]
+NOTIC: [8] Use of undefined constant ISPOST - assumed 'ISPOST' /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 14 行.
+NOTIC: [2] date() expects at least 1 parameter, 0 given /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 22 行.
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.010013s ]
+SQL: INSERT INTO `s_user` (`nickName`,`gender`,`language`,`country`,`province`,`city`,`avatarUrl`,`regDate`,`openId`) VALUES ('',0,'','','','','',0,'') [ RunTime:0.010869s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001339s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001427s ]
+
+[ 2018-03-06T16:56:57+08:00 ] ::1 /Supermaket/mobile.php/User/saveUser?nickName=luowei&ender=1&address=hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000404s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000460s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000510s ]
+NOTIC: [8] Use of undefined constant ISPOST - assumed 'ISPOST' /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 14 行.
+NOTIC: [2] date() expects at least 1 parameter, 0 given /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 22 行.
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.001896s ]
+NOTIC: [8] Array to string conversion /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 61 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000727s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000773s ]
+
+[ 2018-03-06T16:57:17+08:00 ] ::1 /Supermaket/mobile.php/User/saveUser?nickName=luowei&ender=1&address=hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000431s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000531s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000571s ]
+NOTIC: [8] Use of undefined constant ISPOST - assumed 'ISPOST' /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 14 行.
+NOTIC: [2] date() expects at least 1 parameter, 0 given /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 22 行.
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.029577s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000701s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000785s ]
+
+[ 2018-03-06T16:57:32+08:00 ] ::1 /Supermaket/mobile.php/User/saveUser?nickName=luowei&ender=1&address=hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000436s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000541s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000584s ]
+NOTIC: [8] Use of undefined constant ISPOST - assumed 'ISPOST' /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 14 行.
+NOTIC: [2] date() expects at least 1 parameter, 0 given /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 22 行.
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.002169s ]
+NOTIC: [8] Undefined index: nickName /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 61 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000690s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000734s ]
+
+[ 2018-03-06T16:57:58+08:00 ] ::1 /Supermaket/mobile.php/User/saveUser?nickName=luowei&ender=1&address=hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000969s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000934s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001034s ]
+NOTIC: [8] Use of undefined constant ISPOST - assumed 'ISPOST' /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 14 行.
+NOTIC: [2] date() expects at least 1 parameter, 0 given /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 22 行.
+NOTIC: [8] Undefined index: nickName /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 26 行.
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.091152s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000812s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000870s ]
+
+[ 2018-03-06T16:59:39+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=071iUkCD0FcgNc2qpDCD0bRoCD0iUkC6
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000743s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001124s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001223s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001577s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001750s ]
+
+[ 2018-03-06T16:59:40+08:00 ] 192.168.0.10 /Supermaket/mobile.php/User/saveUser
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000516s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000623s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000681s ]
+NOTIC: [2] date() expects at least 1 parameter, 0 given /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.002209s ]
+NOTIC: [8] Undefined index: nickName /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 92 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000724s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000784s ]
+
+[ 2018-03-06T17:00:06+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=011okhZ419GNqL1jTiW41MiWY41okhZS
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000642s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005457s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005560s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000733s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000812s ]
+
+[ 2018-03-06T17:00:06+08:00 ] 192.168.0.10 /Supermaket/mobile.php/User/saveUser
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000602s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000544s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000623s ]
+NOTIC: [2] date() expects at least 1 parameter, 0 given /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.002105s ]
+SQL: INSERT INTO `s_user` (`nickName`,`gender`,`language`,`country`,`province`,`city`,`avatarUrl`,`regDate`,`openId`) VALUES ('',0,'','','','','',0,'') [ RunTime:0.022482s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001143s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001250s ]
+
+[ 2018-03-06T17:01:15+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=061aU1W91M68yR1SH0U91mGKV91aU1Wc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000626s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.040631s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.040731s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.010076s ]
+INFO: [ app_end ] --END-- [ RunTime:0.010181s ]
+
+[ 2018-03-06T17:01:15+08:00 ] 192.168.0.10 /Supermaket/mobile.php/User/saveUser
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000445s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001873s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002019s ]
+NOTIC: [2] date() expects at least 1 parameter, 0 given /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.030716s ]
+SQL: INSERT INTO `s_user` (`nickName`,`gender`,`language`,`country`,`province`,`city`,`avatarUrl`,`regDate`,`openId`) VALUES ('',0,'','','','','',0,'') [ RunTime:0.017096s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001105s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001360s ]
+
+[ 2018-03-06T17:01:48+08:00 ] ::1 /Supermaket/mobile.php/User/saveUser?nickName=luowei&ender=1&address=hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000637s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000925s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001003s ]
+NOTIC: [2] date() expects at least 1 parameter, 0 given /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.001991s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.025496s ]
+INFO: [ app_end ] --END-- [ RunTime:0.025578s ]
+
+[ 2018-03-06T17:02:00+08:00 ] ::1 /Supermaket/mobile.php/User/saveUser?nickName=luowei&ender=1&address=hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000343s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000465s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000506s ]
+NOTIC: [2] date() expects at least 1 parameter, 0 given /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.001828s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001143s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001228s ]
+
+[ 2018-03-06T17:02:39+08:00 ] ::1 /Supermaket/mobile.php/User/saveUser?nickName=luowei&gender=1&address=hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000368s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000462s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000505s ]
+NOTIC: [2] date() expects at least 1 parameter, 0 given /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.002088s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000939s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000999s ]
+
+[ 2018-03-06T17:02:58+08:00 ] ::1 /Supermaket/mobile.php/User/saveUser?nickName=luowei&gender=1&address=hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000403s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000499s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000537s ]
+NOTIC: [2] date() expects at least 1 parameter, 0 given /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.002276s ]
+NOTIC: [4096] Object of class Think\Model could not be converted to string /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 83 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000631s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000691s ]
+
+[ 2018-03-06T17:03:09+08:00 ] ::1 /Supermaket/mobile.php/User/saveUser?nickName=luowei&gender=1&address=hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000342s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000547s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000594s ]
+NOTIC: [2] date() expects at least 1 parameter, 0 given /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.140568s ]
+NOTIC: [4096] Object of class Think\Model could not be converted to string /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 83 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000710s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000757s ]
+
+[ 2018-03-06T17:03:41+08:00 ] ::1 /Supermaket/mobile.php/User/saveUser?nickName=luowei&gender=1&address=hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000642s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000787s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000851s ]
+NOTIC: [2] date() expects at least 1 parameter, 0 given /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.001856s ]
+SQL: SELECT * FROM `s_user`  [ RunTime:0.000449s ]
+NOTIC: [8] Array to string conversion /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 83 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.040413s ]
+INFO: [ app_end ] --END-- [ RunTime:0.040492s ]
+
+[ 2018-03-06T17:03:55+08:00 ] ::1 /Supermaket/mobile.php/User/saveUser?nickName=luowei&gender=1&address=hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000348s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000509s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000619s ]
+NOTIC: [2] date() expects at least 1 parameter, 0 given /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.002178s ]
+SQL: SELECT * FROM `s_user`  [ RunTime:0.000163s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000697s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000746s ]
+
+[ 2018-03-06T17:04:07+08:00 ] ::1 /Supermaket/mobile.php/User/saveUser?nickName=luowei&gender=1&address=hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000340s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000446s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000487s ]
+NOTIC: [2] date() expects at least 1 parameter, 0 given /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.002144s ]
+SQL: SELECT * FROM `s_user`  [ RunTime:0.000188s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000673s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000723s ]
+
+[ 2018-03-06T17:04:17+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=001GZWIV0IYjpU1WeNJV08eWIV0GZWI8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000437s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000744s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000839s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.042397s ]
+INFO: [ app_end ] --END-- [ RunTime:0.042506s ]
+
+[ 2018-03-06T17:04:18+08:00 ] 192.168.0.10 /Supermaket/mobile.php/User/saveUser
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000431s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001004s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001613s ]
+NOTIC: [2] date() expects at least 1 parameter, 0 given /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.001826s ]
+SQL: INSERT INTO `s_user` (`nickName`,`gender`,`language`,`country`,`province`,`city`,`avatarUrl`,`regDate`,`openId`) VALUES ('',0,'','','','','',0,'') [ RunTime:0.051945s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001096s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001187s ]
+
+[ 2018-03-06T17:04:52+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=081eBQju0V3TQa16LVju0fa5ku0eBQjj
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001246s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001216s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001329s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.008105s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008250s ]
+
+[ 2018-03-06T17:04:52+08:00 ] 192.168.0.10 /Supermaket/mobile.php/User/saveUser
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000943s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000543s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000603s ]
+NOTIC: [2] date() expects at least 1 parameter, 0 given /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.004122s ]
+SQL: INSERT INTO `s_user` (`nickName`,`gender`,`language`,`country`,`province`,`city`,`avatarUrl`,`regDate`,`openId`) VALUES ('',0,'','','','','',0,'') [ RunTime:0.059011s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001030s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001091s ]
+
+[ 2018-03-06T17:05:45+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=071L6EUx1jWhVg0p6aWx1NdnUx1L6EUb
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000578s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000777s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000852s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.015743s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015841s ]
+
+[ 2018-03-06T17:05:46+08:00 ] 192.168.0.10 /Supermaket/mobile.php/User/saveUser
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000408s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.049979s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.050096s ]
+NOTIC: [2] date() expects at least 1 parameter, 0 given /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.022572s ]
+SQL: INSERT INTO `s_user` (`nickName`,`gender`,`language`,`country`,`province`,`city`,`avatarUrl`,`openId`) VALUES ('',0,'','','','','','') [ RunTime:0.032510s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000668s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000712s ]
+
+[ 2018-03-06T17:06:58+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=001eGY5j1TUf0y075R5j1CPS5j1eGY5u
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.012678s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.026885s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.026979s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.019043s ]
+INFO: [ app_end ] --END-- [ RunTime:0.019163s ]
+
+[ 2018-03-06T17:06:58+08:00 ] 192.168.0.10 /Supermaket/mobile.php/User/saveUser
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000349s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000555s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000636s ]
+NOTIC: [2] date() expects at least 1 parameter, 0 given /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.002528s ]
+NOTIC: [8] Array to string conversion /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 92 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001958s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002047s ]
+
+[ 2018-03-06T17:07:05+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=021odeje1tJ79t0Bmqje1x7aje1odejT
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000931s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000792s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000879s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001853s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001972s ]
+
+[ 2018-03-06T17:07:06+08:00 ] 192.168.0.10 /Supermaket/mobile.php/User/saveUser
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000327s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000429s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000466s ]
+NOTIC: [2] date() expects at least 1 parameter, 0 given /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.002181s ]
+NOTIC: [8] Array to string conversion /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 92 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001056s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001153s ]
+
+[ 2018-03-06T17:07:41+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=0612L4Z40anVQJ1pbnZ402YLY402L4ZT
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000407s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000773s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000846s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000887s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000982s ]
+
+[ 2018-03-06T17:07:41+08:00 ] 192.168.0.10 /Supermaket/mobile.php/User/saveUser
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.007427s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001050s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001391s ]
+NOTIC: [2] date() expects at least 1 parameter, 0 given /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.003239s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001196s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001286s ]
+
+[ 2018-03-06T17:09:06+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=071CVO8R1bNVCa1OFC8R14hy8R1CVO8a
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000807s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000824s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000897s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.025554s ]
+INFO: [ app_end ] --END-- [ RunTime:0.025653s ]
+
+[ 2018-03-06T17:09:06+08:00 ] 192.168.0.10 /Supermaket/mobile.php/User/saveUser
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000982s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000822s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000910s ]
+NOTIC: [2] date() expects at least 1 parameter, 0 given /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.069848s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001123s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001210s ]
+
+[ 2018-03-06T17:09:26+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=011Bo5dV099IcV1PFFcV0mt6dV0Bo5d2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000766s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000988s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001089s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000981s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001083s ]
+
+[ 2018-03-06T17:09:27+08:00 ] 192.168.0.10 /Supermaket/mobile.php/User/saveUser
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000382s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001103s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001191s ]
+NOTIC: [2] date() expects at least 1 parameter, 0 given /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.002740s ]
+NOTIC: [8] Undefined index: nickName /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 92 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001024s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001191s ]
+
+[ 2018-03-06T17:10:35+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=0115XdZ60qYihH12CHZ60ggSY605XdZz
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000943s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001070s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001159s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.010173s ]
+INFO: [ app_end ] --END-- [ RunTime:0.010311s ]
+
+[ 2018-03-06T17:10:35+08:00 ] 192.168.0.10 /Supermaket/mobile.php/User/saveUser?nickName=%E5%AF%BB%E6%89%BE%E9%82%A3%E4%BB%BD&gender=1&language=zh_CN&country=China&province=Chongqing&city=Dianjiang&avatarUrl=https%3A%2F%2Fwx.qlogo.cn%2Fmmopen%2Fvi_32%2FDYAIOgq83eqO9hgOpJckewQnrE2XnlicAdmdOUbGG506n1ManE3CKGqjgHotiatx89Q2EAaEGHXkghSU2hn4ibueQ%2F0&openId=oojut4rdkvXQl7f9kKJTJa3q86Hg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000754s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000516s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000562s ]
+NOTIC: [2] date() expects at least 1 parameter, 0 given /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.011475s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000640s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000685s ]
+
+[ 2018-03-06T17:11:03+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=021IxuFx1LN4Sg0Y0zFx1JYGFx1IxuFn
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000408s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001016s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001097s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000930s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001030s ]
+
+[ 2018-03-06T17:11:03+08:00 ] 192.168.0.10 /Supermaket/mobile.php/User/saveUser?nickName=%E5%AF%BB%E6%89%BE%E9%82%A3%E4%BB%BD&gender=1&language=zh_CN&country=China&province=Chongqing&city=Dianjiang&avatarUrl=https%3A%2F%2Fwx.qlogo.cn%2Fmmopen%2Fvi_32%2FDYAIOgq83eqO9hgOpJckewQnrE2XnlicAdmdOUbGG506n1ManE3CKGqjgHotiatx89Q2EAaEGHXkghSU2hn4ibueQ%2F0&openId=oojut4rdkvXQl7f9kKJTJa3q86Hg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000632s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001011s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001161s ]
+NOTIC: [2] date() expects at least 1 parameter, 0 given /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.001997s ]
+NOTIC: [2] A non-numeric value encountered /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 92 行.
+ERR: Unsupported operand types
+
+[ 2018-03-06T17:11:25+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=061Lcudc2RXZxP0MwMcc2Tlrdc2LcudZ
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015261s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001228s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001327s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.008514s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008653s ]
+
+[ 2018-03-06T17:11:26+08:00 ] 192.168.0.10 /Supermaket/mobile.php/User/saveUser?nickName=%E5%AF%BB%E6%89%BE%E9%82%A3%E4%BB%BD&gender=1&language=zh_CN&country=China&province=Chongqing&city=Dianjiang&avatarUrl=https%3A%2F%2Fwx.qlogo.cn%2Fmmopen%2Fvi_32%2FDYAIOgq83eqO9hgOpJckewQnrE2XnlicAdmdOUbGG506n1ManE3CKGqjgHotiatx89Q2EAaEGHXkghSU2hn4ibueQ%2F0&openId=oojut4rdkvXQl7f9kKJTJa3q86Hg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000063s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001294s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002084s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002531s ]
+NOTIC: [2] date() expects at least 1 parameter, 0 given /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.001996s ]
+NOTIC: [2] A non-numeric value encountered /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 92 行.
+NOTIC: [2] A non-numeric value encountered /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 92 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000697s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000745s ]
+
+[ 2018-03-06T17:11:55+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=081Nst7A0CEOGg15BA7A0soB7A0Nst7F
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000983s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.126369s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.126457s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.012764s ]
+INFO: [ app_end ] --END-- [ RunTime:0.012895s ]
+
+[ 2018-03-06T17:11:56+08:00 ] 192.168.0.10 /Supermaket/mobile.php/User/saveUser?nickName=%E5%AF%BB%E6%89%BE%E9%82%A3%E4%BB%BD&gender=1&language=zh_CN&country=China&province=Chongqing&city=Dianjiang&avatarUrl=https%3A%2F%2Fwx.qlogo.cn%2Fmmopen%2Fvi_32%2FDYAIOgq83eqO9hgOpJckewQnrE2XnlicAdmdOUbGG506n1ManE3CKGqjgHotiatx89Q2EAaEGHXkghSU2hn4ibueQ%2F0&openId=oojut4rdkvXQl7f9kKJTJa3q86Hg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000523s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000971s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001087s ]
+NOTIC: [2] date() expects at least 1 parameter, 0 given /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.001773s ]
+NOTIC: [2] A non-numeric value encountered /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 92 行.
+NOTIC: [2] A non-numeric value encountered /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 92 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000705s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000753s ]
+
+[ 2018-03-06T17:12:05+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=081hUjGF1HVq3207omIF1ApZFF1hUjGU
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000696s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001075s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001175s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001075s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001184s ]
+
+[ 2018-03-06T17:12:05+08:00 ] 192.168.0.10 /Supermaket/mobile.php/User/saveUser?nickName=%E5%AF%BB%E6%89%BE%E9%82%A3%E4%BB%BD&gender=1&language=zh_CN&country=China&province=Chongqing&city=Dianjiang&avatarUrl=https%3A%2F%2Fwx.qlogo.cn%2Fmmopen%2Fvi_32%2FDYAIOgq83eqO9hgOpJckewQnrE2XnlicAdmdOUbGG506n1ManE3CKGqjgHotiatx89Q2EAaEGHXkghSU2hn4ibueQ%2F0&openId=oojut4rdkvXQl7f9kKJTJa3q86Hg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000816s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000729s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000822s ]
+NOTIC: [2] date() expects at least 1 parameter, 0 given /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.003243s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001099s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001216s ]
+
+[ 2018-03-06T17:13:13+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=0010C3A81Oz3mQ1huNx81vWWz810C3Aq
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000697s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001091s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001193s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.020518s ]
+INFO: [ app_end ] --END-- [ RunTime:0.020618s ]
+
+[ 2018-03-06T17:13:14+08:00 ] 192.168.0.10 /Supermaket/mobile.php/User/saveUser?nickName=%E5%AF%BB%E6%89%BE%E9%82%A3%E4%BB%BD&gender=1&language=zh_CN&country=China&province=Chongqing&city=Dianjiang&avatarUrl=https%3A%2F%2Fwx.qlogo.cn%2Fmmopen%2Fvi_32%2FDYAIOgq83eqO9hgOpJckewQnrE2XnlicAdmdOUbGG506n1ManE3CKGqjgHotiatx89Q2EAaEGHXkghSU2hn4ibueQ%2F0&openId=oojut4rdkvXQl7f9kKJTJa3q86Hg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000383s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000462s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000502s ]
+ERR: Class 'Mobile\Controller\DateTime' not found
+
+[ 2018-03-06T17:13:40+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=0814U76h1nEzqz07iB3h1hpn6h14U76j
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000737s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001009s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001098s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001180s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001275s ]
+
+[ 2018-03-06T17:13:40+08:00 ] 192.168.0.10 /Supermaket/mobile.php/User/saveUser?nickName=%E5%AF%BB%E6%89%BE%E9%82%A3%E4%BB%BD&gender=1&language=zh_CN&country=China&province=Chongqing&city=Dianjiang&avatarUrl=https%3A%2F%2Fwx.qlogo.cn%2Fmmopen%2Fvi_32%2FDYAIOgq83eqO9hgOpJckewQnrE2XnlicAdmdOUbGG506n1ManE3CKGqjgHotiatx89Q2EAaEGHXkghSU2hn4ibueQ%2F0&openId=oojut4rdkvXQl7f9kKJTJa3q86Hg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001044s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000847s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000943s ]
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.011905s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000867s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000918s ]
+
+[ 2018-03-06T17:15:20+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=001MueXc0IV24v1E3mWc0RRjXc0MueX3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000718s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001355s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001601s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.041331s ]
+INFO: [ app_end ] --END-- [ RunTime:0.041442s ]
+
+[ 2018-03-06T17:15:20+08:00 ] 192.168.0.10 /Supermaket/mobile.php/User/saveUser?nickName=%E5%AF%BB%E6%89%BE%E9%82%A3%E4%BB%BD&gender=1&language=zh_CN&country=China&province=Chongqing&city=Dianjiang&avatarUrl=https%3A%2F%2Fwx.qlogo.cn%2Fmmopen%2Fvi_32%2FDYAIOgq83eqO9hgOpJckewQnrE2XnlicAdmdOUbGG506n1ManE3CKGqjgHotiatx89Q2EAaEGHXkghSU2hn4ibueQ%2F0&openId=oojut4rdkvXQl7f9kKJTJa3q86Hg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000354s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000454s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000492s ]
+NOTIC: [2] date() expects at least 1 parameter, 0 given /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 22 行.
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.011309s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000852s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000916s ]
+
+[ 2018-03-06T17:16:00+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=021jqpOJ1JXX050cOSOJ1iXKOJ1jqpOI
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000722s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000957s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001038s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001328s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001433s ]
+
+[ 2018-03-06T17:16:02+08:00 ] 192.168.0.10 /Supermaket/mobile.php/User/saveUser?nickName=%E5%AF%BB%E6%89%BE%E9%82%A3%E4%BB%BD&gender=1&language=zh_CN&country=China&province=Chongqing&city=Dianjiang&avatarUrl=https%3A%2F%2Fwx.qlogo.cn%2Fmmopen%2Fvi_32%2FDYAIOgq83eqO9hgOpJckewQnrE2XnlicAdmdOUbGG506n1ManE3CKGqjgHotiatx89Q2EAaEGHXkghSU2hn4ibueQ%2F0&openId=oojut4rdkvXQl7f9kKJTJa3q86Hg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001024s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001014s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001167s ]
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.002278s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000752s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000809s ]
+
+[ 2018-03-06T17:16:46+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=081wrDdu0fKoGa1rVrcu0AmBdu0wrDde
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.026853s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015704s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015860s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.041358s ]
+INFO: [ app_end ] --END-- [ RunTime:0.041479s ]
+
+[ 2018-03-06T17:16:47+08:00 ] 192.168.0.10 /Supermaket/mobile.php/User/saveUser?nickName=%E5%AF%BB%E6%89%BE%E9%82%A3%E4%BB%BD&gender=1&language=zh_CN&country=China&province=Chongqing&city=Dianjiang&avatarUrl=https%3A%2F%2Fwx.qlogo.cn%2Fmmopen%2Fvi_32%2FDYAIOgq83eqO9hgOpJckewQnrE2XnlicAdmdOUbGG506n1ManE3CKGqjgHotiatx89Q2EAaEGHXkghSU2hn4ibueQ%2F0&openId=oojut4rdkvXQl7f9kKJTJa3q86Hg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000353s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000452s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000491s ]
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.011167s ]
+SQL: INSERT INTO `s_user` (`nickName`,`gender`,`language`,`country`,`province`,`city`,`avatarUrl`,`openId`) VALUES ('寻找那份',1,'zh_CN','','Chongqing','Dianjiang','https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqO9hgOpJckewQnrE2XnlicAdmdOUbGG506n1ManE3CKGqjgHotiatx89Q2EAaEGHXkghSU2hn4ibueQ/0','oojut4rdkvXQl7f9kKJTJa3q86Hg') [ RunTime:0.032811s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000708s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000754s ]
+
+[ 2018-03-06T17:18:20+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=0614mKR51rwAxM1GuyS51sqyR514mKRm
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.082404s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001862s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001996s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.011437s ]
+INFO: [ app_end ] --END-- [ RunTime:0.011553s ]
+
+[ 2018-03-06T17:18:21+08:00 ] 192.168.0.10 /Supermaket/mobile.php/User/saveUser?nickName=%E5%AF%BB%E6%89%BE%E9%82%A3%E4%BB%BD&gender=1&language=zh_CN&country=China&province=Chongqing&city=Dianjiang&avatarUrl=https%3A%2F%2Fwx.qlogo.cn%2Fmmopen%2Fvi_32%2FDYAIOgq83eqO9hgOpJckewQnrE2XnlicAdmdOUbGG506n1ManE3CKGqjgHotiatx89Q2EAaEGHXkghSU2hn4ibueQ%2F0&openId=oojut4rdkvXQl7f9kKJTJa3q86Hg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000373s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000457s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000497s ]
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.010613s ]
+SQL: INSERT INTO `s_user` (`nickName`,`gender`,`language`,`country`,`province`,`city`,`avatarUrl`,`openId`) VALUES ('寻找那份',1,'zh_CN','China','Chongqing','Dianjiang','https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqO9hgOpJckewQnrE2XnlicAdmdOUbGG506n1ManE3CKGqjgHotiatx89Q2EAaEGHXkghSU2hn4ibueQ/0','oojut4rdkvXQl7f9kKJTJa3q86Hg') [ RunTime:0.010543s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001777s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001871s ]
+
+[ 2018-03-06T17:20:12+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=061PVlsG0d38jl2v4WuG0PHnsG0PVlsr
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.010835s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001022s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001116s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001111s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001207s ]
+
+[ 2018-03-06T17:20:12+08:00 ] 192.168.0.10 /Supermaket/mobile.php/User/saveUser?nickName=%E5%AF%BB%E6%89%BE%E9%82%A3%E4%BB%BD&gender=1&language=zh_CN&country=China&province=Chongqing&city=Dianjiang&avatarUrl=https%3A%2F%2Fwx.qlogo.cn%2Fmmopen%2Fvi_32%2FDYAIOgq83eqO9hgOpJckewQnrE2XnlicAdmdOUbGG506n1ManE3CKGqjgHotiatx89Q2EAaEGHXkghSU2hn4ibueQ%2F0&openId=oojut4rdkvXQl7f9kKJTJa3q86Hg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000786s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000765s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000851s ]
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.011172s ]
+SQL: INSERT INTO `s_user` (`nickName`,`gender`,`language`,`country`,`province`,`city`,`avatarUrl`,`openId`) VALUES ('寻找那份',1,'zh_CN','China','Chongqing','Dianjiang','https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqO9hgOpJckewQnrE2XnlicAdmdOUbGG506n1ManE3CKGqjgHotiatx89Q2EAaEGHXkghSU2hn4ibueQ/0','oojut4rdkvXQl7f9kKJTJa3q86Hg') [ RunTime:0.032368s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000975s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001061s ]
+
+[ 2018-03-06T17:26:04+08:00 ] ::1 /Supermaket/mobile.php/User/saveUser?openid=aaa
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000758s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000867s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000935s ]
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.013246s ]
+SQL: SELECT * FROM `s_user` WHERE ( openid= )  [ RunTime:0.012733s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : SELECT * FROM `s_user` WHERE ( openid= ) 
+ERR: Call to a member function count() on boolean
+
+[ 2018-03-06T17:26:25+08:00 ] ::1 /Supermaket/mobile.php/User/saveUser?openid=aaa
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000383s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000504s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000545s ]
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.002114s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `s_user` WHERE ( openid= ) LIMIT 1   [ RunTime:0.000202s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `s_user` WHERE ( openid= ) LIMIT 1  
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.040794s ]
+INFO: [ app_end ] --END-- [ RunTime:0.040867s ]
+
+[ 2018-03-06T17:26:57+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=081oxh7N0Wkeh52qX5aN0lIv7N0oxh7F
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000098s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003301s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001224s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001314s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007152s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007294s ]
+
+[ 2018-03-06T17:27:26+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=061bwhkB1wjeMf0fEGkB1NdnkB1bwhk6
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000823s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000784s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000852s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.015380s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015491s ]
+
+[ 2018-03-06T17:27:52+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=001skIXE0LsNGj2pYTYE0EwuXE0skIXl
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000697s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000859s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001181s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000797s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000929s ]
+
+[ 2018-03-06T17:27:52+08:00 ] 192.168.0.10 /Supermaket/mobile.php/User/saveUser?nickName=%E5%AF%BB%E6%89%BE%E9%82%A3%E4%BB%BD&gender=1&language=zh_CN&country=China&province=Chongqing&city=Dianjiang&avatarUrl=https%3A%2F%2Fwx.qlogo.cn%2Fmmopen%2Fvi_32%2FDYAIOgq83eqO9hgOpJckewQnrE2XnlicAdmdOUbGG506n1ManE3CKGqjgHotiatx89Q2EAaEGHXkghSU2hn4ibueQ%2F0&openId=oojut4rdkvXQl7f9kKJTJa3q86Hg&session_key=undefined
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000595s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000968s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001062s ]
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.002237s ]
+SQL: INSERT INTO `s_user` (`nickName`,`gender`,`language`,`country`,`province`,`city`,`avatarUrl`,`openId`) VALUES ('寻找那份',1,'zh_CN','China','Chongqing','Dianjiang','https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqO9hgOpJckewQnrE2XnlicAdmdOUbGG506n1ManE3CKGqjgHotiatx89Q2EAaEGHXkghSU2hn4ibueQ/0','oojut4rdkvXQl7f9kKJTJa3q86Hg') [ RunTime:0.029328s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001137s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001244s ]
+
+[ 2018-03-06T17:28:11+08:00 ] ::1 /Supermaket/mobile.php/User/saveUser?openid=oojut4rdkvXQl7f9kKJTJa3q86Hg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000414s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000638s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000692s ]
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.002361s ]
+SQL: INSERT INTO `s_user` (`nickName`,`gender`,`language`,`country`,`province`,`city`,`avatarUrl`,`openId`) VALUES ('',0,'','','','','','') [ RunTime:0.000884s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000874s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000944s ]
+
+[ 2018-03-06T17:31:11+08:00 ] ::1 /Supermaket/mobile.php/User/saveUser?openid=oojut4rdkvXQl7f9kKJTJa3q86Hg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000700s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001408s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001532s ]
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.027807s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `s_user` WHERE ( openid='.' ) LIMIT 1   [ RunTime:0.000467s ]
+
+[ 2018-03-06T17:31:31+08:00 ] ::1 /Supermaket/mobile.php/User/saveUser?openid=oojut4rdkvXQl7f9kKJTJa3q86Hg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000343s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000444s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000484s ]
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.002008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `s_user` WHERE ( openid='.' ) LIMIT 1   [ RunTime:0.000148s ]
+
+[ 2018-03-06T17:31:47+08:00 ] ::1 /Supermaket/mobile.php/User/saveUser?openid=oojut4rdkvXQl7f9kKJTJa3q86Hg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000340s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000453s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000494s ]
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.002384s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `s_user` WHERE ( openId='.' ) LIMIT 1   [ RunTime:0.000414s ]
+
+[ 2018-03-06T17:31:47+08:00 ] ::1 /Supermaket/mobile.php/User/saveUser?openid=oojut4rdkvXQl7f9kKJTJa3q86Hg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000353s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000490s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000535s ]
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.002070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `s_user` WHERE ( openId='.' ) LIMIT 1   [ RunTime:0.000118s ]
+
+[ 2018-03-06T17:31:49+08:00 ] ::1 /Supermaket/mobile.php/User/saveUser?openid=oojut4rdkvXQl7f9kKJTJa3q86Hg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000408s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000506s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000549s ]
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.002390s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `s_user` WHERE ( openId='.' ) LIMIT 1   [ RunTime:0.000110s ]
+
+[ 2018-03-06T17:31:59+08:00 ] ::1 /Supermaket/mobile.php/User/saveUser?openid=oojut4rdkvXQl7f9kKJTJa3q86Hg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000339s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000444s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000485s ]
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.070039s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `s_user` WHERE ( openId= ) LIMIT 1   [ RunTime:0.000239s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `s_user` WHERE ( openId= ) LIMIT 1  
+
+[ 2018-03-06T17:32:18+08:00 ] ::1 /Supermaket/mobile.php/User/saveUser?openid=oojut4rdkvXQl7f9kKJTJa3q86Hg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000332s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000435s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000473s ]
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.002220s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `s_user` WHERE ( openId= ) LIMIT 1   [ RunTime:0.000159s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `s_user` WHERE ( openId= ) LIMIT 1  
+
+[ 2018-03-06T17:32:25+08:00 ] ::1 /Supermaket/mobile.php/User/saveUser?openid=oojut4rdkvXQl7f9kKJTJa3q86Hg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000336s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000508s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000562s ]
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.001725s ]
+SQL: SELECT * FROM `s_user` WHERE ( openId= )  [ RunTime:0.000145s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : SELECT * FROM `s_user` WHERE ( openId= ) 
+
+[ 2018-03-06T17:33:03+08:00 ] ::1 /Supermaket/mobile.php/User/saveUser?openid=oojut4rdkvXQl7f9kKJTJa3q86Hg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000891s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001296s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001392s ]
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.026756s ]
+SQL: SELECT * FROM `s_user` WHERE ( openId=oojut4rdkvXQl7f9kKJTJa3q86Hg )  [ RunTime:0.012672s ]
+ERR: 1054:Unknown column 'oojut4rdkvXQl7f9kKJTJa3q86Hg' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `s_user` WHERE ( openId=oojut4rdkvXQl7f9kKJTJa3q86Hg ) 
+
+[ 2018-03-06T17:33:05+08:00 ] ::1 /Supermaket/mobile.php/User/saveUser?openid=oojut4rdkvXQl7f9kKJTJa3q86Hg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000388s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000479s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000521s ]
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.002264s ]
+SQL: SELECT * FROM `s_user` WHERE ( openId=oojut4rdkvXQl7f9kKJTJa3q86Hg )  [ RunTime:0.000305s ]
+ERR: 1054:Unknown column 'oojut4rdkvXQl7f9kKJTJa3q86Hg' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `s_user` WHERE ( openId=oojut4rdkvXQl7f9kKJTJa3q86Hg ) 
+
+[ 2018-03-06T17:35:05+08:00 ] ::1 /Supermaket/mobile.php/User/saveUser?openid=oojut4rdkvXQl7f9kKJTJa3q86Hg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000681s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001259s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001360s ]
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.002249s ]
+SQL: SELECT * FROM `s_user` WHERE ( openId=oojut4rdkvXQl7f9kKJTJa3q86Hg ) LIMIT 1   [ RunTime:0.000242s ]
+ERR: 1054:Unknown column 'oojut4rdkvXQl7f9kKJTJa3q86Hg' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `s_user` WHERE ( openId=oojut4rdkvXQl7f9kKJTJa3q86Hg ) LIMIT 1  
+
+[ 2018-03-06T17:35:53+08:00 ] ::1 /Supermaket/mobile.php/User/saveUser?openid=oojut4rdkvXQl7f9kKJTJa3q86Hg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000368s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000479s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000521s ]
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.002632s ]
+SQL: SELECT * FROM `s_user` WHERE ( openId="oojut4rdkvXQl7f9kKJTJa3q86Hg" ) LIMIT 1   [ RunTime:0.000441s ]
+NOTIC: [8] Array to string conversion /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 65 行.
+
+[ 2018-03-06T17:36:01+08:00 ] ::1 /Supermaket/mobile.php/User/saveUser?openid=oojut4rdkvXQl7f9kKJTJa3q86Hg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000355s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000461s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000503s ]
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.002052s ]
+SQL: SELECT * FROM `s_user` WHERE ( openId="oojut4rdkvXQl7f9kKJTJa3q86Hg" )  [ RunTime:0.000511s ]
+NOTIC: [8] Array to string conversion /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 65 行.
+
+[ 2018-03-06T17:36:06+08:00 ] ::1 /Supermaket/mobile.php/User/saveUser?openid=oojut4rdkvXQl7f9kKJTJa3q86Hg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000326s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000471s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000514s ]
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.002574s ]
+SQL: SELECT * FROM `s_user` WHERE ( openId="oojut4rdkvXQl7f9kKJTJa3q86Hg" )  [ RunTime:0.000181s ]
+NOTIC: [8] Array to string conversion /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 65 行.
+
+[ 2018-03-06T17:36:17+08:00 ] ::1 /Supermaket/mobile.php/User/saveUser?openid=oojut4rdkvXQl7f9kKJTJa3q86Hg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000446s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000533s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000583s ]
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.002147s ]
+SQL: SELECT * FROM `s_user` WHERE ( openId="oojut4rdkvXQl7f9kKJTJa3q86Hg" )  [ RunTime:0.000173s ]
+NOTIC: [8] Array to string conversion /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 65 行.
+
+[ 2018-03-06T17:36:33+08:00 ] ::1 /Supermaket/mobile.php/User/saveUser?openid=oojut4rdkvXQl7f9kKJTJa3q86Hg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000337s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000446s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000486s ]
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.002242s ]
+SQL: SELECT * FROM `s_user` WHERE ( openId="oojut4rdkvXQl7f9kKJTJa3q86Hg" )  [ RunTime:0.000177s ]
+
+[ 2018-03-06T17:36:42+08:00 ] ::1 /Supermaket/mobile.php/User/saveUser?openid=oojut4rdkvXQl7f9kKJTJa3q86Hg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000332s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000433s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000474s ]
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.005891s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `s_user` WHERE ( openId="oojut4rdkvXQl7f9kKJTJa3q86Hg" ) LIMIT 1   [ RunTime:0.000490s ]
+
+[ 2018-03-06T17:37:15+08:00 ] ::1 /Supermaket/mobile.php/User/saveUser?openid=oojut4rdkvXQl7f9kKJTJa3q86Hg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000359s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000438s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000478s ]
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.001831s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `s_user` WHERE ( openId="" ) LIMIT 1   [ RunTime:0.000390s ]
+
+[ 2018-03-06T17:38:16+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=071XK3C528YPeK0AebA52ae5C52XK3CF
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000390s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000554s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000619s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.064168s ]
+INFO: [ app_end ] --END-- [ RunTime:0.064296s ]
+
+[ 2018-03-06T17:38:16+08:00 ] 192.168.0.10 /Supermaket/mobile.php/User/saveUser?nickName=%E5%AF%BB%E6%89%BE%E9%82%A3%E4%BB%BD&gender=1&language=zh_CN&country=China&province=Chongqing&city=Dianjiang&avatarUrl=https%3A%2F%2Fwx.qlogo.cn%2Fmmopen%2Fvi_32%2FDYAIOgq83eqO9hgOpJckewQnrE2XnlicAdmdOUbGG506n1ManE3CKGqjgHotiatx89Q2EAaEGHXkghSU2hn4ibueQ%2F0&openId=oojut4rdkvXQl7f9kKJTJa3q86Hg&session_key=undefined
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000352s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000464s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000504s ]
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.001922s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `s_user` WHERE ( openId="oojut4rdkvXQl7f9kKJTJa3q86Hg" ) LIMIT 1   [ RunTime:0.000119s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000639s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000682s ]
+
+[ 2018-03-06T17:39:00+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=061yxkHY0zwK432nNlJY0sI9HY0yxkHH
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000404s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000540s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000594s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000693s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000771s ]
+
+[ 2018-03-06T17:39:00+08:00 ] 192.168.0.10 /Supermaket/mobile.php/User/saveUser?nickName=%E5%AF%BB%E6%89%BE%E9%82%A3%E4%BB%BD&gender=1&language=zh_CN&country=China&province=Chongqing&city=Dianjiang&avatarUrl=https%3A%2F%2Fwx.qlogo.cn%2Fmmopen%2Fvi_32%2FDYAIOgq83eqO9hgOpJckewQnrE2XnlicAdmdOUbGG506n1ManE3CKGqjgHotiatx89Q2EAaEGHXkghSU2hn4ibueQ%2F0&openId=oojut4rdkvXQl7f9kKJTJa3q86Hg&session_key=undefined
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000857s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000842s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000946s ]
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.002374s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `s_user` WHERE ( openId="oojut4rdkvXQl7f9kKJTJa3q86Hg" ) LIMIT 1   [ RunTime:0.000618s ]
+SQL: INSERT INTO `s_user` (`nickName`,`gender`,`language`,`country`,`province`,`city`,`avatarUrl`,`openId`,`session_key`) VALUES ('寻找那份',1,'zh_CN','China','Chongqing','Dianjiang','https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqO9hgOpJckewQnrE2XnlicAdmdOUbGG506n1ManE3CKGqjgHotiatx89Q2EAaEGHXkghSU2hn4ibueQ/0','oojut4rdkvXQl7f9kKJTJa3q86Hg','undefined') [ RunTime:0.000746s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000748s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000812s ]
+
+[ 2018-03-06T17:40:13+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=0811VgXq0tDjAp1zZ7Vq0dpWWq01VgXw
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000066s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000769s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001183s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001304s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000842s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000981s ]
+
+[ 2018-03-06T17:40:13+08:00 ] 192.168.0.10 /Supermaket/mobile.php/User/saveUser?nickName=%E5%AF%BB%E6%89%BE%E9%82%A3%E4%BB%BD&gender=1&language=zh_CN&country=China&province=Chongqing&city=Dianjiang&avatarUrl=https%3A%2F%2Fwx.qlogo.cn%2Fmmopen%2Fvi_32%2FDYAIOgq83eqO9hgOpJckewQnrE2XnlicAdmdOUbGG506n1ManE3CKGqjgHotiatx89Q2EAaEGHXkghSU2hn4ibueQ%2F0&openId=oojut4rdkvXQl7f9kKJTJa3q86Hg&session_key=EIp%2FO%2BJYxh3jeMIBvM43FQ%3D%3D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000417s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000805s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000922s ]
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.002674s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `s_user` WHERE ( openId="oojut4rdkvXQl7f9kKJTJa3q86Hg" ) LIMIT 1   [ RunTime:0.000564s ]
+SQL: INSERT INTO `s_user` (`nickName`,`gender`,`language`,`country`,`province`,`city`,`avatarUrl`,`openId`,`session_key`) VALUES ('寻找那份',1,'zh_CN','China','Chongqing','Dianjiang','https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqO9hgOpJckewQnrE2XnlicAdmdOUbGG506n1ManE3CKGqjgHotiatx89Q2EAaEGHXkghSU2hn4ibueQ/0','oojut4rdkvXQl7f9kKJTJa3q86Hg','EIp/O+JYxh3jeMIBvM43FQ==') [ RunTime:0.000835s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001551s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001645s ]
+
+[ 2018-03-06T17:42:19+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=081L0XAx0hGtEi1ycbDx062QAx0L0XAU
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001012s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000960s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001468s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001132s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001285s ]
+
+[ 2018-03-06T17:42:19+08:00 ] 192.168.0.10 /Supermaket/mobile.php/User/saveUser?nickName=%E5%AF%BB%E6%89%BE%E9%82%A3%E4%BB%BD&gender=1&language=zh_CN&country=China&province=Chongqing&city=Dianjiang&avatarUrl=https%3A%2F%2Fwx.qlogo.cn%2Fmmopen%2Fvi_32%2FDYAIOgq83eqO9hgOpJckewQnrE2XnlicAdmdOUbGG506n1ManE3CKGqjgHotiatx89Q2EAaEGHXkghSU2hn4ibueQ%2F0&openId=oojut4rdkvXQl7f9kKJTJa3q86Hg&session_key=1VRusKsOLs%2FW8R6T1nBAxA%3D%3D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000658s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000777s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000849s ]
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.002241s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `s_user` WHERE ( openId="oojut4rdkvXQl7f9kKJTJa3q86Hg" ) LIMIT 1   [ RunTime:0.000418s ]
+SQL: INSERT INTO `s_user` (`nickName`,`gender`,`language`,`country`,`province`,`city`,`avatarUrl`,`openId`,`session_key`) VALUES ('寻找那份',1,'zh_CN','China','Chongqing','Dianjiang','https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqO9hgOpJckewQnrE2XnlicAdmdOUbGG506n1ManE3CKGqjgHotiatx89Q2EAaEGHXkghSU2hn4ibueQ/0','oojut4rdkvXQl7f9kKJTJa3q86Hg','1VRusKsOLs/W8R6T1nBAxA==') [ RunTime:0.000715s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000722s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000775s ]
+
+[ 2018-03-06T17:44:35+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=0714uHVX0Sxoh12fS8UX0G0NVX04uHVO
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.040975s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.043395s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.043536s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.015852s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015948s ]
+
+[ 2018-03-06T17:44:35+08:00 ] 192.168.0.10 /Supermaket/mobile.php/User/saveUser?nickName=%E5%AF%BB%E6%89%BE%E9%82%A3%E4%BB%BD&gender=1&language=zh_CN&country=China&province=Chongqing&city=Dianjiang&avatarUrl=https%3A%2F%2Fwx.qlogo.cn%2Fmmopen%2Fvi_32%2FDYAIOgq83eqO9hgOpJckewQnrE2XnlicAdmdOUbGG506n1ManE3CKGqjgHotiatx89Q2EAaEGHXkghSU2hn4ibueQ%2F0&openId=oojut4rdkvXQl7f9kKJTJa3q86Hg&session_key=XeuaJBVyQRb9UU5eCopTcQ%3D%3D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000635s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000617s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000720s ]
+NOTIC: [2] date() expects parameter 2 to be integer, array given /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/UserController.class.php 第 22 行.
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.006234s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `s_user` WHERE ( openId="oojut4rdkvXQl7f9kKJTJa3q86Hg" ) LIMIT 1   [ RunTime:0.000441s ]
+SQL: INSERT INTO `s_user` (`nickName`,`gender`,`language`,`country`,`province`,`city`,`avatarUrl`,`regDate`,`openId`,`session_key`) VALUES ('寻找那份',1,'zh_CN','China','Chongqing','Dianjiang','https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqO9hgOpJckewQnrE2XnlicAdmdOUbGG506n1ManE3CKGqjgHotiatx89Q2EAaEGHXkghSU2hn4ibueQ/0',0,'oojut4rdkvXQl7f9kKJTJa3q86Hg','XeuaJBVyQRb9UU5eCopTcQ==') [ RunTime:0.032826s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000691s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000737s ]
+
+[ 2018-03-06T17:46:28+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=021CAlVO0rntha2qn5TO0TlCVO0CAlVA
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000915s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000912s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000997s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006584s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006691s ]
+
+[ 2018-03-06T17:46:29+08:00 ] 192.168.0.10 /Supermaket/mobile.php/User/saveUser?nickName=%E5%AF%BB%E6%89%BE%E9%82%A3%E4%BB%BD&gender=1&language=zh_CN&country=China&province=Chongqing&city=Dianjiang&avatarUrl=https%3A%2F%2Fwx.qlogo.cn%2Fmmopen%2Fvi_32%2FDYAIOgq83eqO9hgOpJckewQnrE2XnlicAdmdOUbGG506n1ManE3CKGqjgHotiatx89Q2EAaEGHXkghSU2hn4ibueQ%2F0&openId=oojut4rdkvXQl7f9kKJTJa3q86Hg&session_key=XeuaJBVyQRb9UU5eCopTcQ%3D%3D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000054s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000817s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001141s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001239s ]
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.002294s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `s_user` WHERE ( openId="oojut4rdkvXQl7f9kKJTJa3q86Hg" ) LIMIT 1   [ RunTime:0.000361s ]
+SQL: INSERT INTO `s_user` (`nickName`,`gender`,`language`,`country`,`province`,`city`,`avatarUrl`,`regDate`,`openId`,`session_key`) VALUES ('寻找那份',1,'zh_CN','China','Chongqing','Dianjiang','https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqO9hgOpJckewQnrE2XnlicAdmdOUbGG506n1ManE3CKGqjgHotiatx89Q2EAaEGHXkghSU2hn4ibueQ/0','2018-03-06 17:46:29','oojut4rdkvXQl7f9kKJTJa3q86Hg','XeuaJBVyQRb9UU5eCopTcQ==') [ RunTime:0.043184s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001016s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001132s ]
+
+[ 2018-03-06T17:48:48+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=011KLrQ30fYPaE1FPLQ30HasQ30KLrQt
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000863s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000845s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000938s ]
+NOTIC: [8] Undefined index: unionid /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/LoginController.class.php 第 39 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.042011s ]
+INFO: [ app_end ] --END-- [ RunTime:0.042145s ]
+
+[ 2018-03-06T17:48:57+08:00 ] 192.168.0.10 /Supermaket/mobile.php/Login/login?code=021An2uf0Dud3B1PNptf0Q48uf0An2u-
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000438s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000921s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001024s ]
+NOTIC: [8] Undefined index: unionid /Users/simple/Documents/web_projects/Supermaket/Application/Mobile/Controller/LoginController.class.php 第 39 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000795s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000930s ]
+
+[ 2018-03-06T17:48:58+08:00 ] 192.168.0.10 /Supermaket/mobile.php/User/saveUser?nickName=%E5%AF%BB%E6%89%BE%E9%82%A3%E4%BB%BD&gender=1&language=zh_CN&country=China&province=Chongqing&city=Dianjiang&avatarUrl=https%3A%2F%2Fwx.qlogo.cn%2Fmmopen%2Fvi_32%2FDYAIOgq83eqO9hgOpJckewQnrE2XnlicAdmdOUbGG506n1ManE3CKGqjgHotiatx89Q2EAaEGHXkghSU2hn4ibueQ%2F0&openId=oojut4rdkvXQl7f9kKJTJa3q86Hg&session_key=undefined
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000628s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000823s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000908s ]
+SQL: SHOW COLUMNS FROM `s_user` [ RunTime:0.010560s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `s_user` WHERE ( openId="oojut4rdkvXQl7f9kKJTJa3q86Hg" ) LIMIT 1   [ RunTime:0.000500s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000914s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000980s ]
+

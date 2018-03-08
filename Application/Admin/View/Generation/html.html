@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>DataTables | Gentelella</title>
+
+    <!-- Bootstrap -->
+    <link href="<literal>__UI__</literal>/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="<literal>__UI__</literal>/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="<literal>__UI__</literal>/vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- iCheck -->
+    <link href="<literal>__UI__</literal>/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+    <!-- Datatables -->
+    <link href="<literal>__UI__</literal>/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <link href="<literal>__UI__</literal>/vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
+    <link href="<literal>__UI__</literal>/vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
+    <link href="<literal>__UI__</literal>/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
+    <link href="<literal>__UI__</literal>/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="<literal>__UI__</literal>/build/css/custom.min.css" rel="stylesheet">
+
+    <script type="text/javascript">
+        var ENV = '<literal>__APP__</literal>';
+    </script>
+
+</head>
+
+<body class="nav-md">
+<div class="container body">
+    <div class="main_container">
+        <literal><include file="Public:lefttop" /></literal>
+
+        <!-- page content -->
+        <div class="right_col" role="main">
+            <div class="">
+
+
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <h2>{$modalName} <small>列表</small></h2>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                                <table id="datatable1" class="table table-striped table-bordered">
+                                    <thead>
+                                    <tr>
+                                        <volist name="fields" id="vo">
+
+                                        <th>{$vo}</th>
+
+                                        </volist>
+
+                                        <th></th>
+                                    </tr>
+                                    </thead>
+
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /page content -->
+
+        <!-- footer content -->
+        <footer>
+            <div class="pull-right">
+                Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+            </div>
+            <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+    </div>
+</div>
+
+<!-- jQuery -->
+<script src="<literal>__UI__</literal>/vendors/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="<literal>__UI__</literal>/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- FastClick -->
+<script src="<literal>__UI__</literal>/vendors/fastclick/lib/fastclick.js"></script>
+<!-- NProgress -->
+<script src="<literal>__UI__</literal>/vendors/nprogress/nprogress.js"></script>
+<!-- iCheck -->
+<script src="<literal>__UI__</literal>/vendors/iCheck/icheck.min.js"></script>
+<!-- Datatables -->
+<script src="<literal>__UI__</literal>/vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="<literal>__UI__</literal>/vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<script src="<literal>__UI__</literal>/vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+<script src="<literal>__UI__</literal>/vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+<script src="<literal>__UI__</literal>/vendors/datatables.net-buttons/js/buttons.flash.min.js"></script>
+<script src="<literal>__UI__</literal>/vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
+<script src="<literal>__UI__</literal>/vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+<script src="<literal>__UI__</literal>/vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+<script src="<literal>__UI__</literal>/vendors/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+<script src="<literal>__UI__</literal>/vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+<script src="<literal>__UI__</literal>/vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+<script src="<literal>__UI__</literal>/vendors/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
+<script src="<literal>__UI__</literal>/vendors/jszip/dist/jszip.min.js"></script>
+<script src="<literal>__UI__</literal>/vendors/pdfmake/build/pdfmake.min.js"></script>
+<script src="<literal>__UI__</literal>/vendors/pdfmake/build/vfs_fonts.js"></script>
+
+<!-- Custom Theme Scripts -->
+<script src="<literal>__UI__</literal>/build/js/custom.min.js"></script>
+<script src="<literal>__ADMIN__</literal>/js/{$tableLC}.js"></script>
+
+</body>
+</html>
