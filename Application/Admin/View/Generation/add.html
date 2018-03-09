@@ -1,13 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="<literal>{$system.lang}</literal>">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!-- Meta, title, CSS, favicons, etc. -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Gentelella Alela! | </title>
+    <literal>
+        <include file="Public:header" />
+    </literal>
 
     <!-- Bootstrap -->
     <link href="<literal>__UI__</literal>/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -104,12 +100,7 @@
         <!-- /page content -->
 
         <!-- footer content -->
-        <footer>
-            <div class="pull-right">
-                Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
-            </div>
-            <div class="clearfix"></div>
-        </footer>
+        <literal><include file="Public:footer" /></literal>
         <!-- /footer content -->
     </div>
 </div>

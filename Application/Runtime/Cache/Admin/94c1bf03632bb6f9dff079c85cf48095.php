@@ -1,13 +1,14 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="<?php echo ($system["lang"]); ?>">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!-- Meta, title, CSS, favicons, etc. -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Meta, title, CSS, favicons, etc. -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Gentelella Alela! | </title>
+<title><?php echo ($system["sysName"]); ?></title>
+
 
     <!-- Bootstrap -->
     <link href="/Supermaket/Public/Vendor/gentelella/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -39,7 +40,7 @@
         <div class="col-md-3 left_col">
     <div class="left_col scroll-view">
         <div class="navbar nav_title" style="border: 0;">
-            <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Gentelella Alela!</span></a>
+            <a href="/Supermaket/admin.php" class="site_title"><i class="fa fa-paw"></i> <span>Gentelella Alela!</span></a>
         </div>
 
         <div class="clearfix"></div>
@@ -209,45 +210,69 @@
                             </div>
                             <div class="x_content">
                                 <br />
-                                <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" action="/Supermaket/admin.php/System/save">
-                                    <input type="hidden" id="id" name="id">
-
+                                <form id="demo-form2" data-parsley-validate enctype="multipart/form-data"  method="post" class="form-horizontal form-label-left" action="/Supermaket/admin.php/System/save">
+                                    <?php if($model): ?><input type="hidden" id="id" name="id" value="<?php echo ($model["id"]); ?>">
+                                        <?php else: ?>
+                                        <input type="hidden" id="id" name="id"><?php endif; ?>
+                                    <?php if($model): ?><input type="hidden" id="favicon" name="favicon" value="<?php echo ($model["favicon"]); ?>">
+                                        <?php else: ?>
+                                        <input type="hidden" id="favicon" name="favicon"><?php endif; ?>
                                     <div class="form-group">
-                                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">sysName </label>
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">系统名称 </label>
                                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                                    <input type="text" id="sysName" name="sysName" required="required" class="form-control col-md-7 col-xs-12">
+                                                    <?php if($model): ?><input type="text" id="sysName" name="sysName" value="<?php echo ($model["sysName"]); ?>" required="required" class="form-control col-md-7 col-xs-12">
+                                                        <?php else: ?>
+                                                        <input type="text" id="sysName" name="sysName" required="required" class="form-control col-md-7 col-xs-12"><?php endif; ?>
                                                 </div>
                                             </div><div class="form-group">
-                                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">siteName </label>
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">站点名称 </label>
                                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                                    <input type="text" id="siteName" name="siteName" required="required" class="form-control col-md-7 col-xs-12">
+                                                    <?php if($model): ?><input type="text" id="siteName" name="siteName" value="<?php echo ($model["siteName"]); ?>" required="required" class="form-control col-md-7 col-xs-12">
+                                                        <?php else: ?>
+                                                        <input type="text" id="siteName" name="siteName" required="required" class="form-control col-md-7 col-xs-12"><?php endif; ?>
                                                 </div>
                                             </div><div class="form-group">
-                                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">sysVison </label>
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">版本信息 </label>
                                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                                    <input type="text" id="sysVison" name="sysVison" required="required" class="form-control col-md-7 col-xs-12">
+                                                    <?php if($model): ?><input type="text" id="sysVison" name="sysVison" value="<?php echo ($model["sysVison"]); ?>" required="required" class="form-control col-md-7 col-xs-12">
+                                                        <?php else: ?>
+                                                        <input type="text" id="sysVison" name="sysVison" required="required" class="form-control col-md-7 col-xs-12"><?php endif; ?>
                                                 </div>
-                                            </div><div class="form-group">
-                                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">favicon </label>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">站点图标 </label>
                                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                                    <input type="text" id="favicon" name="favicon" required="required" class="form-control col-md-7 col-xs-12">
+                                                    <input type="file" name="favicon_file" id="favicon_file" class="form-control col-md-7 col-xs-12" />
                                                 </div>
-                                            </div><div class="form-group">
-                                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">keywords </label>
+                                            </div>
+                                            <?php if($model): if($model["favicon"] != '' ): ?><div class="form-group">
+                                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name"> </label>
+                                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                                            <img class="img-responsive avatar-view" src="/Supermaket/Uploads/<?php echo ($model["favicon"]); ?>" alt="Avatar" title="Change the avatar" style = "max-height: 200px;">
+                                                        </div>
+                                                    </div><?php endif; endif; ?>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">关键字 </label>
                                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                                    <input type="text" id="keywords" name="keywords" required="required" class="form-control col-md-7 col-xs-12">
+                                                    <?php if($model): ?><input type="text" id="keywords" name="keywords" value="<?php echo ($model["keywords"]); ?>" required="required" class="form-control col-md-7 col-xs-12">
+                                                        <?php else: ?>
+                                                        <input type="text" id="keywords" name="keywords" required="required" class="form-control col-md-7 col-xs-12"><?php endif; ?>
                                                 </div>
-                                            </div><div class="form-group">
-                                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">lang </label>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">语言 </label>
                                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                                    <input type="text" id="lang" name="lang" required="required" class="form-control col-md-7 col-xs-12">
+                                                    <?php if($model): ?><input type="text" id="lang" name="lang" value="<?php echo ($model["lang"]); ?>" required="required" class="form-control col-md-7 col-xs-12">
+                                                        <?php else: ?>
+                                                        <input type="text" id="lang" name="lang" required="required" class="form-control col-md-7 col-xs-12"><?php endif; ?>
                                                 </div>
                                             </div>
                                     <div class="ln_solid"></div>
                                     <div class="form-group">
                                         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
                                             <button class="btn btn-primary" type="reset">重置</button>
-                                            <button type="submit" class="btn btn-success">执行</button>
+                                            <button type="submit" class="btn btn-success">保存</button>
                                         </div>
                                     </div>
 
@@ -264,11 +289,11 @@
 
         <!-- footer content -->
         <footer>
-            <div class="pull-right">
-                Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
-            </div>
-            <div class="clearfix"></div>
-        </footer>
+    <div class="pull-right">
+        <?php echo ($system["sysVison"]); ?>
+    </div>
+    <div class="clearfix"></div>
+</footer>
         <!-- /footer content -->
     </div>
 </div>

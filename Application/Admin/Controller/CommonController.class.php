@@ -20,8 +20,12 @@ class CommonController extends Controller {
                 }
                 array_push($data,$item);
             }
+            $system = M('System')->find();
 
+            $this->assign('system',$system);
             $this->assign('menus',$data);
+
+
         }
     }
 

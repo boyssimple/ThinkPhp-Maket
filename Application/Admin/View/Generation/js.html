@@ -35,7 +35,11 @@ $(function(){
         ajax: ENV+"/{$tableUC}/loadList",
         aoColumns : [//服务器返回的数据处理 此时返回的是 {}
             <volist name="fields" id="vo">
-            { "mData": "{$vo}","sWidth": 250},
+                <if condition="$vo eq 'id' ">
+                    { "mData": "{$vo}","sWidth": 80},
+                    <else/>
+                    { "mData": "{$vo}","sWidth": 200},
+                </if>
             </volist>
 
             { "mData": function(obj){

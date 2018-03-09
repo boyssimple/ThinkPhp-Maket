@@ -9,7 +9,13 @@ class SystemController extends CommonController {
     }
 
     //新增页面
-    public function add(){
+    public function add(){ $model = M('System');
+        $result = $model->find();
+        if (!empty($result)){
+            $this->assign('model',$result);
+        }else{
+            $this->assign('model',null);
+        }
         $this->display();
     }
 
@@ -56,21 +62,40 @@ class SystemController extends CommonController {
     //新增修改
 
     public function save(){
-        if (IS_GET){
+        if (IS_POST){
             $date = date("Y-m-d H:i:s");
-            $data = I('get.');
+            $data = I('post.');
             $model = D("System");
 
+
+            $path = "";
+            // 上传文件
+            if ($_FILES['favicon_file']['name'] != ""){
+                $upload = new \Think\Upload();// 实例化上传类
+                $upload->maxSize   =     3145728 ;// 设置附件上传大小
+                $upload->exts      =     array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
+                $upload->rootPath  =     './Uploads/'; // 设置附件上传根目录
+                $upload->savePath  =     ''; // 设置附件上传（子）目录
+                $upload->saveName = array('uniqid','');
+                $info   =   $upload->uploadOne($_FILES['favicon_file']);
+                if(!$info) {// 上传错误提示错误信息
+                    $this->error($upload->getError(), __APP__.'/System/add');
+                }else{// 上传成功
+                    $path =  $info['savepath'].$info['savename'];
+                }
+                $data['favicon'] = $path;
+            }
             $id = $data['id'];
             if (empty($id)){
                 $model->data($data)->add();
                 $this->success('新增成功!', __APP__.'/System/add');
             }else{
                 $model->data($data)->save();
-                $this->success('修改成功!', __APP__.'/System/index');
+                $this->success('修改成功!', __APP__.'/System/add');
             }
         }else{
-            $this->error('参数传递错误!', __APP__.'/System/index');
+            exit();
+            $this->error('参数传递错误!', __APP__.'/System/add');
         }
     }
 

@@ -7,6 +7,14 @@ class PublicController extends CommonController {
         $this->display();
     }
 
+    public function header(){
+        $this->display();
+    }
+
+    public function footer(){
+        $this->display();
+    }
+
     public function lefttop(){
         $this->display();
     }

@@ -267,7 +267,6 @@
 
 <!-- Custom Theme Scripts -->
 <script src="/Supermaket/Public/Vendor/gentelella/build/js/custom.min.js"></script>
-<script src="/Supermaket/Public/Vendor/gentelella/build/js/custom.min.js"></script>
 <script src="/Supermaket/Public/Admin//js/system.js"></script>
 
 </body>

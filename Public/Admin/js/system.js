@@ -34,7 +34,13 @@ $(function(){
         serverSide: true,
         ajax: ENV+"/System/loadList",
         aoColumns : [//服务器返回的数据处理 此时返回的是 {}
-            { "mData": "id","sWidth": 250},{ "mData": "sysName","sWidth": 250},{ "mData": "siteName","sWidth": 250},{ "mData": "sysVison","sWidth": 250},{ "mData": "favicon","sWidth": 250},{ "mData": "keywords","sWidth": 250},{ "mData": "lang","sWidth": 250},
+            { "mData": "id","sWidth": 60},
+            { "mData": "sysName","sWidth": 150},
+            { "mData": "siteName","sWidth": 150},
+            { "mData": "sysVison","sWidth": 350},
+            { "mData": "favicon","sWidth": 200},
+            { "mData": "keywords","sWidth": 200},
+            { "mData": "lang","sWidth": 80},
             { "mData": function(obj){
                 return '<a data-toggle="modal" data-target="#myModal"  onclick="edit('+obj.id+')" data-title="' + obj.id + '"  class="btn btn-success" href="#"><i class="icon-edit icon-white"></i>修改</a>' +'&nbsp;&nbsp;'+'<a  onclick="del('+obj.id+')"  data-title="' + obj.id + '"  class="btn btn-danger" href="#"><i class="icon-user icon-white"></i>删除</a>';
             }}
