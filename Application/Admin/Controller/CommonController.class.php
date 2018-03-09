@@ -1,6 +1,9 @@
 <?php
 namespace Admin\Controller;
 use Think\Controller;
+
+define('__UPLOAD__', './Uploads/');
+
 class CommonController extends Controller {
 
     public function _initialize(){

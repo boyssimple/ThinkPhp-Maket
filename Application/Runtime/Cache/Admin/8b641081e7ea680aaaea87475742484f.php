@@ -210,7 +210,7 @@
                             </div>
                             <div class="x_content">
                                 <br />
-                                <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" action="/Supermaket/admin.php/Product/save">
+                                <form id="demo-form2" data-parsley-validate enctype="multipart/form-data"  method="post" class="form-horizontal form-label-left" action="/Supermaket/admin.php/Product/save">
 
 
                                                                                 <?php if($model): ?><input type="hidden" id="id" name="id" value="<?php echo ($model["id"]); ?>">
@@ -237,10 +237,11 @@
                                                             <input type="text" id="price" name="price"  required="required" class="form-control col-md-7 col-xs-12"><?php endif; ?>
                                                     
                                                 </div>
-                                            </div>                                            <div class="form-group">
+                                            </div>
+                                            <div class="form-group">
                                                 <label class="control-label col-md-3 col-sm-3 col-xs-12" >图片 </label>
                                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                                    <input type="file" name="favicon_file" id="favicon_file" class="form-control col-md-7 col-xs-12" />
+                                                    <input type="file" name="url_file" id="url_file" class="form-control col-md-7 col-xs-12" />
                                                 </div>
                                             </div>
 
@@ -283,11 +284,25 @@
                                                     
                                                 </div>
                                             </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12" >序号 </label>
+                                                <div class="col-md-6 col-sm-6 col-xs-12">
+
+                                                    <?php if($model): ?><input type="number" id="orderNo" name="orderNo" value="<?php echo ($model["orderNo"]); ?>"  data-min="1" class="form-control col-md-7 col-xs-12">
+                                                    <?php else: ?>
+                                                        <input type="number" id="orderNo" name="orderNo" value="1" data-min="1" class="form-control col-md-7 col-xs-12"><?php endif; ?>
+
+                                                </div>
+                                            </div>
                                     <div class="ln_solid"></div>
                                     <div class="form-group">
                                         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
                                             <button class="btn btn-primary" type="reset">重置</button>
                                             <button type="submit" class="btn btn-success">保存</button>
+
+                                            <?php if($model): ?><button type="button" onclick="goGallery(<?php echo ($model["id"]); ?>)" class="btn btn-success">添加图片</button><?php endif; ?>
+                                            <?php if($model): ?><button type="button" class="btn btn-success">添加详情</button><?php endif; ?>
+
                                         </div>
                                     </div>
 
@@ -383,6 +398,7 @@
             onClick:function(event, treeId, treeNode){
                 $('#categoryId').val(treeNode.id);
                 $('#categoryName').val(treeNode.name);
+                $('#orderNo').val(parseInt(treeNode.count)+1);
                 $('#youModel').modal('hide');
             }
         }
@@ -399,6 +415,10 @@
             });
         });
     });
+
+    function goGallery(id){
+        window.location = ENV + "/Productimg/add?id="+id;
+    }
 </script>
 </body>
 </html>

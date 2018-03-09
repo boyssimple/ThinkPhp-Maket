@@ -60,6 +60,43 @@ class SysgroupController extends CommonController {
         echo json_encode($result);
     }
 
+    //加载树
+    public function loadTree(){
+        $model = M('Sysgroup');
+        $list = $model->where('parentId=0')->select();
+        $data = Array();
+        foreach ($list as $item){
+            $children = $this->loadSub($item['id']);;
+            if (count($children) > 0){
+                $item['children'] = $children;
+            }
+            $item['count'] = $model->where('parentId='.$item['id'])->count();
+            array_push($data,$item);
+        }
+        echo json_encode($data);
+    }
+
+    private function loadSub($parentId){
+        $model = M('Sysgroup');
+        $list = $model->where('parentId='.$parentId)->select();
+        if (count($list) > 0){
+            $data = Array();
+            foreach ($list as $item){
+                $children = $this->loadSub($item['id']);
+                if (count($children) > 0){
+                    $item['children'] = $children;
+                }
+
+                $item['count'] = $model->where('parentId='.$item['id'])->count();
+                array_push($data,$item);
+            }
+            return $data;
+        }else{
+            return null;
+        }
+
+    }
+
     //新增修改
     public function save(){
         if (IS_GET){

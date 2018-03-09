@@ -40,13 +40,13 @@
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="x_panel">
                             <div class="x_title">
-                                <h2>商品管理 <small>商品管理</small></h2>
+                                <h2>产品图片 <small>产品图片</small></h2>
 
                                 <div class="clearfix"></div>
                             </div>
                             <div class="x_content">
                                 <br />
-                                <form id="demo-form2" data-parsley-validate enctype="multipart/form-data"  method="post" class="form-horizontal form-label-left" action="__APP__/Product/save">
+                                <form id="demo-form2" data-parsley-validate  enctype="multipart/form-data"  method="post" class="form-horizontal form-label-left" action="__APP__/Productimg/save">
 
 
                                                                                 <if condition="$model">
@@ -59,76 +59,36 @@
                                             </if>
 
                                                                                         <div class="form-group">
-                                                <label class="control-label col-md-3 col-sm-3 col-xs-12" >商品名称 </label>
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">图片文件 </label>
+                                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                                    <input type="file" name="favicon_file" id="favicon_file" class="form-control col-md-7 col-xs-12" />
+                                                </div>
+                                            </div>                                            <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">序号 </label>
                                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                                     
                                                         <if condition="$model">
-                                                            <input type="text" id="name" name="name" value="{$model.name}"  required="required" class="form-control col-md-7 col-xs-12">
+                                                            <input type="text" id="orderNo" name="orderNo" value="{$model.orderNo}"  required="required" class="form-control col-md-7 col-xs-12">
                                                             <else />
-                                                            <input type="text" id="name" name="name"  required="required" class="form-control col-md-7 col-xs-12">
+                                                            <input type="text" id="orderNo" name="orderNo"  required="required" class="form-control col-md-7 col-xs-12">
                                                         </if>
                                                     
                                                 </div>
                                             </div>                                            <div class="form-group">
-                                                <label class="control-label col-md-3 col-sm-3 col-xs-12" >商品价格 </label>
-                                                <div class="col-md-6 col-sm-6 col-xs-12">
-                                                    
-                                                        <if condition="$model">
-                                                            <input type="text" id="price" name="price" value="{$model.price}"  required="required" class="form-control col-md-7 col-xs-12">
-                                                            <else />
-                                                            <input type="text" id="price" name="price"  required="required" class="form-control col-md-7 col-xs-12">
-                                                        </if>
-                                                    
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="control-label col-md-3 col-sm-3 col-xs-12" >图片 </label>
-                                                <div class="col-md-6 col-sm-6 col-xs-12">
-                                                    <input type="file" name="url_file" id="url_file" class="form-control col-md-7 col-xs-12" />
-                                                </div>
-                                            </div>
-
-                                            <if condition="$model">
-                                                <if condition="$model.url neq '' ">
-                                                    <div class="form-group">
-                                                        <label class="control-label col-md-3 col-sm-3 col-xs-12"> </label>
-                                                        <div class="col-md-6 col-sm-6 col-xs-12">
-                                                            <img class="img-responsive avatar-view" src="__ROOT__/Uploads/{$model.url}" alt="Avatar" title="Change the avatar" style = "max-height: 200px;">
-                                                        </div>
-                                                    </div>
-                                                </if>
-                                            </if>
-                                            <div class="form-group">
-                                                <label class="control-label col-md-3 col-sm-3 col-xs-12" >删除否 </label>
-                                                <div class="col-md-6 col-sm-6 col-xs-12">
-                                                    <if condition="$model">
-                                                        <if condition="$model.isDelete eq 1 ">
-                                                            <input type="checkbox" id="isDelete" name="isDelete" class="flat" checked="checked">
-                                                            <else/>
-                                                            <input type="checkbox" id="isDelete" name="isDelete" class="flat">
-                                                        </if>
-                                                        <else />
-                                                        <div class="checkbox">
-                                                            <input type="checkbox" id="isDelete" name="isDelete" class="flat">
-                                                        </div>
-                                                    </if>
-                                                    
-                                                </div>
-                                            </div>                                            <div class="form-group">
-                                                <label class="control-label col-md-3 col-sm-3 col-xs-12" >所属分类 </label>
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">所属商品 </label>
                                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                                     <if condition="$model">
                                                         <div class="input-group">
-                                                            <input type="hidden" id="categoryId" name="categoryId" value="{$model.parentId}">
-                                                            <input type="text" class="form-control" id="categoryName" name="categoryName" value="{$model.categoryName}"  readonly="true">
+                                                            <input type="hidden" id="parentId" name="parentId" value="{$model.parentId}">
+                                                            <input type="text" class="form-control" id="parentName" name="parentName" value="{$model.parentName}"  readonly="true">
                                                             <span class="input-group-btn">
                                                                       <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">选择</button>
                                                                 </span>
                                                         </div>
                                                         <else />
                                                         <div class="input-group">
-                                                            <input type="hidden" id="categoryId" name="categoryId">
-                                                            <input type="text" class="form-control" id="categoryName" name="categoryName" readonly="true">
+                                                            <input type="hidden" id="parentId" name="parentId">
+                                                            <input type="text" class="form-control" id="parentName" name="parentName" readonly="true">
                                                             <span class="input-group-btn">
                                                                       <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">选择</button>
                                                                 </span>
@@ -136,17 +96,16 @@
                                                     </if>
                                                     
                                                 </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="control-label col-md-3 col-sm-3 col-xs-12" >序号 </label>
+                                            </div>                                            <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">描述 </label>
                                                 <div class="col-md-6 col-sm-6 col-xs-12">
-
-                                                    <if condition="$model">
-                                                        <input type="number" id="orderNo" name="orderNo" value="{$model.orderNo}"  data-min="1" class="form-control col-md-7 col-xs-12">
-                                                    <else />
-                                                        <input type="number" id="orderNo" name="orderNo" value="1" data-min="1" class="form-control col-md-7 col-xs-12">
-                                                    </if>
-
+                                                    
+                                                        <if condition="$model">
+                                                            <input type="text" id="remark" name="remark" value="{$model.remark}"  required="required" class="form-control col-md-7 col-xs-12">
+                                                            <else />
+                                                            <input type="text" id="remark" name="remark"  required="required" class="form-control col-md-7 col-xs-12">
+                                                        </if>
+                                                    
                                                 </div>
                                             </div>
                                     <div class="ln_solid"></div>
@@ -154,14 +113,6 @@
                                         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
                                             <button class="btn btn-primary" type="reset">重置</button>
                                             <button type="submit" class="btn btn-success">保存</button>
-
-                                            <if condition="$model">
-                                                <button type="button" onclick="goGallery({$model.id})" class="btn btn-success">添加图片</button>
-                                            </if>
-                                            <if condition="$model">
-                                                <button type="button" class="btn btn-success">添加详情</button>
-                                            </if>
-
                                         </div>
                                     </div>
 
@@ -175,7 +126,7 @@
                                                 <div class="modal-header">
                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
                                                     </button>
-                                                    <h4 class="modal-title" id="myModalLabel2">商品分类</h4>
+                                                    <h4 class="modal-title" id="myModalLabel2">商品列表</h4>
                                                 </div>
                                                 <div class="modal-body">
                                                     <ul id="treeDemo" class="ztree" style="height:300px;overflow:auto;"></ul>
@@ -240,26 +191,10 @@
 <!-- Custom Theme Scripts -->
 <script src="__UI__/build/js/custom.min.js"></script>
 
-<link rel="stylesheet" href="__JS__/zTree_v3/css/zTreeStyle/zTreeStyle.css" type="text/css">
-<script type="text/javascript" src="__JS__/zTree_v3/js/jquery.ztree.core.js"></script>
+
 <script>
-    var setting = {
-        async: {
-            enable: true,
-            url:ENV+"/Category/loadTree"
-        },
-        callback: {
-            onClick:function(event, treeId, treeNode){
-                $('#categoryId').val(treeNode.id);
-                $('#categoryName').val(treeNode.name);
-                $('#orderNo').val(parseInt(treeNode.count)+1);
-                $('#youModel').modal('hide');
-            }
-        }
-    };
 
     $(function(){
-        $.fn.zTree.init($("#treeDemo"), setting);
         $('#youModel').on('show.bs.modal', function (e) {
             // 关键代码，如没将modal设置为 block，则$modala_dialog.height() 为零
             $(this).css('display', 'block');
@@ -269,10 +204,6 @@
             });
         });
     });
-
-    function goGallery(id){
-        window.location = ENV + "/Productimg/add?id="+id;
-    }
 </script>
 </body>
 </html>

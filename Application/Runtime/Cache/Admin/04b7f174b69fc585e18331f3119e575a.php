@@ -9,7 +9,6 @@
 
 <title><?php echo ($system["sysName"]); ?></title>
 
-
     <!-- Bootstrap -->
     <link href="/Supermaket/Public/Vendor/gentelella/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -39,7 +38,6 @@
 <body class="nav-md">
 <div class="container body">
     <div class="main_container">
-
         <div class="col-md-3 left_col">
     <div class="left_col scroll-view">
         <div class="navbar nav_title" style="border: 0;">
@@ -198,7 +196,6 @@
     </div>
 </div>
 <!-- /top navigation -->
-
         <!-- page content -->
         <div class="right_col" role="main">
             <div class="">
@@ -207,13 +204,13 @@
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="x_panel">
                             <div class="x_title">
-                                <h2> <small></small></h2>
+                                <h2>用户管理 <small>用户管理</small></h2>
 
                                 <div class="clearfix"></div>
                             </div>
                             <div class="x_content">
                                 <br />
-                                <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" action="/Supermaket/admin.php/Sysgroup/save">
+                                <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" action="/Supermaket/admin.php/Sysuser/save">
 
 
                                                                                 <?php if($model): ?><input type="hidden" id="id" name="id" value="<?php echo ($model["id"]); ?>">
@@ -223,41 +220,75 @@
                                                 <input type="hidden" id="id" name="id" ><?php endif; ?>
 
                                                                                         <div class="form-group">
-                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">分组名称 </label>
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">username </label>
                                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                                     
-                                                        <?php if($model): ?><input type="text" id="name" name="name" value="<?php echo ($model["name"]); ?>"  required="required" class="form-control col-md-7 col-xs-12">
+                                                        <?php if($model): ?><input type="text" id="username" name="username" value="<?php echo ($model["username"]); ?>"  required="required" class="form-control col-md-7 col-xs-12">
                                                             <?php else: ?>
-                                                            <input type="text" id="name" name="name"  required="required" class="form-control col-md-7 col-xs-12"><?php endif; ?>
+                                                            <input type="text" id="username" name="username"  required="required" class="form-control col-md-7 col-xs-12"><?php endif; ?>
                                                     
                                                 </div>
                                             </div>                                            <div class="form-group">
-                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">描述 </label>
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">phone </label>
                                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                                     
-                                                        <?php if($model): ?><input type="text" id="remark" name="remark" value="<?php echo ($model["remark"]); ?>"  required="required" class="form-control col-md-7 col-xs-12">
+                                                        <?php if($model): ?><input type="text" id="phone" name="phone" value="<?php echo ($model["phone"]); ?>"  required="required" class="form-control col-md-7 col-xs-12">
                                                             <?php else: ?>
-                                                            <input type="text" id="remark" name="remark"  required="required" class="form-control col-md-7 col-xs-12"><?php endif; ?>
+                                                            <input type="text" id="phone" name="phone"  required="required" class="form-control col-md-7 col-xs-12"><?php endif; ?>
                                                     
                                                 </div>
                                             </div>                                            <div class="form-group">
-                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">上级分组 </label>
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">regDate </label>
                                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                                    <?php if($model): ?><div class="input-group">
-                                                            <input type="hidden" id="parentId" name="parentId" value="<?php echo ($model["parentId"]); ?>">
-                                                            <input type="text" class="form-control" id="parentName" name="parentName" value="<?php echo ($model["parentName"]); ?>"  readonly="true">
-                                                            <span class="input-group-btn">
-                                                                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">选择</button>
-                                                                </span>
-                                                        </div>
-                                                        <?php else: ?>
-                                                        <div class="input-group">
-                                                            <input type="hidden" id="parentId" name="parentId">
-                                                            <input type="text" class="form-control" id="parentName" name="parentName" readonly="true">
-                                                            <span class="input-group-btn">
-                                                                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">选择</button>
-                                                                </span>
-                                                        </div><?php endif; ?>
+                                                    
+                                                        <?php if($model): ?><input type="text" id="regDate" name="regDate" value="<?php echo ($model["regDate"]); ?>"  required="required" class="form-control col-md-7 col-xs-12">
+                                                            <?php else: ?>
+                                                            <input type="text" id="regDate" name="regDate"  required="required" class="form-control col-md-7 col-xs-12"><?php endif; ?>
+                                                    
+                                                </div>
+                                            </div>                                            <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">avatarUrl </label>
+                                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                                    
+                                                        <?php if($model): ?><input type="text" id="avatarUrl" name="avatarUrl" value="<?php echo ($model["avatarUrl"]); ?>"  required="required" class="form-control col-md-7 col-xs-12">
+                                                            <?php else: ?>
+                                                            <input type="text" id="avatarUrl" name="avatarUrl"  required="required" class="form-control col-md-7 col-xs-12"><?php endif; ?>
+                                                    
+                                                </div>
+                                            </div>                                            <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">password </label>
+                                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                                    
+                                                        <?php if($model): ?><input type="text" id="password" name="password" value="<?php echo ($model["password"]); ?>"  required="required" class="form-control col-md-7 col-xs-12">
+                                                            <?php else: ?>
+                                                            <input type="text" id="password" name="password"  required="required" class="form-control col-md-7 col-xs-12"><?php endif; ?>
+                                                    
+                                                </div>
+                                            </div>                                            <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">email </label>
+                                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                                    
+                                                        <?php if($model): ?><input type="text" id="email" name="email" value="<?php echo ($model["email"]); ?>"  required="required" class="form-control col-md-7 col-xs-12">
+                                                            <?php else: ?>
+                                                            <input type="text" id="email" name="email"  required="required" class="form-control col-md-7 col-xs-12"><?php endif; ?>
+                                                    
+                                                </div>
+                                            </div>                                            <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">state </label>
+                                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                                    
+                                                        <?php if($model): ?><input type="text" id="state" name="state" value="<?php echo ($model["state"]); ?>"  required="required" class="form-control col-md-7 col-xs-12">
+                                                            <?php else: ?>
+                                                            <input type="text" id="state" name="state"  required="required" class="form-control col-md-7 col-xs-12"><?php endif; ?>
+                                                    
+                                                </div>
+                                            </div>                                            <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">groupId </label>
+                                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                                    
+                                                        <?php if($model): ?><input type="text" id="groupId" name="groupId" value="<?php echo ($model["groupId"]); ?>"  required="required" class="form-control col-md-7 col-xs-12">
+                                                            <?php else: ?>
+                                                            <input type="text" id="groupId" name="groupId"  required="required" class="form-control col-md-7 col-xs-12"><?php endif; ?>
                                                     
                                                 </div>
                                             </div>
@@ -269,28 +300,6 @@
                                         </div>
                                     </div>
 
-                                    <!-- /modals -->
-
-                                    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-hidden="true" id="youModel">
-                                        <div class="modal-dialog modal-sm" style="width:400px;">
-                                            <div class="modal-content">
-
-                                                <div class="modal-header">
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
-                                                    </button>
-                                                    <h4 class="modal-title" id="myModalLabel2">用户分组</h4>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <ul id="treeDemo" class="ztree" style="height:300px;overflow:auto;"></ul>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- /modals -->
                                 </form>
                             </div>
                         </div>
@@ -308,8 +317,7 @@
         <?php echo ($system["sysVison"]); ?>
     </div>
     <div class="clearfix"></div>
-</footer>
-        <!-- /footer content -->
+</footer>        <!-- /footer content -->
     </div>
 </div>
 
@@ -349,37 +357,5 @@
 <!-- Custom Theme Scripts -->
 <script src="/Supermaket/Public/Vendor/gentelella/build/js/custom.min.js"></script>
 
-<link rel="stylesheet" href="/Supermaket/Public/Vendor//zTree_v3/css/zTreeStyle/zTreeStyle.css" type="text/css">
-<script type="text/javascript" src="/Supermaket/Public/Vendor//zTree_v3/js/jquery.ztree.core.js"></script>
-
-
-<script>
-    var setting = {
-        async: {
-            enable: true,
-            url:ENV+"/Sysgroup/loadTree"
-        },
-        callback: {
-            onClick:function(event, treeId, treeNode){
-                $('#parentId').val(treeNode.id);
-                $('#parentName').val(treeNode.name);
-                $('#orderNo').val(parseInt(treeNode.count)+1);
-                $('#youModel').modal('hide');
-            }
-        }
-    };
-
-    $(function(){
-        $.fn.zTree.init($("#treeDemo"), setting);
-        $('#youModel').on('show.bs.modal', function (e) {
-            // 关键代码，如没将modal设置为 block，则$modala_dialog.height() 为零
-            $(this).css('display', 'block');
-            var modalHeight = $(window).height() / 2 - $('#youModel .modal-dialog').height() / 2;
-            $(this).find('.modal-dialog').css({
-                'margin-top': modalHeight
-            });
-        });
-    });
-</script>
 </body>
 </html>

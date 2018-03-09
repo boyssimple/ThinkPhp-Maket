@@ -64,7 +64,14 @@ class CategoryController extends CommonController {
     public function loadTree(){
         $model = M('Category');
         $list = $model->order('orderNo asc')->select();
-        echo json_encode($list);
+
+        $data = Array();
+        foreach ($list as $item){
+            $mo = M('Product');
+            $item['count'] = $mo->where('categoryId='.$item['id'])->count();
+            array_push($data,$item);
+        }
+        echo json_encode($data);
     }
 
     //新增修改

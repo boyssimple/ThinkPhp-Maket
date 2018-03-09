@@ -32,23 +32,10 @@ $(function(){
             }
         },
         serverSide: true,
-        ajax: ENV+"/Product/loadList",
+        ajax: ENV+"/Sysuser/loadList",
         aoColumns : [//服务器返回的数据处理 此时返回的是 {}
             { "mData": "id","sWidth": 80},
-
-            { "mData": "name","sWidth": 200},
-            { "mData": "price","sWidth": 200},
-            { "mData": "url","sWidth": 200},
-            { "mData": "addDate","sWidth": 200},
-            { "mData": function(obj){
-                if(obj.isDelete == 1 || obj.isDelete == '1'){
-                    return '已删除';
-                }else{
-                    return '-';
-                }
-            },"sWidth": 80},
-            { "mData": "categoryName","sWidth": 100},
-            { "mData": "orderNo","sWidth": 80},
+                                        { "mData": "username","sWidth": 200},                    { "mData": "phone","sWidth": 200},                    { "mData": "regDate","sWidth": 200},                    { "mData": "avatarUrl","sWidth": 200},                    { "mData": "password","sWidth": 200},                    { "mData": "email","sWidth": 200},                    { "mData": "state","sWidth": 200},                    { "mData": "groupId","sWidth": 200},
             { "mData": function(obj){
                 return '<a data-toggle="modal" data-target="#myModal"  onclick="edit('+obj.id+')" data-title="' + obj.id + '"  class="btn btn-success" href="#"><i class="icon-edit icon-white"></i>修改</a>' +'&nbsp;&nbsp;'+'<a  onclick="del('+obj.id+')"  data-title="' + obj.id + '"  class="btn btn-danger" href="#"><i class="icon-user icon-white"></i>删除</a>';
             }}
@@ -57,12 +44,12 @@ $(function(){
 })
 
 function edit(id){
-    window.location.href = ENV + '/Product/add?id='+id;
+    window.location.href = ENV + '/Sysuser/add?id='+id;
 }
 
 function del(id){
     if (window.confirm("确定删除？")){
-        $.post(ENV + '/Product/delete',{id:id},function(result){
+        $.post(ENV + '/Sysuser/delete',{id:id},function(result){
             if(result.success == true || result.success == 'true'){
                 $('#datatable1').DataTable().ajax.reload();
             }else{

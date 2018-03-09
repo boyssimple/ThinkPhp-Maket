@@ -1,8 +1,7 @@
-<?php if (!defined('THINK_PATH')) exit(); echo ($php); ?>
-
+<?php
 namespace Admin\Controller;
 use Think\Controller;
-class <?php echo ($tableUC); ?>Controller extends CommonController {
+class SysuserController extends CommonController {
     
     //列表页面
     public function index(){
@@ -12,7 +11,7 @@ class <?php echo ($tableUC); ?>Controller extends CommonController {
     //新增页面
     public function add(){
         if (isset($_GET['id'])){
-            $model = M('<?php echo ($tableUC); ?>');
+            $model = M('Sysuser');
             $result = $model->where('id='.$_GET['id'])->find();
             $this->assign('model',$result);
         }else{
@@ -35,7 +34,7 @@ class <?php echo ($tableUC); ?>Controller extends CommonController {
             $start = $params['start'];
             $length = $params['length'];
 
-            $model = M('<?php echo ($tableUC); ?>');
+            $model = M('Sysuser');
             //搜索过滤
             $search = $params['search']['value'];
             if (!empty($search)){
@@ -66,18 +65,18 @@ class <?php echo ($tableUC); ?>Controller extends CommonController {
         if (IS_GET){
             $date = date("Y-m-d H:i:s");
             $data = I('get.');
-            $model = D("<?php echo ($tableUC); ?>");
+            $model = D("Sysuser");
             $id = $data['id'];
-            $model = D("<?php echo ($tableUC); ?>");
+            $model = D("Sysuser");
             if (empty($id)){
                 $model->data($data)->add();
-                $this->success('新增成功!', <?php echo ($app); ?>.'/<?php echo ($tableUC); ?>/add');
+                $this->success('新增成功!', __APP__.'/Sysuser/add');
             }else{
                 $model->data($data)->save();
-                $this->success('修改成功!', <?php echo ($app); ?>.'/<?php echo ($tableUC); ?>/index');
+                $this->success('修改成功!', __APP__.'/Sysuser/index');
             }
         }else{
-            $this->error('参数传递错误!', <?php echo ($app); ?>.'/<?php echo ($tableUC); ?>/add');
+            $this->error('参数传递错误!', __APP__.'/Sysuser/add');
         }
     }
 
@@ -88,7 +87,7 @@ class <?php echo ($tableUC); ?>Controller extends CommonController {
         if (IS_POST){
             $ID = isset($_POST['id']) ? $_POST['id']:"";
             if (!empty($ID)){
-                $model = D("<?php echo ($tableUC); ?>");
+                $model = D("Sysuser");
                 $r = $model->where('id='.$ID)->delete();
                 if ($r > 0){
                     $result = true;

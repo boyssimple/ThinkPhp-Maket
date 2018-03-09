@@ -63,7 +63,7 @@
 
                                             <?php else: ?>
                                             <div class="form-group">
-                                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name"><?php echo ($vo); ?> </label>
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12"><?php echo ($vo); ?> </label>
                                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                                     
                                                         <if condition="$model">

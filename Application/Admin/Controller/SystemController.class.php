@@ -3,7 +3,6 @@ namespace Admin\Controller;
 use Think\Controller;
 use Think\Think;
 
-define('__UPLOAD__', './Uploads/');
 
 class SystemController extends CommonController {
     

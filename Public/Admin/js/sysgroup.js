@@ -34,7 +34,16 @@ $(function(){
         serverSide: true,
         ajax: ENV+"/Sysgroup/loadList",
         aoColumns : [//服务器返回的数据处理 此时返回的是 {}
-            { "mData": "id","sWidth": 250},{ "mData": "groupName","sWidth": 250},{ "mData": "remark","sWidth": 250},{ "mData": "parentId","sWidth": 250},
+            { "mData": "id","sWidth": 80},
+            { "mData": "name","sWidth": 150},
+            { "mData": "remark","sWidth": 250},
+            { "mData": function(obj){
+                if(obj.parentName == ""){
+                    return '无';
+                }else{
+                    return obj.parentName;
+                }
+            },"sWidth": 150},
             { "mData": function(obj){
                 return '<a data-toggle="modal" data-target="#myModal"  onclick="edit('+obj.id+')" data-title="' + obj.id + '"  class="btn btn-success" href="#"><i class="icon-edit icon-white"></i>修改</a>' +'&nbsp;&nbsp;'+'<a  onclick="del('+obj.id+')"  data-title="' + obj.id + '"  class="btn btn-danger" href="#"><i class="icon-user icon-white"></i>删除</a>';
             }}

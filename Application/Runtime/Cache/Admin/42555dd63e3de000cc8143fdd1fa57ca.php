@@ -9,7 +9,6 @@
 
 <title><?php echo ($system["sysName"]); ?></title>
 
-
     <!-- Bootstrap -->
     <link href="/Supermaket/Public/Vendor/gentelella/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -39,7 +38,6 @@
 <body class="nav-md">
 <div class="container body">
     <div class="main_container">
-
         <div class="col-md-3 left_col">
     <div class="left_col scroll-view">
         <div class="navbar nav_title" style="border: 0;">
@@ -198,7 +196,6 @@
     </div>
 </div>
 <!-- /top navigation -->
-
         <!-- page content -->
         <div class="right_col" role="main">
             <div class="">
@@ -207,13 +204,13 @@
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="x_panel">
                             <div class="x_title">
-                                <h2> <small></small></h2>
+                                <h2>产品图片 <small>产品图片</small></h2>
 
                                 <div class="clearfix"></div>
                             </div>
                             <div class="x_content">
                                 <br />
-                                <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" action="/Supermaket/admin.php/Sysgroup/save">
+                                <form id="demo-form2" data-parsley-validate  enctype="multipart/form-data"  method="post" class="form-horizontal form-label-left" action="/Supermaket/admin.php/Productimg/save">
 
 
                                                                                 <?php if($model): ?><input type="hidden" id="id" name="id" value="<?php echo ($model["id"]); ?>">
@@ -223,25 +220,21 @@
                                                 <input type="hidden" id="id" name="id" ><?php endif; ?>
 
                                                                                         <div class="form-group">
-                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">分组名称 </label>
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">图片文件 </label>
+                                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                                    <input type="file" name="favicon_file" id="favicon_file" class="form-control col-md-7 col-xs-12" />
+                                                </div>
+                                            </div>                                            <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">序号 </label>
                                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                                     
-                                                        <?php if($model): ?><input type="text" id="name" name="name" value="<?php echo ($model["name"]); ?>"  required="required" class="form-control col-md-7 col-xs-12">
+                                                        <?php if($model): ?><input type="text" id="orderNo" name="orderNo" value="<?php echo ($model["orderNo"]); ?>"  required="required" class="form-control col-md-7 col-xs-12">
                                                             <?php else: ?>
-                                                            <input type="text" id="name" name="name"  required="required" class="form-control col-md-7 col-xs-12"><?php endif; ?>
+                                                            <input type="text" id="orderNo" name="orderNo"  required="required" class="form-control col-md-7 col-xs-12"><?php endif; ?>
                                                     
                                                 </div>
                                             </div>                                            <div class="form-group">
-                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">描述 </label>
-                                                <div class="col-md-6 col-sm-6 col-xs-12">
-                                                    
-                                                        <?php if($model): ?><input type="text" id="remark" name="remark" value="<?php echo ($model["remark"]); ?>"  required="required" class="form-control col-md-7 col-xs-12">
-                                                            <?php else: ?>
-                                                            <input type="text" id="remark" name="remark"  required="required" class="form-control col-md-7 col-xs-12"><?php endif; ?>
-                                                    
-                                                </div>
-                                            </div>                                            <div class="form-group">
-                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">上级分组 </label>
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">所属商品 </label>
                                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                                     <?php if($model): ?><div class="input-group">
                                                             <input type="hidden" id="parentId" name="parentId" value="<?php echo ($model["parentId"]); ?>">
@@ -260,6 +253,15 @@
                                                         </div><?php endif; ?>
                                                     
                                                 </div>
+                                            </div>                                            <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">描述 </label>
+                                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                                    
+                                                        <?php if($model): ?><input type="text" id="remark" name="remark" value="<?php echo ($model["remark"]); ?>"  required="required" class="form-control col-md-7 col-xs-12">
+                                                            <?php else: ?>
+                                                            <input type="text" id="remark" name="remark"  required="required" class="form-control col-md-7 col-xs-12"><?php endif; ?>
+                                                    
+                                                </div>
                                             </div>
                                     <div class="ln_solid"></div>
                                     <div class="form-group">
@@ -268,6 +270,7 @@
                                             <button type="submit" class="btn btn-success">保存</button>
                                         </div>
                                     </div>
+
 
                                     <!-- /modals -->
 
@@ -278,7 +281,7 @@
                                                 <div class="modal-header">
                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
                                                     </button>
-                                                    <h4 class="modal-title" id="myModalLabel2">用户分组</h4>
+                                                    <h4 class="modal-title" id="myModalLabel2">商品列表</h4>
                                                 </div>
                                                 <div class="modal-body">
                                                     <ul id="treeDemo" class="ztree" style="height:300px;overflow:auto;"></ul>
@@ -308,8 +311,7 @@
         <?php echo ($system["sysVison"]); ?>
     </div>
     <div class="clearfix"></div>
-</footer>
-        <!-- /footer content -->
+</footer>        <!-- /footer content -->
     </div>
 </div>
 
@@ -349,28 +351,10 @@
 <!-- Custom Theme Scripts -->
 <script src="/Supermaket/Public/Vendor/gentelella/build/js/custom.min.js"></script>
 
-<link rel="stylesheet" href="/Supermaket/Public/Vendor//zTree_v3/css/zTreeStyle/zTreeStyle.css" type="text/css">
-<script type="text/javascript" src="/Supermaket/Public/Vendor//zTree_v3/js/jquery.ztree.core.js"></script>
-
 
 <script>
-    var setting = {
-        async: {
-            enable: true,
-            url:ENV+"/Sysgroup/loadTree"
-        },
-        callback: {
-            onClick:function(event, treeId, treeNode){
-                $('#parentId').val(treeNode.id);
-                $('#parentName').val(treeNode.name);
-                $('#orderNo').val(parseInt(treeNode.count)+1);
-                $('#youModel').modal('hide');
-            }
-        }
-    };
 
     $(function(){
-        $.fn.zTree.init($("#treeDemo"), setting);
         $('#youModel').on('show.bs.modal', function (e) {
             // 关键代码，如没将modal设置为 block，则$modala_dialog.height() 为零
             $(this).css('display', 'block');

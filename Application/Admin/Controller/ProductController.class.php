@@ -8,6 +8,15 @@ class ProductController extends CommonController {
         $this->display();
     }
 
+    //图片列表
+    public function gallery(){
+        $this->display();
+    }
+
+    public function upload(){
+        $this->display();
+    }
+
     //新增页面
     public function add(){
         if (isset($_GET['id'])){
@@ -38,15 +47,14 @@ class ProductController extends CommonController {
             //搜索过滤
             $search = $params['search']['value'];
             if (!empty($search)){
-                //$map['groupName'] = array('like','%'.$search.'%');
-                //$list = $model->where($map)->limit($start,$length)->select();
-                //$total = $model->where($map)->count();
+                $map['name'] = array('like','%'.$search.'%');
+                $list = $model->where($map)->limit($start,$length)->order("orderNo asc")->select();
+                $total = $model->where($map)->count();
 
-                $list = $model->limit($start,$length)->select();
                 $total = $model->count();
             }else{
                 $total = $model->count();
-                $list = $model->limit($start,$length)->select();
+                $list = $model->limit($start,$length)->order("orderNo asc")->select();
             }
 
         }
@@ -62,12 +70,34 @@ class ProductController extends CommonController {
 
     //新增修改
     public function save(){
-        if (IS_GET){
+        if (IS_POST){
             $date = date("Y-m-d H:i:s");
-            $data = I('get.');
+            $data = I('post.');
             $model = D("Product");
+
+
+            // 上传文件
+            if ($_FILES['url_file']['name'] != ""){
+                $upload = new \Think\Upload();// 实例化上传类
+                $upload->maxSize   =     3145728 ;// 设置附件上传大小
+                $upload->exts      =     array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
+                $upload->rootPath  =     __UPLOAD__; // 设置附件上传根目录
+                $upload->savePath  =     ''; // 设置附件上传（子）目录
+                $upload->saveName = array('uniqid','');
+                $info   =   $upload->uploadOne($_FILES['url_file']);
+                if(!$info) {// 上传错误提示错误信息
+                    $this->error($upload->getError(), __APP__.'/Product/add');
+                }else{// 上传成功
+                    $path =  $info['savepath'].$info['savename'];
+                    //把之前的文件删除
+                    if ($data['favicon'] != ""){
+                        unlink(__UPLOAD__.$data['url']);
+                    }
+                }
+                $data['url'] = $path;
+            }
+
             $id = $data['id'];
-            $model = D("Systable");
             if (empty($id)){
                 $model->data($data)->add();
                 $this->success('新增成功!', __APP__.'/Product/add');
@@ -76,7 +106,7 @@ class ProductController extends CommonController {
                 $this->success('修改成功!', __APP__.'/Product/index');
             }
         }else{
-            $this->error('参数传递错误!', __APP__.'/Product/index');
+            $this->error('参数传递错误!', __APP__.'/Product/add');
         }
     }
 

@@ -236,7 +236,7 @@
                                                 </div>
                                             </div>
                                             <?php if($model): if($model["url"] != '' ): ?><div class="form-group">
-                                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name"> </label>
+                                                        <label class="control-label col-md-3 col-sm-3 col-xs-12"> </label>
                                                         <div class="col-md-6 col-sm-6 col-xs-12">
                                                             <img class="img-responsive avatar-view" src="/Supermaket/Uploads/<?php echo ($model["url"]); ?>" alt="Avatar" title="Change the avatar" style = "max-height: 200px;">
                                                         </div>
