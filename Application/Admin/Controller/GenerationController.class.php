@@ -1,7 +1,7 @@
 <?php
 namespace Admin\Controller;
 use Think\Controller;
-class GenerationController extends Controller {
+class GenerationController extends CommonController {
     public function index(){
         $this -> display();
     }
@@ -44,7 +44,11 @@ class GenerationController extends Controller {
             $this->assign("modalName",$modalName);              //模块名称
             $this->assign("php",'<?php');                    //php
             $this->assign("app",'__APP__');                    //php
-
+            $this->assign("admin",'__ADMIN__');                    //php
+            $this->assign("ui",'__UI__');                    //php
+            $this->assign("footer",'<include file="Public:footer" />');                    //php
+            $this->assign("lefttop",'<include file="Public:lefttop" />');                    //php
+            $this->assign("header",'<include file="Public:header" />');                    //php
 
             //第一步 生成Controller  (路径：Admin/Controller下)
             $this->buildHtml($nameUC."Controller.class.php",'Application/Admin/Controller/',"Generation:controller");

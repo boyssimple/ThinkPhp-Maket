@@ -38,12 +38,9 @@ class SysmenuController extends CommonController {
             //搜索过滤
             $search = $params['search']['value'];
             if (!empty($search)){
-                //$map['groupName'] = array('like','%'.$search.'%');
-                //$list = $model->where($map)->limit($start,$length)->select();
-                //$total = $model->where($map)->count();
-
-                $list = $model->limit($start,$length)->select();
-                $total = $model->count();
+                $map['name'] = array('like','%'.$search.'%');
+                $list = $model->where($map)->limit($start,$length)->select();
+                $total = $model->where($map)->count();
             }else{
                 $total = $model->count();
                 $list = $model->limit($start,$length)->select();
@@ -63,7 +60,7 @@ class SysmenuController extends CommonController {
     //加载树
     public function loadTree(){
         $model = M('Sysmenu');
-        $list = $model->where('parentId=0')->select();
+        $list = $model->where('parentId=0')->order('orderNo asc')->select();
         $data = Array();
         foreach ($list as $item){
             $children = $this->loadSub($item['id']);;
@@ -78,7 +75,7 @@ class SysmenuController extends CommonController {
 
     private function loadSub($parentId){
         $model = M('Sysmenu');
-        $list = $model->where('parentId='.$parentId)->select();
+        $list = $model->where('parentId='.$parentId)->order('orderNo asc')->select();
         if (count($list) > 0){
             $data = Array();
             foreach ($list as $item){

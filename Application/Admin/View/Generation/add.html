@@ -1,37 +1,38 @@
 <!DOCTYPE html>
 <html lang="<literal>{$system.lang}</literal>">
 <head>
-    <literal>
-        <include file="Public:header" />
-    </literal>
+    {$header}
 
     <!-- Bootstrap -->
-    <link href="<literal>__UI__</literal>/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{$ui}/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="<literal>__UI__</literal>/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="{$ui}/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
-    <link href="<literal>__UI__</literal>/vendors/nprogress/nprogress.css" rel="stylesheet">
+    <link href="{$ui}/vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- iCheck -->
-    <link href="<literal>__UI__</literal>/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+    <link href="{$ui}/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
     <!-- bootstrap-wysiwyg -->
-    <link href="<literal>__UI__</literal>/vendors/google-code-prettify/bin/prettify.min.css" rel="stylesheet">
+    <link href="{$ui}/vendors/google-code-prettify/bin/prettify.min.css" rel="stylesheet">
     <!-- Select2 -->
-    <link href="<literal>__UI__</literal>/vendors/select2/dist/css/select2.min.css" rel="stylesheet">
+    <link href="{$ui}/vendors/select2/dist/css/select2.min.css" rel="stylesheet">
     <!-- Switchery -->
-    <link href="<literal>__UI__</literal>/vendors/switchery/dist/switchery.min.css" rel="stylesheet">
+    <link href="{$ui}/vendors/switchery/dist/switchery.min.css" rel="stylesheet">
     <!-- starrr -->
-    <link href="<literal>__UI__</literal>/vendors/starrr/dist/starrr.css" rel="stylesheet">
+    <link href="{$ui}/vendors/starrr/dist/starrr.css" rel="stylesheet">
     <!-- bootstrap-daterangepicker -->
-    <link href="<literal>__UI__</literal>/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+    <link href="{$ui}/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
-    <link href="<literal>__UI__</literal>/build/css/custom.min.css" rel="stylesheet">
+    <link href="{$ui}/build/css/custom.min.css" rel="stylesheet">
+    <script type="text/javascript">
+        var ENV = '{$app}';
+    </script>
 </head>
 
 <body class="nav-md">
 <div class="container body">
     <div class="main_container">
-        <literal><include file="Public:lefttop" /></literal>
+        {$lefttop}
 
         <!-- page content -->
         <div class="right_col" role="main">
@@ -41,13 +42,13 @@
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="x_panel">
                             <div class="x_title">
-                                <h2>添加资源 <small>添加资源</small></h2>
+                                <h2>{$modalName} <small>{$modalName}</small></h2>
 
                                 <div class="clearfix"></div>
                             </div>
                             <div class="x_content">
                                 <br />
-                                <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" action="<literal>__APP__/</literal>{$tableUC}/save">
+                                <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" action="{$app}/{$tableUC}/save">
 
 
                                     <volist name="fields" id="vo">
@@ -64,7 +65,7 @@
 
                                             <else />
                                             <div class="form-group">
-                                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">{$vo} </label>
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">{$vo} </label>
                                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                                     <literal>
                                                         <if condition="$model">
@@ -100,46 +101,46 @@
         <!-- /page content -->
 
         <!-- footer content -->
-        <literal><include file="Public:footer" /></literal>
+        {$footer}
         <!-- /footer content -->
     </div>
 </div>
 
 <!-- jQuery -->
-<script src="<literal>__UI__</literal>_/vendors/jquery/dist/jquery.min.js"></script>
+<script src="{$ui}/vendors/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap -->
-<script src="<literal>__UI__</literal>/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="{$ui}/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- FastClick -->
-<script src="<literal>__UI__</literal>/vendors/fastclick/lib/fastclick.js"></script>
+<script src="{$ui}/vendors/fastclick/lib/fastclick.js"></script>
 <!-- NProgress -->
-<script src="<literal>__UI__</literal>/vendors/nprogress/nprogress.js"></script>
+<script src="{$ui}/vendors/nprogress/nprogress.js"></script>
 <!-- bootstrap-progressbar -->
-<script src="<literal>__UI__</literal>/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+<script src="{$ui}/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
 <!-- iCheck -->
-<script src="<literal>__UI__</literal>/vendors/iCheck/icheck.min.js"></script>
+<script src="{$ui}/vendors/iCheck/icheck.min.js"></script>
 <!-- bootstrap-daterangepicker -->
-<script src="<literal>__UI__</literal>/vendors/moment/min/moment.min.js"></script>
-<script src="<literal>__UI__</literal>/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+<script src="{$ui}/vendors/moment/min/moment.min.js"></script>
+<script src="{$ui}/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
 <!-- bootstrap-wysiwyg -->
-<script src="<literal>__UI__</literal>/vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
-<script src="<literal>__UI__</literal>/vendors/jquery.hotkeys/jquery.hotkeys.js"></script>
-<script src="<literal>__UI__</literal>/vendors/google-code-prettify/src/prettify.js"></script>
+<script src="{$ui}/vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
+<script src="{$ui}/vendors/jquery.hotkeys/jquery.hotkeys.js"></script>
+<script src="{$ui}/vendors/google-code-prettify/src/prettify.js"></script>
 <!-- jQuery Tags Input -->
-<script src="<literal>__UI__/vendors/jquery.tagsinput/src/jquery.tagsinput.js"></script>
+<script src="{$ui}/vendors/jquery.tagsinput/src/jquery.tagsinput.js"></script>
 <!-- Switchery -->
-<script src="<literal>__UI__</literal>/vendors/switchery/dist/switchery.min.js"></script>
+<script src="{$ui}/vendors/switchery/dist/switchery.min.js"></script>
 <!-- Select2 -->
-<script src="<literal>__UI__</literal>/vendors/select2/dist/js/select2.full.min.js"></script>
+<script src="{$ui}/vendors/select2/dist/js/select2.full.min.js"></script>
 <!-- Parsley -->
-<script src="<literal>__UI__</literal>/vendors/parsleyjs/dist/parsley.min.js"></script>
+<script src="{$ui}/vendors/parsleyjs/dist/parsley.min.js"></script>
 <!-- Autosize -->
-<script src="<literal>__UI__</literal>/vendors/autosize/dist/autosize.min.js"></script>
+<script src="{$ui}/vendors/autosize/dist/autosize.min.js"></script>
 <!-- jQuery autocomplete -->
-<script src="<literal>__UI__</literal>/vendors/devbridge-autocomplete/dist/jquery.autocomplete.min.js"></script>
+<script src="{$ui}/vendors/devbridge-autocomplete/dist/jquery.autocomplete.min.js"></script>
 <!-- starrr -->
-<script src="<literal>__UI__</literal>/vendors/starrr/dist/starrr.js"></script>
+<script src="{$ui}/vendors/starrr/dist/starrr.js"></script>
 <!-- Custom Theme Scripts -->
-<script src="<literal>__UI__</literal>/build/js/custom.min.js"></script>
+<script src="{$ui}/build/js/custom.min.js"></script>
 
 </body>
 </html>

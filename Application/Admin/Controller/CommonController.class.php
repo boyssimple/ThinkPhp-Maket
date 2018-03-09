@@ -11,7 +11,7 @@ class CommonController extends Controller {
         }else{
             //加载树
             $model = M('Sysmenu');
-            $list = $model->where('parentId=0')->select();
+            $list = $model->where('parentId=0')->order('orderNo asc')->select();
             $data = Array();
             foreach ($list as $item){
                 $children = $this->loadSub($item['id']);;
@@ -31,7 +31,7 @@ class CommonController extends Controller {
 
     private function loadSub($parentId){
         $model = M('Sysmenu');
-        $list = $model->where('parentId='.$parentId)->select();
+        $list = $model->where('parentId='.$parentId)->order('orderNo asc')->select();
         if (count($list) > 0){
             $data = Array();
             foreach ($list as $item){

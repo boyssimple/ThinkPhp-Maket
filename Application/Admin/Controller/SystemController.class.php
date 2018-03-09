@@ -1,6 +1,10 @@
 <?php
 namespace Admin\Controller;
 use Think\Controller;
+use Think\Think;
+
+define('__UPLOAD__', './Uploads/');
+
 class SystemController extends CommonController {
     
     //列表页面
@@ -67,14 +71,12 @@ class SystemController extends CommonController {
             $data = I('post.');
             $model = D("System");
 
-
-            $path = "";
             // 上传文件
             if ($_FILES['favicon_file']['name'] != ""){
                 $upload = new \Think\Upload();// 实例化上传类
                 $upload->maxSize   =     3145728 ;// 设置附件上传大小
                 $upload->exts      =     array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
-                $upload->rootPath  =     './Uploads/'; // 设置附件上传根目录
+                $upload->rootPath  =     __UPLOAD__; // 设置附件上传根目录
                 $upload->savePath  =     ''; // 设置附件上传（子）目录
                 $upload->saveName = array('uniqid','');
                 $info   =   $upload->uploadOne($_FILES['favicon_file']);
@@ -82,6 +84,10 @@ class SystemController extends CommonController {
                     $this->error($upload->getError(), __APP__.'/System/add');
                 }else{// 上传成功
                     $path =  $info['savepath'].$info['savename'];
+                    //把之前的文件删除
+                    if ($data['favicon'] != ""){
+                        unlink(__UPLOAD__.$data['favicon']);
+                    }
                 }
                 $data['favicon'] = $path;
             }

@@ -262,11 +262,20 @@
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">语言 </label>
-                                                <div class="col-md-6 col-sm-6 col-xs-12">
-                                                    <?php if($model): ?><input type="text" id="lang" name="lang" value="<?php echo ($model["lang"]); ?>" required="required" class="form-control col-md-7 col-xs-12">
-                                                        <?php else: ?>
-                                                        <input type="text" id="lang" name="lang" required="required" class="form-control col-md-7 col-xs-12"><?php endif; ?>
-                                                </div>
+                                                <?php if($model): ?><!--<input type="text" id="lang" name="lang" value="<?php echo ($model["lang"]); ?>" required="required" class="form-control col-md-7 col-xs-12">-->
+                                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                                        <select class="form-control" id="lang" name="lang">
+                                                            <option value="en" <?php if($model["lang"] == 'en' ): ?>selected<?php endif; ?> >英文</option>
+                                                            <option value="zh-cn" <?php if($model["lang"] == 'zh-cn' ): ?>selected<?php endif; ?> >中文</option>
+                                                        </select>
+                                                    </div>
+                                                    <?php else: ?>
+                                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                                        <select class="form-control" id="lang" name="lang">
+                                                            <option value="en" >英文</option>
+                                                            <option value="zh-cn" selected="selected">中文</option>
+                                                        </select>
+                                                    </div><?php endif; ?>
                                             </div>
                                     <div class="ln_solid"></div>
                                     <div class="form-group">

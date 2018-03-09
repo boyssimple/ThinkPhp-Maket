@@ -1,8 +1,7 @@
-{$php}
-
+<?php
 namespace Admin\Controller;
 use Think\Controller;
-class {$tableUC}Controller extends CommonController {
+class CategoryController extends CommonController {
     
     //列表页面
     public function index(){
@@ -12,12 +11,15 @@ class {$tableUC}Controller extends CommonController {
     //新增页面
     public function add(){
         if (isset($_GET['id'])){
-            $model = M('{$tableUC}');
+            $model = M('Category');
             $result = $model->where('id='.$_GET['id'])->find();
             $this->assign('model',$result);
         }else{
             $this->assign('model',null);
         }
+        $model = M('Category');
+        $count = $model->count();
+        $this->assign('count',$count+1);
         $this->display();
     }
 
@@ -35,16 +37,13 @@ class {$tableUC}Controller extends CommonController {
             $start = $params['start'];
             $length = $params['length'];
 
-            $model = M('{$tableUC}');
+            $model = M('Category');
             //搜索过滤
             $search = $params['search']['value'];
             if (!empty($search)){
-                //$map['groupName'] = array('like','%'.$search.'%');
-                //$list = $model->where($map)->limit($start,$length)->select();
-                //$total = $model->where($map)->count();
-
-                $list = $model->limit($start,$length)->select();
-                $total = $model->count();
+                $map['name'] = array('like','%'.$search.'%');
+                $list = $model->where($map)->limit($start,$length)->select();
+                $total = $model->where($map)->count();
             }else{
                 $total = $model->count();
                 $list = $model->limit($start,$length)->select();
@@ -61,23 +60,53 @@ class {$tableUC}Controller extends CommonController {
         echo json_encode($result);
     }
 
+    //加载树
+    public function loadTree(){
+        $model = M('Category');
+        $list = $model->order('orderNo asc')->select();
+        echo json_encode($list);
+    }
+
     //新增修改
     public function save(){
-        if (IS_GET){
+        if (IS_POST){
             $date = date("Y-m-d H:i:s");
-            $data = I('get.');
-            $model = D("{$tableUC}");
+            $data = I('post.');
+            $model = D("Category");
+
+            // 上传文件
+            if ($_FILES['url_file']['name'] != ""){
+                $upload = new \Think\Upload();// 实例化上传类
+                $upload->maxSize   =     3145728 ;// 设置附件上传大小
+                $upload->exts      =     array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
+                $upload->rootPath  =     __UPLOAD__; // 设置附件上传根目录
+                $upload->savePath  =     ''; // 设置附件上传（子）目录
+                $upload->saveName = array('uniqid','');
+                $info   =   $upload->uploadOne($_FILES['url_file']);
+                if(!$info) {// 上传错误提示错误信息
+                    $this->error($upload->getError(), __APP__.'/Category/add');
+                    exit();
+                }else{// 上传成功
+                    $path =  $info['savepath'].$info['savename'];
+                    //把之前的文件删除
+                    if ($data['url'] != ""){
+                        unlink(__UPLOAD__.$data['url']);
+                    }
+                }
+                $data['url'] = $path;
+            }
+
             $id = $data['id'];
-            $model = D("{$tableUC}");
+            $model = D("Category");
             if (empty($id)){
                 $model->data($data)->add();
-                $this->success('新增成功!', {$app}.'/{$tableUC}/add');
+                $this->success('新增成功!', __APP__.'/Category/add');
             }else{
                 $model->data($data)->save();
-                $this->success('修改成功!', {$app}.'/{$tableUC}/index');
+                $this->success('修改成功!', __APP__.'/Category/index');
             }
         }else{
-            $this->error('参数传递错误!', {$app}.'/{$tableUC}/add');
+            $this->error('参数传递错误!', __APP__.'/Category/add');
         }
     }
 
@@ -88,7 +117,7 @@ class {$tableUC}Controller extends CommonController {
         if (IS_POST){
             $ID = isset($_POST['id']) ? $_POST['id']:"";
             if (!empty($ID)){
-                $model = D("{$tableUC}");
+                $model = D("Category");
                 $r = $model->where('id='.$ID)->delete();
                 if ($r > 0){
                     $result = true;

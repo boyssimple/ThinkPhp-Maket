@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit();?>$(function(){
+$(function(){
     $('#datatable1').DataTable({
         bSort: false,      //是否排序
         bPaginate: true,  //是否分页
@@ -32,12 +32,20 @@
             }
         },
         serverSide: true,
-        ajax: ENV+"/<?php echo ($tableUC); ?>/loadList",
+        ajax: ENV+"/Category/loadList",
         aoColumns : [//服务器返回的数据处理 此时返回的是 {}
-            <?php if(is_array($fields)): $i = 0; $__LIST__ = $fields;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i; if($vo == 'id' ): ?>{ "mData": "<?php echo ($vo); ?>","sWidth": 80},
-                    <?php else: ?>
-                    { "mData": "<?php echo ($vo); ?>","sWidth": 200},<?php endif; endforeach; endif; else: echo "" ;endif; ?>
-
+            { "mData": "id","sWidth": 80},
+            { "mData": "name","sWidth": 200},
+            { "mData": "url","sWidth": 200},
+            { "mData": "orderNo","sWidth": 200},
+            { "mData": "remark","sWidth": 200},
+            { "mData": function(obj){
+                if(obj.isDelete == 1 || obj.isDelete == '1'){
+                    return '已删除';
+                }else{
+                    return '-';
+                }
+            },"sWidth": 200},
             { "mData": function(obj){
                 return '<a data-toggle="modal" data-target="#myModal"  onclick="edit('+obj.id+')" data-title="' + obj.id + '"  class="btn btn-success" href="#"><i class="icon-edit icon-white"></i>修改</a>' +'&nbsp;&nbsp;'+'<a  onclick="del('+obj.id+')"  data-title="' + obj.id + '"  class="btn btn-danger" href="#"><i class="icon-user icon-white"></i>删除</a>';
             }}
@@ -46,12 +54,12 @@
 })
 
 function edit(id){
-    window.location.href = ENV + '/<?php echo ($tableUC); ?>/add?id='+id;
+    window.location.href = ENV + '/Category/add?id='+id;
 }
 
 function del(id){
     if (window.confirm("确定删除？")){
-        $.post(ENV + '/<?php echo ($tableUC); ?>/delete',{id:id},function(result){
+        $.post(ENV + '/Category/delete',{id:id},function(result){
             if(result.success == true || result.success == 'true'){
                 $('#datatable1').DataTable().ajax.reload();
             }else{

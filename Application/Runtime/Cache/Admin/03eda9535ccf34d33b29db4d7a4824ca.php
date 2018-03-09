@@ -2,7 +2,7 @@
 
 namespace Admin\Controller;
 use Think\Controller;
-class <?php echo ($tableUC); ?>Controller extends Controller {
+class <?php echo ($tableUC); ?>Controller extends CommonController {
     
     //列表页面
     public function index(){
