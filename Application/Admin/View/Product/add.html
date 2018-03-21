@@ -156,9 +156,8 @@
                                             <button type="submit" class="btn btn-success">保存</button>
 
                                             <if condition="$model">
-                                                <button type="button" onclick="goGallery({$model.id})" class="btn btn-success">添加图片</button>
-                                            </if>
-                                            <if condition="$model">
+                                                <button type="button" onclick="addGallery({$model.id})" class="btn btn-success">添加图片</button>
+                                                <button type="button" onclick="goGallery({$model.id})" class="btn btn-success">批量添加图片</button>
                                                 <button type="button" class="btn btn-success">添加详情</button>
                                             </if>
 
@@ -270,8 +269,12 @@
         });
     });
 
-    function goGallery(id){
+    function addGallery(id){
         window.location = ENV + "/Productimg/add?id="+id;
+    }
+
+    function goGallery(id){
+        window.location = ENV + "/Product/upload?id="+id;
     }
 </script>
 </body>

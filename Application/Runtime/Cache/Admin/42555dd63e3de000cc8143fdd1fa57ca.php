@@ -230,7 +230,7 @@
                                                     
                                                         <?php if($model): ?><input type="text" id="orderNo" name="orderNo" value="<?php echo ($model["orderNo"]); ?>"  required="required" class="form-control col-md-7 col-xs-12">
                                                             <?php else: ?>
-                                                            <input type="text" id="orderNo" name="orderNo"  required="required" class="form-control col-md-7 col-xs-12"><?php endif; ?>
+                                                            <input type="text" id="orderNo" name="orderNo"  required="required" value="1" class="form-control col-md-7 col-xs-12"><?php endif; ?>
                                                     
                                                 </div>
                                             </div>                                            <div class="form-group">

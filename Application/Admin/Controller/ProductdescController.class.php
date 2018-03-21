@@ -1,18 +1,30 @@
 <?php
 namespace Admin\Controller;
 use Think\Controller;
-class ProductimgController extends CommonController {
+class ProductdescController extends CommonController {
     
     //列表页面
     public function index(){
+        $this->display();
+    }
 
+    public function gallery(){
+        if (isset($_GET['id'])){
+            $model = M('Productdesc');
+            $pro = M('Product');
+            $list = $model->where('productId='.$_GET['id'])->select();
+            $this->assign("imgs",$list);
+
+            $product = $pro->where('id='.$_GET['id'])->find();
+            $this->assign("product",$product);
+        }
         $this->display();
     }
 
     //新增页面
     public function edit(){
         if (isset($_GET['id'])){
-            $model = M('Productimg');
+            $model = M('Productdesc');
             $result = $model->where('id='.$_GET['id'])->find();
             if ($result){
                 $proModel = M('Product');
@@ -26,6 +38,25 @@ class ProductimgController extends CommonController {
         $this->display();
     }
 
+
+    //新增页面
+    public function add(){
+        if (isset($_GET['id'])){
+            $model = M('Productdesc');
+            $result = $model->where('id='.$_GET['id'])->find();
+            $this->assign('model',$result);
+        }else{
+            $this->assign('model',null);
+        }
+        $this->display();
+    }
+
+    public function upload(){
+        if (isset($_GET['id'])){
+            $this->assign('productId',$_GET['id']);
+        }
+        $this->display();
+    }
 
     //加载列表
     public function loadList(){
@@ -41,7 +72,7 @@ class ProductimgController extends CommonController {
             $start = $params['start'];
             $length = $params['length'];
 
-            $model = M('Productimg');
+            $model = M('Productdesc');
             //搜索过滤
             $search = $params['search']['value'];
             if (!empty($search)){
@@ -71,7 +102,7 @@ class ProductimgController extends CommonController {
         if (IS_POST){
             $date = date("Y-m-d H:i:s");
             $data = I('post.');
-            $model = D("Productimg");
+            $model = D("Productdesc");
 
             // 上传文件
             $upload = new \Think\Upload();// 实例化上传类
@@ -82,10 +113,9 @@ class ProductimgController extends CommonController {
             $upload->saveName = array('uniqid','');
             $info   =   $upload->upload($_FILES);
             if(!$info) {// 上传错误提示错误信息
-                $this->error($upload->getError(), __APP__.'/Product/upload');
+                $this->error($upload->getError(), __APP__.'/Productdesc/upload');
             }else{// 上传成功
                 $path =  $info['savepath'].$info['savename'];
-
                 foreach($info as $file){
                     $path =  $file['savepath'].$file['savename'];
                     $data['url'] = $path;
@@ -106,7 +136,7 @@ class ProductimgController extends CommonController {
     {
         if (IS_POST) {
             $data = I('post.');
-            $model = D("Productimg");
+            $model = D("Productdesc");
             $id = $data['id'];
 
 
@@ -120,7 +150,7 @@ class ProductimgController extends CommonController {
                 $upload->saveName = array('uniqid', '');
                 $info = $upload->uploadOne($_FILES['file']);
                 if (!$info) {// 上传错误提示错误信息
-                    $this->error($upload->getError(), __APP__ . '/Productimg/edit?id=' . $id);
+                    $this->error($upload->getError(), __APP__ . '/Productdesc/edit?id=' . $id);
                 } else {// 上传成功
                     $path = $info['savepath'] . $info['savename'];
                     //把之前的文件删除
@@ -134,7 +164,7 @@ class ProductimgController extends CommonController {
             }
             if (!empty($id)) {
                 $model->data($data)->save();
-                $this->success('修改成功!', __APP__ . '/Productimg/edit?id=' . $id);
+                $this->success('修改成功!', __APP__ . '/Productdesc/edit?id=' . $id);
             }
         } else {
             $this->error('参数传递错误!', __APP__ . '/Product/index');
@@ -150,15 +180,15 @@ class ProductimgController extends CommonController {
                 $model = D("Productimg");
                 $r = $model->where('id='.$ID)->delete();
                 if ($r > 0){
-                    $this->success('删除成功!', __APP__.'/Product/gallery?id='.$_GET['parentId']);
+                    $this->success('删除成功!', __APP__.'/Productdesc/gallery?id='.$_GET['parentId']);
                 }else{
-                    $this->success('删除失败!', __APP__.'/Product/gallery?id='.$_GET['parentId']);
+                    $this->success('删除失败!', __APP__.'/Productdesc/gallery?id='.$_GET['parentId']);
                 }
             }else{
-                $this->error('参数传递错误!', __APP__.'/Product/gallery?id='.$_GET['parentId']);
+                $this->error('参数传递错误!', __APP__.'/Productdesc/gallery?id='.$_GET['parentId']);
             }
         }else{
-            $this->error('参数传递错误!', __APP__.'/Product/gallery?id='.$_GET['parentId']);
+            $this->error('参数传递错误!', __APP__.'/Productdesc/gallery?id='.$_GET['parentId']);
         }
     }
 
@@ -169,7 +199,7 @@ class ProductimgController extends CommonController {
         if (IS_POST){
             $ID = isset($_POST['id']) ? $_POST['id']:"";
             if (!empty($ID)){
-                $model = D("Productimg");
+                $model = D("Productdesc");
                 $r = $model->where('id='.$ID)->delete();
                 if ($r > 0){
                     $result = true;

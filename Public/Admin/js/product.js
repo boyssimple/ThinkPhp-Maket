@@ -37,7 +37,7 @@ $(function(){
             { "mData": "id","sWidth": 80},
 
             { "mData": "name","sWidth": 200},
-            { "mData": "price","sWidth": 200},
+            { "mData": "price","sWidth": 80},
             { "mData": "url","sWidth": 200},
             { "mData": "addDate","sWidth": 200},
             { "mData": function(obj){
@@ -50,7 +50,13 @@ $(function(){
             { "mData": "categoryName","sWidth": 100},
             { "mData": "orderNo","sWidth": 80},
             { "mData": function(obj){
-                return '<a data-toggle="modal" data-target="#myModal"  onclick="edit('+obj.id+')" data-title="' + obj.id + '"  class="btn btn-success" href="#"><i class="icon-edit icon-white"></i>修改</a>' +'&nbsp;&nbsp;'+'<a  onclick="del('+obj.id+')"  data-title="' + obj.id + '"  class="btn btn-danger" href="#"><i class="icon-user icon-white"></i>删除</a>';
+                var action = '<a data-toggle="modal" data-target="#myModal"  onclick="edit('+obj.id+')" data-title="' + obj.id + '"  class="btn btn-success" href="#"><i class="icon-edit icon-white"></i>修改</a>' ;
+
+                action += '&nbsp;&nbsp;' + '<a  onclick="intro('+obj.id+')"  data-title="' + obj.id + '"  class="btn btn-danger" href="#"><i class="icon-user icon-white"></i>介绍图片</a>';
+                action += '&nbsp;&nbsp;' + '<a  onclick="desc('+obj.id+')"  data-title="' + obj.id + '"  class="btn btn-danger" href="#"><i class="icon-user icon-white"></i>详情</a>';
+                action += '&nbsp;&nbsp;' + '<a  onclick="del('+obj.id+')"  data-title="' + obj.id + '"  class="btn btn-danger" href="#"><i class="icon-user icon-white"></i>删除</a>';
+
+                return action;
             }}
         ]
     });
@@ -58,6 +64,12 @@ $(function(){
 
 function edit(id){
     window.location.href = ENV + '/Product/add?id='+id;
+}
+function intro(id){
+    window.location.href = ENV + '/Product/gallery?id='+id;
+}
+function desc(id){
+    window.location.href = ENV + '/Productdesc/gallery?id='+id;
 }
 
 function del(id){

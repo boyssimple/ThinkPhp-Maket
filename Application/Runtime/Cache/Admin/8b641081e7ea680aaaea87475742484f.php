@@ -300,8 +300,9 @@
                                             <button class="btn btn-primary" type="reset">重置</button>
                                             <button type="submit" class="btn btn-success">保存</button>
 
-                                            <?php if($model): ?><button type="button" onclick="goGallery(<?php echo ($model["id"]); ?>)" class="btn btn-success">添加图片</button><?php endif; ?>
-                                            <?php if($model): ?><button type="button" class="btn btn-success">添加详情</button><?php endif; ?>
+                                            <?php if($model): ?><button type="button" onclick="addGallery(<?php echo ($model["id"]); ?>)" class="btn btn-success">添加图片</button>
+                                                <button type="button" onclick="goGallery(<?php echo ($model["id"]); ?>)" class="btn btn-success">批量添加图片</button>
+                                                <button type="button" class="btn btn-success">添加详情</button><?php endif; ?>
 
                                         </div>
                                     </div>
@@ -416,8 +417,12 @@
         });
     });
 
-    function goGallery(id){
+    function addGallery(id){
         window.location = ENV + "/Productimg/add?id="+id;
+    }
+
+    function goGallery(id){
+        window.location = ENV + "/Product/upload?id="+id;
     }
 </script>
 </body>

@@ -16,11 +16,12 @@
     <link href="/Supermaket/Public/Vendor/gentelella/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
     <link href="/Supermaket/Public/Vendor/gentelella/vendors/nprogress/nprogress.css" rel="stylesheet">
-    <!-- Dropzone.js -->
-    <link href="/Supermaket/Public/Vendor/gentelella/vendors/dropzone/dist/min/dropzone.min.css" rel="stylesheet">
-
-    <!-- Custom Theme Style -->
+    
+    <!-- Custom styling plus plugins -->
     <link href="/Supermaket/Public/Vendor/gentelella/build/css/custom.min.css" rel="stylesheet">
+    <script type="text/javascript">
+        var ENV = '/Supermaket/admin.php';
+    </script>
   </head>
 
   <body class="nav-md">
@@ -188,33 +189,13 @@
         <!-- page content -->
         <div class="right_col" role="main">
           <div class="">
-            <div class="page-title">
-              <div class="title_left">
-                <h3>图片上传 </h3>
-              </div>
-
-              <div class="title_right">
-                <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
-                  <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search for...">
-                    <span class="input-group-btn">
-                      <button class="btn btn-default" type="button">Go!</button>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="clearfix"></div>
 
             <div class="row">
-              <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="col-md-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>多图片上传</h2>
+                    <h2>商品图片 <small> 商品图片 </small></h2>
                     <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                      </li>
                       <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
                         <ul class="dropdown-menu" role="menu">
@@ -224,20 +205,44 @@
                           </li>
                         </ul>
                       </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
                     </ul>
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-                    <p>Drag multiple files to the box below for multi upload or click to select files. This is for demonstration purposes only, the files are not uploaded to any server.</p>
-                    <form action="/Supermaket/admin.php/Productimg/uploadImgs" class="dropzone">
-                      <input type="hidden" id="productId" name="productId" value="<?php echo ($productId); ?>">
-                    </form>
-                    <br />
-                    <br />
-                    <br />
-                    <br />
+
+                    <div class="row">
+                      <p>商品名称：<?php echo ($product["name"]); ?> </p>
+                      <?php if(is_array($imgs)): $i = 0; $__LIST__ = $imgs;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="col-md-55">
+                          <div class="thumbnail">
+                            <div class="image view view-first">
+                              <img style="width: 100%; display: block;" src="/Supermaket/Uploads/<?php echo ($vo["url"]); ?>" alt="image" />
+                              <div class="mask">
+                                <p><?php echo ($vo["remark"]); ?></p>
+                                <div class="tools tools-bottom">
+                                  <a href="#"><i class="fa fa-link"></i></a>
+                                  <a href="#" onclick="edit(<?php echo ($vo["id"]); ?>,<?php echo ($product["id"]); ?>)"><i class="fa fa-pencil"></i></a>
+                                  <a href="#" onclick="del(<?php echo ($vo["id"]); ?>,<?php echo ($product["id"]); ?>)"><i class="fa fa-times"></i></a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="caption">
+                              <p>Snow and Ice Incoming for the South</p>
+                            </div>
+                          </div>
+                        </div><?php endforeach; endif; else: echo "" ;endif; ?>
+
+
+
+
+
+
+                    </div>
+                    <div class="ln_solid"></div>
+                    <div class="form-group">
+                      <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                        <button type="button" onclick="goUpload(<?php echo ($product["id"]); ?>)" class="btn btn-success">添加图片</button>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -265,10 +270,24 @@
     <script src="/Supermaket/Public/Vendor/gentelella/vendors/fastclick/lib/fastclick.js"></script>
     <!-- NProgress -->
     <script src="/Supermaket/Public/Vendor/gentelella/vendors/nprogress/nprogress.js"></script>
-    <!-- Dropzone.js -->
-    <script src="/Supermaket/Public/Vendor/gentelella/vendors/dropzone/dist/min/dropzone.min.js"></script>
 
     <!-- Custom Theme Scripts -->
     <script src="/Supermaket/Public/Vendor/gentelella/build/js/custom.min.js"></script>
+
+    <script>
+      function del(id,parentId){
+          if(window.confirm("确定删除?")){
+              window.location.href = ENV + '/Productimg/del?id='+id +'&parentId='+parentId;
+          }
+      }
+
+      function edit(id,parentId){
+          window.location.href = ENV + '/Productimg/edit?id='+id;
+      }
+
+      function goUpload(id){
+          window.location.href = ENV + '/Productdesc/upload?id='+id;
+      }
+    </script>
   </body>
 </html>

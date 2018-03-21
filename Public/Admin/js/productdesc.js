@@ -32,26 +32,24 @@ $(function(){
             }
         },
         serverSide: true,
-        ajax: ENV+"/Sysuser/loadList",
+        ajax: ENV+"/Productdesc/loadList",
         aoColumns : [//服务器返回的数据处理 此时返回的是 {}
             { "mData": "id","sWidth": 80},
-                                        { "mData": "username","sWidth": 200},                    { "mData": "phone","sWidth": 200},                    { "mData": "regDate","sWidth": 200},                    { "mData": "avatarUrl","sWidth": 200},                    { "mData": "password","sWidth": 200},                    { "mData": "email","sWidth": 200},                    { "mData": "state","sWidth": 200},                    { "mData": "groupId","sWidth": 200},
+                                        { "mData": "url","sWidth": 200},                    { "mData": "orderNo","sWidth": 200},                    { "mData": "productId","sWidth": 200},                    { "mData": "remark","sWidth": 200},
             { "mData": function(obj){
                 return '<a data-toggle="modal" data-target="#myModal"  onclick="edit('+obj.id+')" data-title="' + obj.id + '"  class="btn btn-success" href="#"><i class="icon-edit icon-white"></i>修改</a>' +'&nbsp;&nbsp;'+'<a  onclick="del('+obj.id+')"  data-title="' + obj.id + '"  class="btn btn-danger" href="#"><i class="icon-user icon-white"></i>删除</a>';
             }}
         ]
     });
-
-
 })
 
 function edit(id){
-    window.location.href = ENV + '/Sysuser/add?id='+id;
+    window.location.href = ENV + '/Productdesc/add?id='+id;
 }
 
 function del(id){
     if (window.confirm("确定删除？")){
-        $.post(ENV + '/Sysuser/delete',{id:id},function(result){
+        $.post(ENV + '/Productdesc/delete',{id:id},function(result){
             if(result.success == true || result.success == 'true'){
                 $('#datatable1').DataTable().ajax.reload();
             }else{

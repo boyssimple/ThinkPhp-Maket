@@ -63,12 +63,13 @@ class SysuserController extends CommonController {
     //新增修改
     public function save(){
         if (IS_GET){
-            $date = date("Y-m-d H:i:s");
             $data = I('get.');
             $model = D("Sysuser");
             $id = $data['id'];
             $model = D("Sysuser");
             if (empty($id)){
+                $date = date("Y-m-d H:i:s");
+                $data['regDate'] = $date;
                 $model->data($data)->add();
                 $this->success('新增成功!', __APP__.'/Sysuser/add');
             }else{

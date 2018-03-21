@@ -10,10 +10,23 @@ class ProductController extends CommonController {
 
     //图片列表
     public function gallery(){
+        if (isset($_GET['id'])){
+            $model = M('Productimg');
+            $pro = M('Product');
+            $list = $model->where('productId='.$_GET['id'])->select();
+            $this->assign("imgs",$list);
+
+            $product = $pro->where('id='.$_GET['id'])->find();
+            $this->assign("product",$product);
+        }
+
         $this->display();
     }
 
     public function upload(){
+        if (isset($_GET['id'])){
+            $this->assign('productId',$_GET['id']);
+        }
         $this->display();
     }
 
@@ -71,10 +84,8 @@ class ProductController extends CommonController {
     //新增修改
     public function save(){
         if (IS_POST){
-            $date = date("Y-m-d H:i:s");
             $data = I('post.');
             $model = D("Product");
-
 
             // 上传文件
             if ($_FILES['url_file']['name'] != ""){
@@ -99,6 +110,8 @@ class ProductController extends CommonController {
 
             $id = $data['id'];
             if (empty($id)){
+                $date = date("Y-m-d H:i:s");
+                $data['addDate'] = $date;
                 $model->data($data)->add();
                 $this->success('新增成功!', __APP__.'/Product/add');
             }else{

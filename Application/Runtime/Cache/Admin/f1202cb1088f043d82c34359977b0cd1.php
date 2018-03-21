@@ -1,7 +1,7 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html lang="<?php echo ($system["lang"]); ?>">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <!-- Meta, title, CSS, favicons, etc. -->
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,23 +9,35 @@
 
 <title><?php echo ($system["sysName"]); ?></title>
 
-
     <!-- Bootstrap -->
     <link href="/Supermaket/Public/Vendor/gentelella/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="/Supermaket/Public/Vendor/gentelella/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
     <link href="/Supermaket/Public/Vendor/gentelella/vendors/nprogress/nprogress.css" rel="stylesheet">
-    <!-- Dropzone.js -->
-    <link href="/Supermaket/Public/Vendor/gentelella/vendors/dropzone/dist/min/dropzone.min.css" rel="stylesheet">
+    <!-- iCheck -->
+    <link href="/Supermaket/Public/Vendor/gentelella/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+    <!-- bootstrap-wysiwyg -->
+    <link href="/Supermaket/Public/Vendor/gentelella/vendors/google-code-prettify/bin/prettify.min.css" rel="stylesheet">
+    <!-- Select2 -->
+    <link href="/Supermaket/Public/Vendor/gentelella/vendors/select2/dist/css/select2.min.css" rel="stylesheet">
+    <!-- Switchery -->
+    <link href="/Supermaket/Public/Vendor/gentelella/vendors/switchery/dist/switchery.min.css" rel="stylesheet">
+    <!-- starrr -->
+    <link href="/Supermaket/Public/Vendor/gentelella/vendors/starrr/dist/starrr.css" rel="stylesheet">
+    <!-- bootstrap-daterangepicker -->
+    <link href="/Supermaket/Public/Vendor/gentelella/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
     <link href="/Supermaket/Public/Vendor/gentelella/build/css/custom.min.css" rel="stylesheet">
-  </head>
+    <script type="text/javascript">
+        var ENV = '/Supermaket/admin.php';
+    </script>
+</head>
 
-  <body class="nav-md">
-    <div class="container body">
-      <div class="main_container">
+<body class="nav-md">
+<div class="container body">
+    <div class="main_container">
         <div class="col-md-3 left_col">
     <div class="left_col scroll-view">
         <div class="navbar nav_title" style="border: 0;">
@@ -184,65 +196,81 @@
     </div>
 </div>
 <!-- /top navigation -->
-
         <!-- page content -->
         <div class="right_col" role="main">
-          <div class="">
-            <div class="page-title">
-              <div class="title_left">
-                <h3>图片上传 </h3>
-              </div>
+            <div class="">
+                <div class="clearfix"></div>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <h2>产品图片 <small>产品图片</small></h2>
 
-              <div class="title_right">
-                <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
-                  <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search for...">
-                    <span class="input-group-btn">
-                      <button class="btn btn-default" type="button">Go!</button>
-                    </span>
-                  </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                                <br />
+                                <form id="demo-form2" data-parsley-validate  enctype="multipart/form-data"  method="post" class="form-horizontal form-label-left" action="/Supermaket/admin.php/Productimg/save">
+
+
+                                        <?php if($model): ?><input type="hidden" id="id" name="id" value="<?php echo ($model["id"]); ?>">
+
+                                            <?php else: ?>
+
+                                            <input type="hidden" id="id" name="id" ><?php endif; ?>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" >图片 </label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <input type="file" name="file" id="file" class="form-control col-md-7 col-xs-12" />
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12"> </label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <img class="img-responsive avatar-view" src="/Supermaket/Uploads/<?php echo ($model["url"]); ?>" alt="Avatar" title="Change the avatar" style = "max-height: 200px;">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">序号 </label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+
+                                                    <?php if($model): ?><input type="number" id="orderNo" name="orderNo" value="<?php echo ($model["orderNo"]); ?>"  required="required" class="form-control col-md-7 col-xs-12">
+                                                        <?php else: ?>
+                                                        <input type="number" id="orderNo" name="orderNo"  required="required" value="1" class="form-control col-md-7 col-xs-12"><?php endif; ?>
+
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">所属商品 </label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <?php if($product): ?><input type="text" value="<?php echo ($product["name"]); ?>"  class="form-control col-md-7 col-xs-12"><?php endif; ?>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">描述 </label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+
+                                                    <?php if($model): ?><input type="text" id="remark" name="remark" value="<?php echo ($model["remark"]); ?>"  class="form-control col-md-7 col-xs-12">
+                                                        <?php else: ?>
+                                                        <input type="text" id="remark" name="remark"  class="form-control col-md-7 col-xs-12"><?php endif; ?>
+
+                                            </div>
+                                        </div>
+                                    <div class="ln_solid"></div>
+                                    <div class="form-group">
+                                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                                            <button type="submit" class="btn btn-success">保存</button>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
 
-            <div class="clearfix"></div>
 
-            <div class="row">
-              <div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="x_panel">
-                  <div class="x_title">
-                    <h2>多图片上传</h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                      </li>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                        <ul class="dropdown-menu" role="menu">
-                          <li><a href="#">Settings 1</a>
-                          </li>
-                          <li><a href="#">Settings 2</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
-                    </ul>
-                    <div class="clearfix"></div>
-                  </div>
-                  <div class="x_content">
-                    <p>Drag multiple files to the box below for multi upload or click to select files. This is for demonstration purposes only, the files are not uploaded to any server.</p>
-                    <form action="/Supermaket/admin.php/Productimg/uploadImgs" class="dropzone">
-                      <input type="hidden" id="productId" name="productId" value="<?php echo ($productId); ?>">
-                    </form>
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                  </div>
-                </div>
-              </div>
             </div>
-          </div>
         </div>
         <!-- /page content -->
 
@@ -252,23 +280,49 @@
         <?php echo ($system["sysVison"]); ?>
     </div>
     <div class="clearfix"></div>
-</footer>
-        <!-- /footer content -->
-      </div>
+</footer>        <!-- /footer content -->
     </div>
+</div>
 
-    <!-- jQuery -->
-    <script src="/Supermaket/Public/Vendor/gentelella/vendors/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap -->
-    <script src="/Supermaket/Public/Vendor/gentelella/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- FastClick -->
-    <script src="/Supermaket/Public/Vendor/gentelella/vendors/fastclick/lib/fastclick.js"></script>
-    <!-- NProgress -->
-    <script src="/Supermaket/Public/Vendor/gentelella/vendors/nprogress/nprogress.js"></script>
-    <!-- Dropzone.js -->
-    <script src="/Supermaket/Public/Vendor/gentelella/vendors/dropzone/dist/min/dropzone.min.js"></script>
+<!-- jQuery -->
+<script src="/Supermaket/Public/Vendor/gentelella/vendors/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="/Supermaket/Public/Vendor/gentelella/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- FastClick -->
+<script src="/Supermaket/Public/Vendor/gentelella/vendors/fastclick/lib/fastclick.js"></script>
+<!-- NProgress -->
+<script src="/Supermaket/Public/Vendor/gentelella/vendors/nprogress/nprogress.js"></script>
+<!-- bootstrap-progressbar -->
+<script src="/Supermaket/Public/Vendor/gentelella/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+<!-- iCheck -->
+<script src="/Supermaket/Public/Vendor/gentelella/vendors/iCheck/icheck.min.js"></script>
+<!-- bootstrap-daterangepicker -->
+<script src="/Supermaket/Public/Vendor/gentelella/vendors/moment/min/moment.min.js"></script>
+<script src="/Supermaket/Public/Vendor/gentelella/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+<!-- bootstrap-wysiwyg -->
+<script src="/Supermaket/Public/Vendor/gentelella/vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
+<script src="/Supermaket/Public/Vendor/gentelella/vendors/jquery.hotkeys/jquery.hotkeys.js"></script>
+<script src="/Supermaket/Public/Vendor/gentelella/vendors/google-code-prettify/src/prettify.js"></script>
+<!-- jQuery Tags Input -->
+<script src="/Supermaket/Public/Vendor/gentelella/vendors/jquery.tagsinput/src/jquery.tagsinput.js"></script>
+<!-- Switchery -->
+<script src="/Supermaket/Public/Vendor/gentelella/vendors/switchery/dist/switchery.min.js"></script>
+<!-- Select2 -->
+<script src="/Supermaket/Public/Vendor/gentelella/vendors/select2/dist/js/select2.full.min.js"></script>
+<!-- Parsley -->
+<script src="/Supermaket/Public/Vendor/gentelella/vendors/parsleyjs/dist/parsley.min.js"></script>
+<!-- Autosize -->
+<script src="/Supermaket/Public/Vendor/gentelella/vendors/autosize/dist/autosize.min.js"></script>
+<!-- jQuery autocomplete -->
+<script src="/Supermaket/Public/Vendor/gentelella/vendors/devbridge-autocomplete/dist/jquery.autocomplete.min.js"></script>
+<!-- starrr -->
+<script src="/Supermaket/Public/Vendor/gentelella/vendors/starrr/dist/starrr.js"></script>
+<!-- Custom Theme Scripts -->
+<script src="/Supermaket/Public/Vendor/gentelella/build/js/custom.min.js"></script>
 
-    <!-- Custom Theme Scripts -->
-    <script src="/Supermaket/Public/Vendor/gentelella/build/js/custom.min.js"></script>
-  </body>
+
+<script>
+
+</script>
+</body>
 </html>
