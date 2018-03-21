@@ -31,12 +31,14 @@
 
     <!-- Custom Theme Style -->
     <link href="/Supermaket/Public/Vendor/gentelella/build/css/custom.min.css" rel="stylesheet">
+    <script type="text/javascript">
+        var ENV = '/Supermaket/admin.php';
+    </script>
 </head>
 
 <body class="nav-md">
 <div class="container body">
     <div class="main_container">
-
         <div class="col-md-3 left_col">
     <div class="left_col scroll-view">
         <div class="navbar nav_title" style="border: 0;">
@@ -204,40 +206,123 @@
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="x_panel">
                             <div class="x_title">
-                                <h2>数据表 <small>数据表</small></h2>
+                                <h2>数据列 <small>数据列</small></h2>
 
                                 <div class="clearfix"></div>
                             </div>
                             <div class="x_content">
                                 <br />
-                                <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" action="/Supermaket/admin.php/Systable/save">
+                                <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" action="/Supermaket/admin.php/Syscolumn/save">
 
 
-                                                                                <?php if($model): ?><input type="hidden" id="id" name="id" value="<?php echo ($model["id"]); ?>">
+                                            <?php if($model): ?><input type="hidden" id="id" name="id" value="<?php echo ($model["id"]); ?>">
 
                                                 <?php else: ?>
 
                                                 <input type="hidden" id="id" name="id" ><?php endif; ?>
 
-
                                             <div class="form-group">
-                                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">表名称 </label>
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12" >字段名称 </label>
                                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                                     
-                                                        <?php if($model): ?><input type="text" id="name" name="name" value="<?php echo ($model["name"]); ?>"  required="required" class="form-control col-md-7 col-xs-12">
+                                                        <?php if($model): ?><input type="text" id="colName" name="colName" value="<?php echo ($model["colName"]); ?>"  required="required" class="form-control col-md-7 col-xs-12">
                                                             <?php else: ?>
-                                                            <input type="text" id="name" name="name"  required="required" class="form-control col-md-7 col-xs-12"><?php endif; ?>
+                                                            <input type="text" id="colName" name="colName"  required="required" class="form-control col-md-7 col-xs-12"><?php endif; ?>
                                                     
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">描述 </label>
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12" >数据类型 </label>
+                                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                                    
+                                                        <!--<?php if($model): ?><input type="text" id="colType" name="colType" value="<?php echo ($model["colType"]); ?>"  required="required" class="form-control col-md-7 col-xs-12">
+                                                            <?php else: ?>
+                                                            <input type="text" id="colType" name="colType"  required="required" class="form-control col-md-7 col-xs-12"><?php endif; ?>-->
+
+                                                    <select class="form-control" id="colType" name="colType">
+                                                        <?php if($type): if(is_array($type)): $i = 0; $__LIST__ = $type;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i; if($model): if($model["colType"] == $vo.name): ?><option selected value="<?php echo ($vo["id"]); ?>"><?php echo ($vo["name"]); ?></option>
+                                                                        <?php else: ?>
+                                                                        <option value="<?php echo ($vo["id"]); ?>"><?php echo ($vo["name"]); ?></option><?php endif; ?>
+
+                                                                    <?php else: ?>
+                                                                    <option value="<?php echo ($vo["id"]); ?>"><?php echo ($vo["name"]); ?></option><?php endif; endforeach; endif; else: echo "" ;endif; endif; ?>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12" >长度 </label>
+                                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                                    
+                                                        <?php if($model): ?><input type="text" id="colLength" name="colLength" value="<?php echo ($model["colLength"]); ?>"  required="required" class="form-control col-md-7 col-xs-12">
+                                                            <?php else: ?>
+                                                            <input type="text" id="colLength" name="colLength"  required="required" class="form-control col-md-7 col-xs-12"><?php endif; ?>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12" >默认值 </label>
+                                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                                    
+                                                        <?php if($model): ?><input type="text" id="defaultValue" name="defaultValue" value="<?php echo ($model["defaultValue"]); ?>"  class="form-control col-md-7 col-xs-12">
+                                                            <?php else: ?>
+                                                            <input type="text" id="defaultValue" name="defaultValue" class="form-control col-md-7 col-xs-12"><?php endif; ?>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12" >是否主键 </label>
+                                                <div class="col-md-6 col-sm-6 col-xs-12">
+
+                                                    <?php if($model): if($model["isPk"] == 1 ): ?><input type="checkbox" id="isPk" name="isPk" class="flat" checked="checked">
+                                                            <?php else: ?>
+                                                            <input type="checkbox" id="isPk" name="isPk" class="flat"><?php endif; ?>
+                                                        <?php else: ?>
+                                                        <div class="checkbox">
+                                                            <input type="checkbox" id="isPk" name="isPk" class="flat">
+                                                        </div><?php endif; ?>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12" >描述 </label>
                                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                                     
                                                         <?php if($model): ?><input type="text" id="remark" name="remark" value="<?php echo ($model["remark"]); ?>"  required="required" class="form-control col-md-7 col-xs-12">
                                                             <?php else: ?>
                                                             <input type="text" id="remark" name="remark"  required="required" class="form-control col-md-7 col-xs-12"><?php endif; ?>
                                                     
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12" >删除否 </label>
+                                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                                    <?php if($model): if($model["state"] == 1 ): ?><input type="checkbox" id="state" name="state" class="flat" checked="checked">
+                                                            <?php else: ?>
+                                                            <input type="checkbox" id="state" name="state" class="flat"><?php endif; ?>
+                                                        <?php else: ?>
+                                                        <div class="checkbox">
+                                                            <input type="checkbox" id="state" name="state" class="flat">
+                                                        </div><?php endif; ?>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12" >表名 </label>
+                                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                                    
+                                                    <?php if($model): ?><div class="input-group">
+                                                            <input type="hidden" id="parentId" name="parentId" value="<?php echo ($model["parentId"]); ?>">
+                                                            <input type="text" class="form-control" id="parentName" name="parentName" value="<?php echo ($model["parentName"]); ?>"  readonly="true">
+                                                            <span class="input-group-btn">
+                                                                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">选择</button>
+                                                                </span>
+                                                        </div>
+                                                        <?php else: ?>
+                                                        <div class="input-group">
+                                                            <input type="hidden" id="parentId" name="parentId">
+                                                            <input type="text" class="form-control" id="parentName" name="parentName" readonly="true">
+                                                            <span class="input-group-btn">
+                                                                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">选择</button>
+                                                                </span>
+                                                        </div><?php endif; ?>
                                                 </div>
                                             </div>
                                     <div class="ln_solid"></div>
@@ -247,6 +332,29 @@
                                         </div>
                                     </div>
 
+
+                                    <!-- /modals -->
+
+                                    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-hidden="true" id="youModel">
+                                        <div class="modal-dialog modal-sm" style="width:400px;">
+                                            <div class="modal-content">
+
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
+                                                    </button>
+                                                    <h4 class="modal-title" id="myModalLabel2">数据库表</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <ul id="treeDemo" class="ztree" style="height:300px;overflow:auto;"></ul>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /modals -->
                                 </form>
                             </div>
                         </div>
@@ -304,6 +412,35 @@
 <script src="/Supermaket/Public/Vendor/gentelella/vendors/starrr/dist/starrr.js"></script>
 <!-- Custom Theme Scripts -->
 <script src="/Supermaket/Public/Vendor/gentelella/build/js/custom.min.js"></script>
+<link rel="stylesheet" href="/Supermaket/Public/Vendor//zTree_v3/css/zTreeStyle/zTreeStyle.css" type="text/css">
+<script type="text/javascript" src="/Supermaket/Public/Vendor//zTree_v3/js/jquery.ztree.core.js"></script>
+<script>
+    var setting = {
+        async: {
+            enable: true,
+            url:ENV+"/Systable/loadTree"
+        },
+        callback: {
+            onClick:function(event, treeId, treeNode){
+                $('#parentId').val(treeNode.id);
+                $('#parentName').val(treeNode.name);
+                $('#orderNo').val(parseInt(treeNode.count)+1);
+                $('#youModel').modal('hide');
+            }
+        }
+    };
 
+    $(function(){
+        $.fn.zTree.init($("#treeDemo"), setting);
+        $('#youModel').on('show.bs.modal', function (e) {
+            // 关键代码，如没将modal设置为 block，则$modala_dialog.height() 为零
+            $(this).css('display', 'block');
+            var modalHeight = $(window).height() / 2 - $('#youModel .modal-dialog').height() / 2;
+            $(this).find('.modal-dialog').css({
+                'margin-top': modalHeight
+            });
+        });
+    });
+</script>
 </body>
 </html>

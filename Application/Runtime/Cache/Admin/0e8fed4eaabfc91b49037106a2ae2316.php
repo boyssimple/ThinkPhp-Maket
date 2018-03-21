@@ -51,25 +51,27 @@
                                 <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" action="<?php echo ($app); ?>/<?php echo ($tableUC); ?>/save">
 
 
-                                    <?php if(is_array($fields)): $i = 0; $__LIST__ = $fields;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i; if($vo == 'id' ): ?>
-                                            <if condition="$model">
-                                                <input type="hidden" id="id" name="id" value="{$model.id}">
+                                    <?php if(is_array($fields)): $i = 0; $__LIST__ = $fields;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i; if($vo["isPk"] == 1 ): ?>
+                                                <if condition="$model">
+                                            
+                                                    <input type="hidden" id="<?php echo ($vo["colName"]); ?>" name="<?php echo ($vo["colName"]); ?>" value="{$model.<?php echo ($vo["colName"]); ?>}">
 
-                                                <else/>
+                                                    
+                                                    <else/>
+                                                    
+                                                    <input type="hidden" id="<?php echo ($vo["colName"]); ?>" name="<?php echo ($vo["colName"]); ?>" >
+                                                
+                                                </if>
 
-                                                <input type="hidden" id="id" name="id" >
-
-                                            </if>
-
-                                            <?php else: ?>
+                                         <?php else: ?>
                                             <div class="form-group">
-                                                <label class="control-label col-md-3 col-sm-3 col-xs-12"><?php echo ($vo); ?> </label>
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12"><?php echo ($vo["remark"]); ?> </label>
                                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                                     
                                                         <if condition="$model">
-                                                            <input type="text" id="<?php echo ($vo); ?>" name="<?php echo ($vo); ?>" value="{$model.<?php echo ($vo); ?>}"  required="required" class="form-control col-md-7 col-xs-12">
+                                                            <input type="text" id="<?php echo ($vo["colName"]); ?>" name="<?php echo ($vo["colName"]); ?>" value="{$model.<?php echo ($vo["colName"]); ?>}"  required="required" class="form-control col-md-7 col-xs-12">
                                                             <else />
-                                                            <input type="text" id="<?php echo ($vo); ?>" name="<?php echo ($vo); ?>"  required="required" class="form-control col-md-7 col-xs-12">
+                                                            <input type="text" id="<?php echo ($vo["colName"]); ?>" name="<?php echo ($vo["colName"]); ?>"  required="required" class="form-control col-md-7 col-xs-12">
                                                         </if>
                                                     
                                                 </div>

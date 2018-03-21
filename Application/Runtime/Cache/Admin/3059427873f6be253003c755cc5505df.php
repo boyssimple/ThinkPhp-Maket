@@ -1,32 +1,40 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html lang="<?php echo ($system["lang"]); ?>">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <!-- Meta, title, CSS, favicons, etc. -->
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title><?php echo ($system["sysName"]); ?></title>
-
-
     <!-- Bootstrap -->
     <link href="/Supermaket/Public/Vendor/gentelella/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="/Supermaket/Public/Vendor/gentelella/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
     <link href="/Supermaket/Public/Vendor/gentelella/vendors/nprogress/nprogress.css" rel="stylesheet">
-    
-    <!-- Custom styling plus plugins -->
+    <!-- iCheck -->
+    <link href="/Supermaket/Public/Vendor/gentelella/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+    <!-- Datatables -->
+    <link href="/Supermaket/Public/Vendor/gentelella/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <link href="/Supermaket/Public/Vendor/gentelella/vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
+    <link href="/Supermaket/Public/Vendor/gentelella/vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
+    <link href="/Supermaket/Public/Vendor/gentelella/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
+    <link href="/Supermaket/Public/Vendor/gentelella/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
     <link href="/Supermaket/Public/Vendor/gentelella/build/css/custom.min.css" rel="stylesheet">
+
     <script type="text/javascript">
         var ENV = '/Supermaket/admin.php';
     </script>
-  </head>
 
-  <body class="nav-md">
-    <div class="container body">
-      <div class="main_container">
+</head>
+
+<body class="nav-md">
+<div class="container body">
+    <div class="main_container">
         <div class="col-md-3 left_col">
     <div class="left_col scroll-view">
         <div class="navbar nav_title" style="border: 0;">
@@ -185,69 +193,35 @@
     </div>
 </div>
 <!-- /top navigation -->
-
         <!-- page content -->
         <div class="right_col" role="main">
-          <div class="">
+            <div class="">
 
-            <div class="row">
-              <div class="col-md-12">
-                <div class="x_panel">
-                  <div class="x_title">
-                    <h2>商品图片 <small> 商品名称：<?php echo ($product["name"]); ?>  </small></h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                        <ul class="dropdown-menu" role="menu">
-                          <li><a href="#">Settings 1</a>
-                          </li>
-                          <li><a href="#">Settings 2</a>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                    <div class="clearfix"></div>
-                  </div>
-                  <div class="x_content">
 
-                    <div class="row">
-
-                      <?php if(is_array($imgs)): $i = 0; $__LIST__ = $imgs;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="col-md-55">
-                          <div class="thumbnail">
-                            <div class="image view view-first">
-                              <img style="width: 100%; display: block;" src="/Supermaket/Uploads/<?php echo ($vo["url"]); ?>" alt="image" />
-                              <div class="mask">
-                                <p><?php echo ($vo["remark"]); ?></p>
-                                <div class="tools tools-bottom">
-                                  <a href="#"><i class="fa fa-link"></i></a>
-                                  <a href="#" onclick="edit(<?php echo ($vo["id"]); ?>,<?php echo ($product["id"]); ?>)"><i class="fa fa-pencil"></i></a>
-                                  <a href="#" onclick="del(<?php echo ($vo["id"]); ?>,<?php echo ($product["id"]); ?>)"><i class="fa fa-times"></i></a>
-                                </div>
-                              </div>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <h2>数据类型 <small>列表</small></h2>
+                                <div class="clearfix"></div>
                             </div>
-                            <div class="caption">
-                              <p>Snow and Ice Incoming for the South</p>
+                            <div class="x_content">
+                                <table id="datatable1" class="table table-striped table-bordered">
+                                    <thead>
+                                    <tr>
+                                        <th>序号</th><th>名称</th><th>长度</th><th>描述</th>
+                                        <th></th>
+                                    </tr>
+                                    </thead>
+
+                                    <tbody>
+                                    </tbody>
+                                </table>
                             </div>
-                          </div>
-                        </div><?php endforeach; endif; else: echo "" ;endif; ?>
-
-
-
-
-
-
+                        </div>
                     </div>
-                    <div class="ln_solid"></div>
-                    <div class="form-group">
-                      <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                        <button type="button" onclick="goUpload(<?php echo ($product["id"]); ?>)" class="btn btn-success">添加图片</button>
-                      </div>
-                    </div>
-                  </div>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
         <!-- /page content -->
 
@@ -257,37 +231,40 @@
         <?php echo ($system["sysVison"]); ?>
     </div>
     <div class="clearfix"></div>
-</footer>
-        <!-- /footer content -->
-      </div>
+</footer>        <!-- /footer content -->
     </div>
+</div>
 
-    <!-- jQuery -->
-    <script src="/Supermaket/Public/Vendor/gentelella/vendors/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap -->
-    <script src="/Supermaket/Public/Vendor/gentelella/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- FastClick -->
-    <script src="/Supermaket/Public/Vendor/gentelella/vendors/fastclick/lib/fastclick.js"></script>
-    <!-- NProgress -->
-    <script src="/Supermaket/Public/Vendor/gentelella/vendors/nprogress/nprogress.js"></script>
+<!-- jQuery -->
+<script src="/Supermaket/Public/Vendor/gentelella/vendors/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="/Supermaket/Public/Vendor/gentelella/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- FastClick -->
+<script src="/Supermaket/Public/Vendor/gentelella/vendors/fastclick/lib/fastclick.js"></script>
+<!-- NProgress -->
+<script src="/Supermaket/Public/Vendor/gentelella/vendors/nprogress/nprogress.js"></script>
+<!-- iCheck -->
+<script src="/Supermaket/Public/Vendor/gentelella/vendors/iCheck/icheck.min.js"></script>
+<!-- Datatables -->
+<script src="/Supermaket/Public/Vendor/gentelella/vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="/Supermaket/Public/Vendor/gentelella/vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<script src="/Supermaket/Public/Vendor/gentelella/vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+<script src="/Supermaket/Public/Vendor/gentelella/vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+<script src="/Supermaket/Public/Vendor/gentelella/vendors/datatables.net-buttons/js/buttons.flash.min.js"></script>
+<script src="/Supermaket/Public/Vendor/gentelella/vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
+<script src="/Supermaket/Public/Vendor/gentelella/vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+<script src="/Supermaket/Public/Vendor/gentelella/vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+<script src="/Supermaket/Public/Vendor/gentelella/vendors/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+<script src="/Supermaket/Public/Vendor/gentelella/vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+<script src="/Supermaket/Public/Vendor/gentelella/vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+<script src="/Supermaket/Public/Vendor/gentelella/vendors/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
+<script src="/Supermaket/Public/Vendor/gentelella/vendors/jszip/dist/jszip.min.js"></script>
+<script src="/Supermaket/Public/Vendor/gentelella/vendors/pdfmake/build/pdfmake.min.js"></script>
+<script src="/Supermaket/Public/Vendor/gentelella/vendors/pdfmake/build/vfs_fonts.js"></script>
 
-    <!-- Custom Theme Scripts -->
-    <script src="/Supermaket/Public/Vendor/gentelella/build/js/custom.min.js"></script>
+<!-- Custom Theme Scripts -->
+<script src="/Supermaket/Public/Vendor/gentelella/build/js/custom.min.js"></script>
+<script src="/Supermaket/Public/Admin//js/systype.js"></script>
 
-    <script>
-      function del(id,parentId){
-          if(window.confirm("确定删除?")){
-              window.location.href = ENV + '/Productimg/del?id='+id +'&parentId='+parentId;
-          }
-      }
-
-      function edit(id,parentId){
-          window.location.href = ENV + '/Productimg/edit?id='+id;
-      }
-
-      function goUpload(id){
-          window.location.href = ENV + '/Product/upload?id='+id;
-      }
-    </script>
-  </body>
+</body>
 </html>

@@ -2,7 +2,6 @@
 <html lang="{$system.lang}">
 <head>
     <include file="Public:header" />
-
     <!-- Bootstrap -->
     <link href="__UI__/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -24,14 +23,15 @@
 
     <!-- Custom Theme Style -->
     <link href="__UI__/build/css/custom.min.css" rel="stylesheet">
+    <script type="text/javascript">
+        var ENV = '__APP__';
+    </script>
 </head>
 
 <body class="nav-md">
 <div class="container body">
     <div class="main_container">
-
         <include file="Public:lefttop" />
-
         <!-- page content -->
         <div class="right_col" role="main">
             <div class="">
@@ -40,13 +40,13 @@
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="x_panel">
                             <div class="x_title">
-                                <h2>数据表 <small>数据表</small></h2>
+                                <h2>数据类型 <small>数据类型</small></h2>
 
                                 <div class="clearfix"></div>
                             </div>
                             <div class="x_content">
                                 <br />
-                                <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" action="/Supermaket/admin.php/Systable/save">
+                                <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" action="__APP__/Systype/save">
 
 
                                                                                 <if condition="$model">
@@ -58,9 +58,8 @@
 
                                             </if>
 
-
-                                            <div class="form-group">
-                                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">表名称 </label>
+                                                                                        <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">名称 </label>
                                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                                     
                                                         <if condition="$model">
@@ -70,9 +69,19 @@
                                                         </if>
                                                     
                                                 </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">描述 </label>
+                                            </div>                                            <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">长度 </label>
+                                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                                    
+                                                        <if condition="$model">
+                                                            <input type="text" id="legnth" name="legnth" value="{$model.legnth}"  required="required" class="form-control col-md-7 col-xs-12">
+                                                            <else />
+                                                            <input type="text" id="legnth" name="legnth"  required="required" class="form-control col-md-7 col-xs-12">
+                                                        </if>
+                                                    
+                                                </div>
+                                            </div>                                            <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">描述 </label>
                                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                                     
                                                         <if condition="$model">
@@ -86,6 +95,7 @@
                                     <div class="ln_solid"></div>
                                     <div class="form-group">
                                         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                                            <!--<button class="btn btn-primary" type="reset">重置</button>-->
                                             <button type="submit" class="btn btn-success">保存</button>
                                         </div>
                                     </div>
@@ -102,8 +112,7 @@
         <!-- /page content -->
 
         <!-- footer content -->
-        <include file="Public:footer" />
-        <!-- /footer content -->
+        <include file="Public:footer" />        <!-- /footer content -->
     </div>
 </div>
 

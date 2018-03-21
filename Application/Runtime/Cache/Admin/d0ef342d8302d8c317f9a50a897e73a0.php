@@ -1,4 +1,4 @@
-$(function(){
+<?php if (!defined('THINK_PATH')) exit();?>$(function(){
     $('#datatable1').DataTable({
         bSort: false,      //是否排序
         bPaginate: true,  //是否分页
@@ -32,29 +32,12 @@ $(function(){
             }
         },
         serverSide: true,
-        ajax: ENV+"/Syscolumn/loadList",
+        ajax: ENV+"/<?php echo ($tableUC); ?>/loadList",
         aoColumns : [//服务器返回的数据处理 此时返回的是 {}
-            { "mData": "id","sWidth": 80},
-            { "mData": "colName","sWidth": 150},
-            { "mData": "colTypeName","sWidth": 100},
-            { "mData": "colLength","sWidth": 80},
-            { "mData": "defaultValue","sWidth": 80},
-            { "mData": function(obj){
-                if(obj.isPk == 1 || obj.isPk == "1"){
-                    return "主键";
-                }else{
-                    return "-";
-                }
-            },"sWidth": 80},
-            { "mData": "remark","sWidth": 150},
-            { "mData": function(obj){
-                if(obj.state == 1 || obj.state == "1"){
-                    return "删除";
-                }else{
-                    return "-";
-                }
-            },"sWidth": 50},
-            { "mData": "parentName","sWidth": 100},
+            <?php if(is_array($fields)): $i = 0; $__LIST__ = $fields;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i; if($vo["colName"] == 'id' ): ?>{ "mData": "<?php echo ($vo["colName"]); ?>","sWidth": 80},
+                    <?php else: ?>
+                    { "mData": "<?php echo ($vo["colName"]); ?>","sWidth": 200},<?php endif; endforeach; endif; else: echo "" ;endif; ?>
+
             { "mData": function(obj){
                 return '<a data-toggle="modal" data-target="#myModal"  onclick="edit('+obj.id+')" data-title="' + obj.id + '"  class="btn btn-success" href="#"><i class="icon-edit icon-white"></i>修改</a>' +'&nbsp;&nbsp;'+'<a  onclick="del('+obj.id+')"  data-title="' + obj.id + '"  class="btn btn-danger" href="#"><i class="icon-user icon-white"></i>删除</a>';
             }}
@@ -63,12 +46,12 @@ $(function(){
 })
 
 function edit(id){
-    window.location.href = ENV + '/Syscolumn/add?id='+id;
+    window.location.href = ENV + '/<?php echo ($tableUC); ?>/add?id='+id;
 }
 
 function del(id){
     if (window.confirm("确定删除？")){
-        $.post(ENV + '/Syscolumn/delete',{id:id},function(result){
+        $.post(ENV + '/<?php echo ($tableUC); ?>/delete',{id:id},function(result){
             if(result.success == true || result.success == 'true'){
                 $('#datatable1').DataTable().ajax.reload();
             }else{

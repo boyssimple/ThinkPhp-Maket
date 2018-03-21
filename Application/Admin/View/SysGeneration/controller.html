@@ -1,7 +1,8 @@
-<?php
+{$php}
+
 namespace Admin\Controller;
 use Think\Controller;
-class SyscolumnController extends CommonController {
+class {$tableUC}Controller extends CommonController {
     
     //列表页面
     public function index(){
@@ -11,24 +12,18 @@ class SyscolumnController extends CommonController {
     //新增页面
     public function add(){
         if (isset($_GET['id'])){
-            $model = M('Syscolumn');
+            $model = M('{$tableUC}');
             $result = $model->where('id='.$_GET['id'])->find();
             $this->assign('model',$result);
         }else{
             $this->assign('model',null);
         }
-
-        $type = M('Systype');
-        $list = $type->select();
-        $this->assign('type',$list);
-
         $this->display();
     }
 
     //加载列表
     public function loadList(){
         $list = null;
-        $li = array();
         $darw = 1;
         $total = 0;
         $start = 0;
@@ -40,7 +35,7 @@ class SyscolumnController extends CommonController {
             $start = $params['start'];
             $length = $params['length'];
 
-            $model = M('Syscolumn');
+            $model = M('{$tableUC}');
             //搜索过滤
             $search = $params['search']['value'];
             if (!empty($search)){
@@ -49,30 +44,15 @@ class SyscolumnController extends CommonController {
                 //$total = $model->where($map)->count();
 
                 $list = $model->limit($start,$length)->select();
-                foreach ($list as $a){
-                    $colType = $a['colType'];
-                    $typeModel = M('Systype');
-                    $type =  $typeModel->where('id='.$colType)->find();
-                    $a['colTypeName'] = $type['name'];
-                    array_push($li,$a);
-                }
-
                 $total = $model->count();
             }else{
                 $total = $model->count();
                 $list = $model->limit($start,$length)->select();
-                foreach ($list as $a){
-                    $colType = $a['colType'];
-                    $typeModel = M('Systype');
-                    $type =  $typeModel->where('id='.$colType)->find();
-                    $a['colTypeName'] = $type['name'];
-                    array_push($li,$a);
-                }
             }
 
         }
         $result['draw'] = $darw;
-        $result['aaData'] = $li;
+        $result['aaData'] = $list;
         $result['iTotalRecords'] = $total;
         $result['iTotalDisplayRecords'] = $total;
         $result['length'] = $length;
@@ -86,27 +66,18 @@ class SyscolumnController extends CommonController {
         if (IS_GET){
             $date = date("Y-m-d H:i:s");
             $data = I('get.');
-            $model = D("Syscolumn");
+            $model = D("{$tableUC}");
             $id = $data['id'];
-            if ($data['isPk'] == 'on'){
-                $data['isPk'] = 1;
-            }else{
-                $data['isPk'] = 0;
-            }
-            if ($data['state'] == 'on'){
-                $data['state'] = 1;
-            }else{
-                $data['state'] = 0;
-            }
+            $model = D("{$tableUC}");
             if (empty($id)){
                 $model->data($data)->add();
-                $this->success('新增成功!', __APP__.'/Syscolumn/add');
+                $this->success('新增成功!', {$app}.'/{$tableUC}/add');
             }else{
                 $model->data($data)->save();
-                $this->success('修改成功!', __APP__.'/Syscolumn/index');
+                $this->success('修改成功!', {$app}.'/{$tableUC}/index');
             }
         }else{
-            $this->error('参数传递错误!', __APP__.'/Syscolumn/index');
+            $this->error('参数传递错误!', {$app}.'/{$tableUC}/add');
         }
     }
 
@@ -117,7 +88,7 @@ class SyscolumnController extends CommonController {
         if (IS_POST){
             $ID = isset($_POST['id']) ? $_POST['id']:"";
             if (!empty($ID)){
-                $model = D("Syscolumn");
+                $model = D("{$tableUC}");
                 $r = $model->where('id='.$ID)->delete();
                 if ($r > 0){
                     $result = true;

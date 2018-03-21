@@ -34,10 +34,15 @@ $(function(){
         serverSide: true,
         ajax: ENV+"/Systable/loadList",
         aoColumns : [//服务器返回的数据处理 此时返回的是 {}
-            { "mData": "id","sWidth": 250},{ "mData": "name","sWidth": 250},{ "mData": "oldName","sWidth": 250},{ "mData": "remark","sWidth": 250},
+            { "mData": "id","sWidth": 80},
+            { "mData": "name","sWidth": 150},
+            { "mData": "oldName","sWidth": 150},
+            { "mData": "remark","sWidth": 250},
             { "mData": function(obj){
-                var action = '<a data-toggle="modal" data-target="#myModal"  onclick="detail('+obj.id+')" data-title="' + obj.id + '"  class="btn btn-success" href="#"><i class="icon-edit icon-white"></i>明细</a>' ;
+                var action = '<a data-toggle="modal" data-target="#myModal"  onclick="detail('+obj.id+')" data-title="' + obj.id + '"  class="btn btn-success" href="#"><i class="icon-edit icon-white"></i>字段列</a>' ;
                 action += '&nbsp;&nbsp;'+'<a data-toggle="modal" data-target="#myModal"  onclick="edit('+obj.id+')" data-title="' + obj.id + '"  class="btn btn-success" href="#"><i class="icon-edit icon-white"></i>修改</a>';
+                action += '&nbsp;&nbsp;'+'<a  onclick="execute('+obj.id+')"  data-title="' + obj.id + '"  class="btn btn-danger" href="#"><i class="icon-user icon-white"></i>生成数据表</a>';
+                action += '&nbsp;&nbsp;'+'<a  onclick="geneHtml('+obj.id+')"  data-title="' + obj.id + '"  class="btn btn-danger" href="#"><i class="icon-user icon-white"></i>生成页面</a>';
                 action += '&nbsp;&nbsp;'+'<a  onclick="del('+obj.id+')"  data-title="' + obj.id + '"  class="btn btn-danger" href="#"><i class="icon-user icon-white"></i>删除</a>';
                 return action;
             }}
@@ -62,5 +67,24 @@ function del(id){
                 alert("删除失败！");
             }
         },'json');
+    }
+}
+
+function execute(id){
+    if (window.confirm("确定生成表？")) {
+        window.location.href = ENV + '/Systable/execute?id=' + id;
+    }
+}
+
+
+function geneHtml(id){
+    if (window.confirm("确定生成页面？")) {
+        $.post(ENV + '/Systable/generation?id=' + id,{},function(data){
+            if(data.success){
+                alert("生成成功！");
+            }else{
+                alert("生成失败!");
+            }
+        }, 'json');
     }
 }
