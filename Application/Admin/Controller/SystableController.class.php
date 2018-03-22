@@ -8,6 +8,20 @@ class SystableController extends CommonController {
         $this->display();
     }
 
+    public function graphic(){
+
+        $tables = M('Systable')->select();
+        $list = array();
+        foreach ($tables as $table){
+            $columns = M('Syscolumn')->where('parentId='.$table['id'])->select();
+            $table['columns'] = $columns;
+            array_push($list,$table);
+        }
+
+        $this->assign('tables',$list);
+        $this->display();
+    }
+
     //新增页面
     public function add(){
         if (isset($_GET['id'])){
