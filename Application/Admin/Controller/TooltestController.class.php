@@ -67,7 +67,6 @@ class TooltestController extends CommonController {
             $data = I('get.');
             $model = D("Tooltest");
             $id = $data['id'];
-            $model = D("Tooltest");
             if (empty($id)){
                 $model->data($data)->add();
                 $this->success('新增成功!', __APP__.'/Tooltest/add');

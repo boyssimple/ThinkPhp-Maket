@@ -93,6 +93,11 @@ class SyscolumnController extends CommonController {
             }else{
                 $data['isPk'] = 0;
             }
+            if ($data['isHiden'] == 'on'){
+                $data['isHiden'] = 1;
+            }else{
+                $data['isHiden'] = 0;
+            }
             if ($data['state'] == 'on'){
                 $data['state'] = 1;
             }else{

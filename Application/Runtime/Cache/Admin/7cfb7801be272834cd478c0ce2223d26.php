@@ -8,8 +8,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title><?php echo ($system["sysName"]); ?></title>
-
-
     <!-- Bootstrap -->
     <link href="/Supermaket/Public/Vendor/gentelella/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -37,7 +35,6 @@
 <body class="nav-md">
 <div class="container body">
     <div class="main_container">
-
         <div class="col-md-3 left_col">
     <div class="left_col scroll-view">
         <div class="navbar nav_title" style="border: 0;">
@@ -196,7 +193,6 @@
     </div>
 </div>
 <!-- /top navigation -->
-
         <!-- page content -->
         <div class="right_col" role="main">
             <div class="">
@@ -206,14 +202,14 @@
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="x_panel">
                             <div class="x_title">
-                                <h2>数据列 <small>列表</small></h2>
+                                <h2>工具测试表 <small>列表</small></h2>
                                 <div class="clearfix"></div>
                             </div>
                             <div class="x_content">
                                 <table id="datatable1" class="table table-striped table-bordered">
                                     <thead>
                                     <tr>
-                                        <th>id</th><th>字段名称</th><th>数据类型</th><th>长度</th><th>默认值</th><th>是否主键</th><th>是否隐藏</th><th>描述</th><th>状态</th><th>所属表</th>
+                                        <th>主键</th><th>名称</th><th>描述</th>
                                         <th></th>
                                     </tr>
                                     </thead>
@@ -235,8 +231,7 @@
         <?php echo ($system["sysVison"]); ?>
     </div>
     <div class="clearfix"></div>
-</footer>
-        <!-- /footer content -->
+</footer>        <!-- /footer content -->
     </div>
 </div>
 
@@ -269,7 +264,7 @@
 
 <!-- Custom Theme Scripts -->
 <script src="/Supermaket/Public/Vendor/gentelella/build/js/custom.min.js"></script>
-<script src="/Supermaket/Public/Admin//js/syscolumn.js"></script>
+<script src="/Supermaket/Public/Admin//js/tooltest.js"></script>
 
 </body>
 </html>

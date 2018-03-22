@@ -68,7 +68,6 @@ class {$tableUC}Controller extends CommonController {
             $data = I('get.');
             $model = D("{$tableUC}");
             $id = $data['id'];
-            $model = D("{$tableUC}");
             if (empty($id)){
                 $model->data($data)->add();
                 $this->success('新增成功!', {$app}.'/{$tableUC}/add');

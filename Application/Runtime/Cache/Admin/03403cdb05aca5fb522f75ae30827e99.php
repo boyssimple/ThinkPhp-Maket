@@ -283,6 +283,19 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12" >是否隐藏 </label>
+                                                <div class="col-md-6 col-sm-6 col-xs-12">
+
+                                                    <?php if($model): if($model["isHidden"] == 1 ): ?><input type="checkbox" id="isHidden" name="isHidden" class="flat" checked="checked">
+                                                            <?php else: ?>
+                                                            <input type="checkbox" id="isHidden" name="isHidden" class="flat"><?php endif; ?>
+                                                        <?php else: ?>
+                                                        <div class="checkbox">
+                                                            <input type="checkbox" id="isHidden" name="isHidden" class="flat">
+                                                        </div><?php endif; ?>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
                                                 <label class="control-label col-md-3 col-sm-3 col-xs-12" >描述 </label>
                                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                                     

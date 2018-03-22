@@ -46,6 +46,13 @@ $(function(){
                     return "-";
                 }
             },"sWidth": 80},
+            { "mData": function(obj){
+                if(obj.isHidden == 1 || obj.isHidden == "1"){
+                    return "隐藏";
+                }else{
+                    return "-";
+                }
+            },"sWidth": 80},
             { "mData": "remark","sWidth": 150},
             { "mData": function(obj){
                 if(obj.state == 1 || obj.state == "1"){

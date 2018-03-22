@@ -66,18 +66,35 @@
                                                 </if></literal>
 
                                          <else />
-                                            <div class="form-group">
-                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">{$vo.remark} </label>
-                                                <div class="col-md-6 col-sm-6 col-xs-12">
-                                                    <literal>
-                                                        <if condition="$model">
-                                                            <input type="text" id="</literal>{$vo.colName}<literal>" name="</literal>{$vo.colName}<literal>" value="{$model.</literal>{$vo.colName}<literal>}"  required="required" class="form-control col-md-7 col-xs-12">
-                                                            <else />
-                                                            <input type="text" id="</literal>{$vo.colName}<literal>" name="</literal>{$vo.colName}<literal>"  required="required" class="form-control col-md-7 col-xs-12">
-                                                        </if>
+                                            <if condition="$vo.isHidden eq 1">
+
+                                                <literal>
+                                                    <if condition="$model">
                                                     </literal>
+                                                    <input type="hidden" id="{$vo.colName}" name="{$vo.colName}" value="<literal>{$model.</literal>{$vo.colName}<literal>}</literal>">
+
+                                                    <literal>
+                                                        <else/>
+                                                    </literal>
+                                                    <input type="hidden" id="{$vo.colName}" name="{$vo.colName}" >
+                                                    <literal>
+                                                </if></literal>
+
+                                                <else/>
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">{$vo.remark} </label>
+                                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                                        <literal>
+                                                            <if condition="$model">
+                                                                <input type="text" id="</literal>{$vo.colName}<literal>" name="</literal>{$vo.colName}<literal>" value="{$model.</literal>{$vo.colName}<literal>}"  required="required" class="form-control col-md-7 col-xs-12">
+                                                                <else />
+                                                                <input type="text" id="</literal>{$vo.colName}<literal>" name="</literal>{$vo.colName}<literal>"  required="required" class="form-control col-md-7 col-xs-12">
+                                                            </if>
+                                                        </literal>
+                                                    </div>
                                                 </div>
-                                            </div>
+                                            </if>
+
 
                                         </if>
 

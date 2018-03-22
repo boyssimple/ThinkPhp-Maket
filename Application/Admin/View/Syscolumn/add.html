@@ -142,6 +142,23 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12" >是否隐藏 </label>
+                                                <div class="col-md-6 col-sm-6 col-xs-12">
+
+                                                    <if condition="$model">
+                                                        <if condition="$model.isHidden eq 1 ">
+                                                            <input type="checkbox" id="isHidden" name="isHidden" class="flat" checked="checked">
+                                                            <else/>
+                                                            <input type="checkbox" id="isHidden" name="isHidden" class="flat">
+                                                        </if>
+                                                        <else />
+                                                        <div class="checkbox">
+                                                            <input type="checkbox" id="isHidden" name="isHidden" class="flat">
+                                                        </div>
+                                                    </if>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
                                                 <label class="control-label col-md-3 col-sm-3 col-xs-12" >描述 </label>
                                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                                     

@@ -9,7 +9,6 @@
 
 <title><?php echo ($system["sysName"]); ?></title>
 
-
     <!-- Bootstrap -->
     <link href="/Supermaket/Public/Vendor/gentelella/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -18,26 +17,27 @@
     <link href="/Supermaket/Public/Vendor/gentelella/vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- iCheck -->
     <link href="/Supermaket/Public/Vendor/gentelella/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
-    <!-- Datatables -->
-    <link href="/Supermaket/Public/Vendor/gentelella/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
-    <link href="/Supermaket/Public/Vendor/gentelella/vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
-    <link href="/Supermaket/Public/Vendor/gentelella/vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
-    <link href="/Supermaket/Public/Vendor/gentelella/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
-    <link href="/Supermaket/Public/Vendor/gentelella/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
+    <!-- bootstrap-wysiwyg -->
+    <link href="/Supermaket/Public/Vendor/gentelella/vendors/google-code-prettify/bin/prettify.min.css" rel="stylesheet">
+    <!-- Select2 -->
+    <link href="/Supermaket/Public/Vendor/gentelella/vendors/select2/dist/css/select2.min.css" rel="stylesheet">
+    <!-- Switchery -->
+    <link href="/Supermaket/Public/Vendor/gentelella/vendors/switchery/dist/switchery.min.css" rel="stylesheet">
+    <!-- starrr -->
+    <link href="/Supermaket/Public/Vendor/gentelella/vendors/starrr/dist/starrr.css" rel="stylesheet">
+    <!-- bootstrap-daterangepicker -->
+    <link href="/Supermaket/Public/Vendor/gentelella/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
     <link href="/Supermaket/Public/Vendor/gentelella/build/css/custom.min.css" rel="stylesheet">
-
     <script type="text/javascript">
         var ENV = '/Supermaket/admin.php';
     </script>
-
 </head>
 
 <body class="nav-md">
 <div class="container body">
     <div class="main_container">
-
         <div class="col-md-3 left_col">
     <div class="left_col scroll-view">
         <div class="navbar nav_title" style="border: 0;">
@@ -196,35 +196,64 @@
     </div>
 </div>
 <!-- /top navigation -->
-
         <!-- page content -->
         <div class="right_col" role="main">
             <div class="">
-
-
+                <div class="clearfix"></div>
                 <div class="row">
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="x_panel">
                             <div class="x_title">
-                                <h2>数据列 <small>列表</small></h2>
+                                <h2>工具测试表 <small>工具测试表</small></h2>
+
                                 <div class="clearfix"></div>
                             </div>
                             <div class="x_content">
-                                <table id="datatable1" class="table table-striped table-bordered">
-                                    <thead>
-                                    <tr>
-                                        <th>id</th><th>字段名称</th><th>数据类型</th><th>长度</th><th>默认值</th><th>是否主键</th><th>是否隐藏</th><th>描述</th><th>状态</th><th>所属表</th>
-                                        <th></th>
-                                    </tr>
-                                    </thead>
+                                <br />
+                                <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" action="/Supermaket/admin.php/Tooltest/save">
 
-                                    <tbody>
-                                    </tbody>
-                                </table>
+
+                                                                                    <?php if($model): ?><input type="hidden" id="id" name="id" value="<?php echo ($model["id"]); ?>">
+
+                                                    
+                                                    <?php else: ?>
+                                                    
+                                                    <input type="hidden" id="id" name="id" ><?php endif; ?>
+
+                                                                                     <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">名称 </label>
+                                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                                    
+                                                        <?php if($model): ?><input type="text" id="name" name="name" value="<?php echo ($model["name"]); ?>"  required="required" class="form-control col-md-7 col-xs-12">
+                                                            <?php else: ?>
+                                                            <input type="text" id="name" name="name"  required="required" class="form-control col-md-7 col-xs-12"><?php endif; ?>
+                                                    
+                                                </div>
+                                            </div>                                            <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">描述 </label>
+                                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                                    
+                                                        <?php if($model): ?><input type="text" id="remark" name="remark" value="<?php echo ($model["remark"]); ?>"  required="required" class="form-control col-md-7 col-xs-12">
+                                                            <?php else: ?>
+                                                            <input type="text" id="remark" name="remark"  required="required" class="form-control col-md-7 col-xs-12"><?php endif; ?>
+                                                    
+                                                </div>
+                                            </div>
+                                    <div class="ln_solid"></div>
+                                    <div class="form-group">
+                                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                                            <!--<button class="btn btn-primary" type="reset">重置</button>-->
+                                            <button type="submit" class="btn btn-success">保存</button>
+                                        </div>
+                                    </div>
+
+                                </form>
                             </div>
                         </div>
                     </div>
                 </div>
+
+
             </div>
         </div>
         <!-- /page content -->
@@ -235,8 +264,7 @@
         <?php echo ($system["sysVison"]); ?>
     </div>
     <div class="clearfix"></div>
-</footer>
-        <!-- /footer content -->
+</footer>        <!-- /footer content -->
     </div>
 </div>
 
@@ -248,28 +276,33 @@
 <script src="/Supermaket/Public/Vendor/gentelella/vendors/fastclick/lib/fastclick.js"></script>
 <!-- NProgress -->
 <script src="/Supermaket/Public/Vendor/gentelella/vendors/nprogress/nprogress.js"></script>
+<!-- bootstrap-progressbar -->
+<script src="/Supermaket/Public/Vendor/gentelella/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
 <!-- iCheck -->
 <script src="/Supermaket/Public/Vendor/gentelella/vendors/iCheck/icheck.min.js"></script>
-<!-- Datatables -->
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/datatables.net/js/jquery.dataTables.min.js"></script>
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/datatables.net-buttons/js/buttons.flash.min.js"></script>
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/jszip/dist/jszip.min.js"></script>
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/pdfmake/build/pdfmake.min.js"></script>
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/pdfmake/build/vfs_fonts.js"></script>
-
+<!-- bootstrap-daterangepicker -->
+<script src="/Supermaket/Public/Vendor/gentelella/vendors/moment/min/moment.min.js"></script>
+<script src="/Supermaket/Public/Vendor/gentelella/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+<!-- bootstrap-wysiwyg -->
+<script src="/Supermaket/Public/Vendor/gentelella/vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
+<script src="/Supermaket/Public/Vendor/gentelella/vendors/jquery.hotkeys/jquery.hotkeys.js"></script>
+<script src="/Supermaket/Public/Vendor/gentelella/vendors/google-code-prettify/src/prettify.js"></script>
+<!-- jQuery Tags Input -->
+<script src="/Supermaket/Public/Vendor/gentelella/vendors/jquery.tagsinput/src/jquery.tagsinput.js"></script>
+<!-- Switchery -->
+<script src="/Supermaket/Public/Vendor/gentelella/vendors/switchery/dist/switchery.min.js"></script>
+<!-- Select2 -->
+<script src="/Supermaket/Public/Vendor/gentelella/vendors/select2/dist/js/select2.full.min.js"></script>
+<!-- Parsley -->
+<script src="/Supermaket/Public/Vendor/gentelella/vendors/parsleyjs/dist/parsley.min.js"></script>
+<!-- Autosize -->
+<script src="/Supermaket/Public/Vendor/gentelella/vendors/autosize/dist/autosize.min.js"></script>
+<!-- jQuery autocomplete -->
+<script src="/Supermaket/Public/Vendor/gentelella/vendors/devbridge-autocomplete/dist/jquery.autocomplete.min.js"></script>
+<!-- starrr -->
+<script src="/Supermaket/Public/Vendor/gentelella/vendors/starrr/dist/starrr.js"></script>
 <!-- Custom Theme Scripts -->
 <script src="/Supermaket/Public/Vendor/gentelella/build/js/custom.min.js"></script>
-<script src="/Supermaket/Public/Admin//js/syscolumn.js"></script>
 
 </body>
 </html>
