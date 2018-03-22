@@ -68,7 +68,6 @@ class <?php echo ($tableUC); ?>Controller extends CommonController {
             $data = I('get.');
             $model = D("<?php echo ($tableUC); ?>");
             $id = $data['id'];
-            $model = D("<?php echo ($tableUC); ?>");
             if (empty($id)){
                 $model->data($data)->add();
                 $this->success('新增成功!', <?php echo ($app); ?>.'/<?php echo ($tableUC); ?>/add');

@@ -64,18 +64,31 @@
                                                 </if>
 
                                          <?php else: ?>
-                                            <div class="form-group">
-                                                <label class="control-label col-md-3 col-sm-3 col-xs-12"><?php echo ($vo["remark"]); ?> </label>
-                                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <?php if($vo["isHidden"] == 1): ?>
+                                                    <if condition="$model">
                                                     
-                                                        <if condition="$model">
-                                                            <input type="text" id="<?php echo ($vo["colName"]); ?>" name="<?php echo ($vo["colName"]); ?>" value="{$model.<?php echo ($vo["colName"]); ?>}"  required="required" class="form-control col-md-7 col-xs-12">
-                                                            <else />
-                                                            <input type="text" id="<?php echo ($vo["colName"]); ?>" name="<?php echo ($vo["colName"]); ?>"  required="required" class="form-control col-md-7 col-xs-12">
-                                                        </if>
+                                                    <input type="hidden" id="<?php echo ($vo["colName"]); ?>" name="<?php echo ($vo["colName"]); ?>" value="{$model.<?php echo ($vo["colName"]); ?>}">
+
                                                     
-                                                </div>
-                                            </div><?php endif; endforeach; endif; else: echo "" ;endif; ?>
+                                                        <else/>
+                                                    
+                                                    <input type="hidden" id="<?php echo ($vo["colName"]); ?>" name="<?php echo ($vo["colName"]); ?>" >
+                                                    
+                                                </if>
+
+                                                <?php else: ?>
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-3 col-sm-3 col-xs-12"><?php echo ($vo["remark"]); ?> </label>
+                                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                                        
+                                                            <if condition="$model">
+                                                                <input type="text" id="<?php echo ($vo["colName"]); ?>" name="<?php echo ($vo["colName"]); ?>" value="{$model.<?php echo ($vo["colName"]); ?>}"  required="required" class="form-control col-md-7 col-xs-12">
+                                                                <else />
+                                                                <input type="text" id="<?php echo ($vo["colName"]); ?>" name="<?php echo ($vo["colName"]); ?>"  required="required" class="form-control col-md-7 col-xs-12">
+                                                            </if>
+                                                        
+                                                    </div>
+                                                </div><?php endif; endif; endforeach; endif; else: echo "" ;endif; ?>
 
                                     <div class="ln_solid"></div>
                                     <div class="form-group">
