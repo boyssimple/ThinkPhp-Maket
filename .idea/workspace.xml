@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fc075d0e-8bbd-4982-a5f6-6bd2a67e7f67" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Admin/View/Systable/graphic.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Admin/Controller/SystableController.class.php" afterPath="$PROJECT_DIR$/Application/Admin/Controller/SystableController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Logs/Admin/18_03_22.log" afterPath="$PROJECT_DIR$/Application/Runtime/Logs/Admin/18_03_22.log" />
-    </list>
+    <list default="true" id="fc075d0e-8bbd-4982-a5f6-6bd2a67e7f67" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,8 +15,8 @@
       <file leaf-file-name="graphic.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Application/Admin/View/Systable/graphic.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
-              <caret line="113" column="29" lean-forward="false" selection-start-line="113" selection-start-column="29" selection-end-line="114" selection-end-column="53" />
+            <state relative-caret-position="390">
+              <caret line="90" column="18" lean-forward="true" selection-start-line="90" selection-start-column="18" selection-end-line="90" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -165,7 +160,7 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="191" />
+    <option name="x" value="6" />
     <option name="y" value="23" />
     <option name="width" value="1920" />
     <option name="height" value="980" />
@@ -575,15 +570,15 @@
       <workItem from="1520316534136" duration="79544000" />
       <workItem from="1520907440312" duration="22136000" />
       <workItem from="1521008813017" duration="126000" />
-      <workItem from="1521600409410" duration="26941000" />
+      <workItem from="1521600409410" duration="26962000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="138419000" />
+    <option name="totallyTimeSpent" value="138440000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="191" y="23" width="1920" height="980" extended-state="0" />
+    <frame x="6" y="23" width="1920" height="980" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18229167" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1039,8 +1034,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Admin/View/Systable/graphic.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="113" column="29" lean-forward="false" selection-start-line="113" selection-start-column="29" selection-end-line="114" selection-end-column="53" />
+        <state relative-caret-position="390">
+          <caret line="90" column="18" lean-forward="true" selection-start-line="90" selection-start-column="18" selection-end-line="90" selection-end-column="18" />
           <folding />
         </state>
       </provider>
