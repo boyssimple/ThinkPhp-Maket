@@ -47,7 +47,7 @@
                                 <table id="datatable1" class="table table-striped table-bordered">
                                     <thead>
                                     <tr>
-                                        <?php if(is_array($fields)): $i = 0; $__LIST__ = $fields;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><th><?php echo ($vo["remark"]); ?></th><?php endforeach; endif; else: echo "" ;endif; ?>
+                                        <?php if(is_array($fields)): $i = 0; $__LIST__ = $fields;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i; if($vo["isHidden"] != 1): ?><th><?php echo ($vo["remark"]); ?></th><?php endif; endforeach; endif; else: echo "" ;endif; ?>
 
                                         <th></th>
                                     </tr>

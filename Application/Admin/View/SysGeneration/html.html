@@ -48,8 +48,9 @@
                                     <thead>
                                     <tr>
                                         <volist name="fields" id="vo">
-
-                                        <th>{$vo.remark}</th>
+                                            <if condition="$vo.isHidden neq 1">
+                                                <th>{$vo.remark}</th>
+                                            </if>
 
                                         </volist>
 

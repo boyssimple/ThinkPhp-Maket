@@ -1,0 +1,95 @@
+
+/* location */
+.shj_crumbs{width: inherit; height: 36px; line-height: 56px;}
+.shj_crumbs_now{color: #127a59;}
+.shj_crumbs_icon{font-size: 14px; padding: 0 2px;}
+
+.shj_lxgt_box{width: 100%; height: auto; position: relative; background-color: #f5f6f8; padding-bottom: 50px}
+.shj_lxgt_top_bg{width: 100%; height: 510px; position: absolute; top: 0; }
+.shj_lxgt{width: 1200px; height: auto; margin: 0 auto; position: relative; }
+.shj_lxgt_title{width: inherit; height: 425px; margin-top: 20px;}
+.shj_lxgt_select_box{float: left; width: 245px; height: 410px; background: #fff; padding: 0 15px 15px;}
+.shj_lxgt_select_box>h4{color: #000; margin-top: 12px;}
+.shj_lxgt_select_box>h4>span{font-size: 12px; color: #959595;}
+.shj_lxgt_select_box>ul{width: 255px; height: 100px; margin-left: -10px;}
+.shj_lxgt_select_box>ul .select_blur{float: left; width: 75px; height: 25px; background: #fff; margin: 8px 0 0 10px; color: #000; text-align: center; line-height: 25px; cursor: pointer; font-size: 13px;}
+.shj_lxgt_select_box>ul .select_focus{color: #fff; background: #127a59;}
+.shj_lxgt_swiper_box{float: left; margin-left: 15px; width: 910px; height: 425px; overflow: hidden;}
+.shj_lxgt_swiper_box img{width: 910px; height: 425px;}
+.shj_lxgt_swiper_box .swiper-button-prev,.shj_lxgt_swiper_box .swiper-button-next{top: 162.5px;}
+.shj_lxgt_lists_wrap{opacity: 1;transition: .5s ease; }
+.shj_lxgt_lists{width: 1200px; margin: 30px 0 30px 0px; }
+.shj_lxgt_item{width: 292.5px; height: 250px;margin: 10px 10px 10px 0px; float: left; border-radius: 8px; overflow: hidden; box-shadow: 0px 0px 10px #f3e3e3;  -webkit-transition: .5s ease-in-out; -o-transition: .5s ease-in-out; transition: .5s ease-in-out; z-index: 99;}
+.shj_lxgt_item a{text-decoration: none;}
+.shj_lxgt_item:nth-child(4n){margin-right: 0px!important;}
+.shj_lxgt_item>a>img{width: 100%; height: 200px;}
+.shj_lxgt_item .shj_lxgt_info{width: auto; height: 45px; line-height: 45px; font-size: 14px; padding: 0 20px; background: #fff;}
+.shj_lxgt_item .shj_lxgt_info>span{float: right;}
+.shj_lxgt_item:hover .shj_lxgt_info{color: #ed661e;}
+.shj_lxgt_item:hover{box-shadow: 0px 0px 20px #f3e3e3;}
+
+.paganation {
+    position: relative;
+    text-align: center;
+    zoom: 1;
+    width:600px;
+    margin: 0 auto;
+    margin-top: 70px;
+}
+
+.paganation:before,
+.paganation:after {
+    content: "";
+    display: table;
+}
+
+.paganation:after {
+    clear: both;
+    overflow: hidden;
+}
+
+.paganation span {
+    float: left;
+    margin: 0 5px;
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    color: #bdbdbd;
+    font-size: 14px;
+}
+
+.paganation .active {
+    float: left;
+    margin: 0 5px;
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    background: #e91e63;
+    color: #fff;
+    font-size: 14px;
+    border: 1px solid #e91e63;
+}
+
+.paganation a {
+    float: left;
+    margin: 0 5px;
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    background: #fff;
+    border: 1px solid #ebebeb;
+    color: #bdbdbd;
+    font-size: 14px;
+}
+
+.paganation a:hover {
+    color: #fff;
+    background: #e91e63;
+}
+
+.paganation .next,
+.paganation .prev {
+    font-family: "Simsun";
+    font-size: 16px;
+    font-weight: bold;
+}

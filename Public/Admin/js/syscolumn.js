@@ -1,4 +1,7 @@
 $(function(){
+    var Request = new Object();
+
+    Request = GetRequest();
     $('#datatable1').DataTable({
         bSort: false,      //是否排序
         bPaginate: true,  //是否分页
@@ -32,7 +35,7 @@ $(function(){
             }
         },
         serverSide: true,
-        ajax: ENV+"/Syscolumn/loadList",
+        ajax: ENV+"/Syscolumn/loadList?id="+Request['id'],
         aoColumns : [//服务器返回的数据处理 此时返回的是 {}
             { "mData": "id","sWidth": 80},
             { "mData": "colName","sWidth": 150},
@@ -83,4 +86,27 @@ function del(id){
             }
         },'json');
     }
+}
+
+function GetRequest() {
+    var url = location.search; //获取url中含"?"符后的字串
+
+    var theRequest = new Object();
+
+    if (url.indexOf("?") != -1) {
+
+        var str = url.substr(1);
+
+        strs = str.split("&");
+
+        for(var i = 0; i < strs.length; i ++) {
+
+            theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);
+
+        }
+
+    }
+
+    return theRequest;
+
 }

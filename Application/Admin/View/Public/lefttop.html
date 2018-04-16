@@ -34,9 +34,22 @@
                                         <li><a  <if condition=" $ms.menuUrl neq '' "> href="__APP__/{$ms.menuUrl}"</if> >{$ms.name}<if condition=" $ms.children gt 0 "><span class="fa fa-chevron-down"></span></if></a>
                                             <if condition=" $ms.children gt 0 ">
                                                 <ul class="nav child_menu">
-                                                    <volist name="ms.children" id="mss">
-                                                        <li class="sub_menu"><a href="__APP__/{$mss.menuUrl}">{$mss.name}</a></li>
-                                                    </volist>
+                                                    <!--<volist name="ms.children" id="mss">-->
+                                                        <!--<li class="sub_menu"><a href="__APP__/{$mss.menuUrl}">{$mss.name}</a></li>-->
+                                                    <!--</volist>-->
+
+                                                    <foreach name="ms.children" item="mss">
+
+                                                        <li><a  <if condition=" $mss.menuUrl neq '' "> href="__APP__/{$mss.menuUrl}"</if> >{$mss.name}<if condition=" $mss.children gt 0 "><span class="fa fa-chevron-down"></span></if></a>
+                                                            <if condition=" $mss.children gt 0 ">
+                                                                <ul class="nav child_menu">
+                                                                    <foreach name="mss.children" item="msss">
+                                                                        <li class="sub_menu"><a href="__APP__/{$msss.menuUrl}">{$msss.name}</a></li>
+                                                                    </foreach>
+                                                                </ul>
+                                                            </if>
+                                                        </li>
+                                                    </foreach>
                                                 </ul>
                                             </if>
                                         </li>

@@ -35,7 +35,6 @@ class SyscolumnController extends CommonController {
         $length = 10;
         if (IS_GET){
             $params = I('get.');
-
             $darw = $params['draw'];
             $start = $params['start'];
             $length = $params['length'];
@@ -59,8 +58,8 @@ class SyscolumnController extends CommonController {
 
                 $total = $model->count();
             }else{
-                $total = $model->count();
-                $list = $model->limit($start,$length)->select();
+                $total = $model->where('parentId='.$params['id'])->count();
+                $list = $model->where('parentId='.$params['id'])->limit($start,$length)->select();
                 foreach ($list as $a){
                     $colType = $a['colType'];
                     $typeModel = M('Systype');
@@ -108,7 +107,7 @@ class SyscolumnController extends CommonController {
                 $this->success('新增成功!', __APP__.'/Syscolumn/add');
             }else{
                 $model->data($data)->save();
-                $this->success('修改成功!', __APP__.'/Syscolumn/index');
+                $this->success('修改成功!', __APP__.'/Syscolumn/index?id='.$data['parentId']);
             }
         }else{
             $this->error('参数传递错误!', __APP__.'/Syscolumn/index');

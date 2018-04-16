@@ -10,16 +10,16 @@
     <title>Gentelella Alela! | </title>
 
     <!-- Bootstrap -->
-    <link href="/Supermaket/Public/Vendor/gentelella/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/Design/Public/Vendor/gentelella/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="/Supermaket/Public/Vendor/gentelella/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Design/Public/Vendor/gentelella/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
-    <link href="/Supermaket/Public/Vendor/gentelella/vendors/nprogress/nprogress.css" rel="stylesheet">
+    <link href="/Design/Public/Vendor/gentelella/vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- Animate.css -->
-    <link href="/Supermaket/Public/Vendor/gentelella/vendors/animate.css/animate.min.css" rel="stylesheet">
+    <link href="/Design/Public/Vendor/gentelella/vendors/animate.css/animate.min.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
-    <link href="/Supermaket/Public/Vendor/gentelella/build/css/custom.min.css" rel="stylesheet">
+    <link href="/Design/Public/Vendor/gentelella/build/css/custom.min.css" rel="stylesheet">
 </head>
 
 <body class="login">
@@ -39,7 +39,7 @@
                         <input type="password" class="form-control" placeholder="Password" required="" />
                     </div>
                     <div>
-                        <a class="btn btn-default submit" href="/Supermaket/admin.php/Login/login">Log in</a>
+                        <a class="btn btn-default submit" href="/Design/admin.php/Login/login">Log in</a>
                         <a class="reset_pass" href="#">Lost your password?</a>
                     </div>
 

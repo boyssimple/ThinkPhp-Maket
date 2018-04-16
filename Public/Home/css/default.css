@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+/* 公共样式 */
+html,body,h1,h2,h3,h4,h5,h6,p,ul,li,pre,form,button,input,textarea,th,td{margin:0;padding:0;}
+body,html,input{font:12px/1.5 "微软雅黑",tahoma,arial,\5b8b\4f53,sans-serif;}
+h1{font-size:32px;}h2{font-size:26px;}h3{font-size:20px; }h4{font-size:16px;}h5{font-size:15px;}h6{font-size:12px;}
+h1,h2,h3,h4,h5,h6{font-weight: 400;}
+input{vertical-align:middle;}
+img{border:none;vertical-align:bottom;}
+ul,li{list-style:none;}
+a{text-decoration:none; color: inherit;}
+a:hover{text-decoration:underline;}
+button,input{background:#fff;border:none; outline: none;}
+.fixed{position:fixed;}
+.rel{position:relative;}
+.abs{position:absolute;}
+.clear{clear: both;}
+body{width: 100%; min-width: 1220px;}
+
+.content-width{width:1220px;margin: 0 auto;}

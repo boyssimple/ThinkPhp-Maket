@@ -37,10 +37,11 @@ $(function(){
             { "mData": "id","sWidth": 60},
             { "mData": "sysName","sWidth": 150},
             { "mData": "siteName","sWidth": 150},
-            { "mData": "sysVison","sWidth": 350},
+            { "mData": "sysVision","sWidth": 350},
             { "mData": "favicon","sWidth": 200},
             { "mData": "keywords","sWidth": 200},
-            { "mData": "lang","sWidth": 80},
+            { "mData": "lang","sWidth": 80},,
+            { "mData": "remark","sWidth": 180},
             { "mData": function(obj){
                 return '<a data-toggle="modal" data-target="#myModal"  onclick="edit('+obj.id+')" data-title="' + obj.id + '"  class="btn btn-success" href="#"><i class="icon-edit icon-white"></i>修改</a>' +'&nbsp;&nbsp;'+'<a  onclick="del('+obj.id+')"  data-title="' + obj.id + '"  class="btn btn-danger" href="#"><i class="icon-user icon-white"></i>删除</a>';
             }}

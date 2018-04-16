@@ -11,29 +11,29 @@
 
 
     <!-- Bootstrap -->
-    <link href="/Supermaket/Public/Vendor/gentelella/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/Design/Public/Vendor/gentelella/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="/Supermaket/Public/Vendor/gentelella/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Design/Public/Vendor/gentelella/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
-    <link href="/Supermaket/Public/Vendor/gentelella/vendors/nprogress/nprogress.css" rel="stylesheet">
+    <link href="/Design/Public/Vendor/gentelella/vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- iCheck -->
-    <link href="/Supermaket/Public/Vendor/gentelella/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+    <link href="/Design/Public/Vendor/gentelella/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
     <!-- bootstrap-wysiwyg -->
-    <link href="/Supermaket/Public/Vendor/gentelella/vendors/google-code-prettify/bin/prettify.min.css" rel="stylesheet">
+    <link href="/Design/Public/Vendor/gentelella/vendors/google-code-prettify/bin/prettify.min.css" rel="stylesheet">
     <!-- Select2 -->
-    <link href="/Supermaket/Public/Vendor/gentelella/vendors/select2/dist/css/select2.min.css" rel="stylesheet">
+    <link href="/Design/Public/Vendor/gentelella/vendors/select2/dist/css/select2.min.css" rel="stylesheet">
     <!-- Switchery -->
-    <link href="/Supermaket/Public/Vendor/gentelella/vendors/switchery/dist/switchery.min.css" rel="stylesheet">
+    <link href="/Design/Public/Vendor/gentelella/vendors/switchery/dist/switchery.min.css" rel="stylesheet">
     <!-- starrr -->
-    <link href="/Supermaket/Public/Vendor/gentelella/vendors/starrr/dist/starrr.css" rel="stylesheet">
+    <link href="/Design/Public/Vendor/gentelella/vendors/starrr/dist/starrr.css" rel="stylesheet">
     <!-- bootstrap-daterangepicker -->
-    <link href="/Supermaket/Public/Vendor/gentelella/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+    <link href="/Design/Public/Vendor/gentelella/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
-    <link href="/Supermaket/Public/Vendor/gentelella/build/css/custom.min.css" rel="stylesheet">
+    <link href="/Design/Public/Vendor/gentelella/build/css/custom.min.css" rel="stylesheet">
 
     <script type="text/javascript">
-        var ENV = '/Supermaket/admin.php';
+        var ENV = '/Design/admin.php';
     </script>
 </head>
 
@@ -44,7 +44,7 @@
         <div class="col-md-3 left_col">
     <div class="left_col scroll-view">
         <div class="navbar nav_title" style="border: 0;">
-            <a href="/Supermaket/admin.php" class="site_title"><i class="fa fa-paw"></i> <span>Gentelella Alela!</span></a>
+            <a href="/Design/admin.php" class="site_title"><i class="fa fa-paw"></i> <span>Gentelella Alela!</span></a>
         </div>
 
         <div class="clearfix"></div>
@@ -70,9 +70,17 @@
                 <ul class="nav side-menu">
                     <?php if(is_array($menus)): $i = 0; $__LIST__ = $menus;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$m): $mod = ($i % 2 );++$i;?><li><a><i class="fa fa-clone"></i><?php echo ($m["name"]); ?> <?php if( $m["children"] > 0 ): ?><span class="fa fa-chevron-down"></span><?php endif; ?></a>
                             <?php if( $m["children"] > 0 ): ?><ul class="nav child_menu">
-                                    <?php if(is_array($m["children"])): $i = 0; $__LIST__ = $m["children"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$ms): $mod = ($i % 2 );++$i;?><li><a  <?php if( $ms["menuUrl"] != '' ): ?>href="/Supermaket/admin.php/<?php echo ($ms["menuUrl"]); ?>"<?php endif; ?> ><?php echo ($ms["name"]); if( $ms["children"] > 0 ): ?><span class="fa fa-chevron-down"></span><?php endif; ?></a>
+                                    <?php if(is_array($m["children"])): $i = 0; $__LIST__ = $m["children"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$ms): $mod = ($i % 2 );++$i;?><li><a  <?php if( $ms["menuUrl"] != '' ): ?>href="/Design/admin.php/<?php echo ($ms["menuUrl"]); ?>"<?php endif; ?> ><?php echo ($ms["name"]); if( $ms["children"] > 0 ): ?><span class="fa fa-chevron-down"></span><?php endif; ?></a>
                                             <?php if( $ms["children"] > 0 ): ?><ul class="nav child_menu">
-                                                    <?php if(is_array($ms["children"])): $i = 0; $__LIST__ = $ms["children"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$mss): $mod = ($i % 2 );++$i;?><li class="sub_menu"><a href="/Supermaket/admin.php/<?php echo ($mss["menuUrl"]); ?>"><?php echo ($mss["name"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+                                                    <!--<?php if(is_array($ms["children"])): $i = 0; $__LIST__ = $ms["children"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$mss): $mod = ($i % 2 );++$i;?>-->
+                                                        <!--<li class="sub_menu"><a href="/Design/admin.php/<?php echo ($mss["menuUrl"]); ?>"><?php echo ($mss["name"]); ?></a></li>-->
+                                                    <!--<?php endforeach; endif; else: echo "" ;endif; ?>-->
+
+                                                    <?php if(is_array($ms["children"])): foreach($ms["children"] as $key=>$mss): ?><li><a  <?php if( $mss["menuUrl"] != '' ): ?>href="/Design/admin.php/<?php echo ($mss["menuUrl"]); ?>"<?php endif; ?> ><?php echo ($mss["name"]); if( $mss["children"] > 0 ): ?><span class="fa fa-chevron-down"></span><?php endif; ?></a>
+                                                            <?php if( $mss["children"] > 0 ): ?><ul class="nav child_menu">
+                                                                    <?php if(is_array($mss["children"])): foreach($mss["children"] as $key=>$msss): ?><li class="sub_menu"><a href="/Design/admin.php/<?php echo ($msss["menuUrl"]); ?>"><?php echo ($msss["name"]); ?></a></li><?php endforeach; endif; ?>
+                                                                </ul><?php endif; ?>
+                                                        </li><?php endforeach; endif; ?>
                                                 </ul><?php endif; ?>
                                         </li><?php endforeach; endif; else: echo "" ;endif; ?>
                                 </ul><?php endif; ?>
@@ -214,7 +222,7 @@
                             </div>
                             <div class="x_content">
                                 <br />
-                                <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" action="/Supermaket/admin.php/Sysmenu/save">
+                                <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" action="/Design/admin.php/Sysmenu/save">
 
 
                                                                                 <?php if($model): ?><input type="hidden" id="id" name="id" value="<?php echo ($model["id"]); ?>">
@@ -263,7 +271,7 @@
                                                 <label class="control-label col-md-3 col-sm-3 col-xs-12" >描述 </label>
                                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                                     
-                                                        <?php if($model): ?><textarea class="form-control" id="remark" name="remark" value="<?php echo ($model["remark"]); ?>" rows="3" placeholder='添加描述'></textarea>
+                                                        <?php if($model): ?><textarea class="form-control" id="remark" name="remark" rows="3" placeholder='添加描述'><?php echo ($model["remark"]); ?>h</textarea>
                                                             <?php else: ?>
                                                             <textarea class="form-control" id="remark" name="remark" rows="3" placeholder='添加描述'></textarea><?php endif; ?>
                                                     
@@ -351,7 +359,7 @@
         <!-- footer content -->
         <footer>
     <div class="pull-right">
-        <?php echo ($system["sysVison"]); ?>
+        <?php echo ($system["sysVision"]); ?>
     </div>
     <div class="clearfix"></div>
 </footer>
@@ -360,45 +368,45 @@
 </div>
 
 <!-- jQuery -->
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/jquery/dist/jquery.min.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap -->
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- FastClick -->
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/fastclick/lib/fastclick.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/fastclick/lib/fastclick.js"></script>
 <!-- NProgress -->
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/nprogress/nprogress.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/nprogress/nprogress.js"></script>
 <!-- bootstrap-progressbar -->
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
 <!-- iCheck -->
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/iCheck/icheck.min.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/iCheck/icheck.min.js"></script>
 <!-- bootstrap-daterangepicker -->
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/moment/min/moment.min.js"></script>
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/moment/min/moment.min.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
 <!-- bootstrap-wysiwyg -->
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/jquery.hotkeys/jquery.hotkeys.js"></script>
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/google-code-prettify/src/prettify.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/jquery.hotkeys/jquery.hotkeys.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/google-code-prettify/src/prettify.js"></script>
 <!-- jQuery Tags Input -->
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/jquery.tagsinput/src/jquery.tagsinput.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/jquery.tagsinput/src/jquery.tagsinput.js"></script>
 <!-- Switchery -->
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/switchery/dist/switchery.min.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/switchery/dist/switchery.min.js"></script>
 <!-- Select2 -->
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/select2/dist/js/select2.full.min.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/select2/dist/js/select2.full.min.js"></script>
 <!-- Parsley -->
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/parsleyjs/dist/parsley.min.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/parsleyjs/dist/parsley.min.js"></script>
 <!-- Autosize -->
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/autosize/dist/autosize.min.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/autosize/dist/autosize.min.js"></script>
 <!-- jQuery autocomplete -->
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/devbridge-autocomplete/dist/jquery.autocomplete.min.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/devbridge-autocomplete/dist/jquery.autocomplete.min.js"></script>
 <!-- starrr -->
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/starrr/dist/starrr.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/starrr/dist/starrr.js"></script>
 <!-- Custom Theme Scripts -->
-<script src="/Supermaket/Public/Vendor/gentelella/build/js/custom.min.js"></script>
+<script src="/Design/Public/Vendor/gentelella/build/js/custom.min.js"></script>
 
 
 
-<link rel="stylesheet" href="/Supermaket/Public/Vendor//zTree_v3/css/zTreeStyle/zTreeStyle.css" type="text/css">
-<script type="text/javascript" src="/Supermaket/Public/Vendor//zTree_v3/js/jquery.ztree.core.js"></script>
+<link rel="stylesheet" href="/Design/Public/Vendor/zTree_v3/css/zTreeStyle/zTreeStyle.css" type="text/css">
+<script type="text/javascript" src="/Design/Public/Vendor/zTree_v3/js/jquery.ztree.core.js"></script>
 <script>
     var setting = {
         async: {

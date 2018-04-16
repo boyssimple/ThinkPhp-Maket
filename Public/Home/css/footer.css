@@ -1,0 +1,13 @@
+/*底部样式*/
+.footer_box{width: 100%; height: 260px;  position: relative;background-color: #1a1a1a}
+.footer{width: 1220px; height: 260px; margin: 0 auto; }
+.footer_top_box{width: 1220px; height: 180px; padding-top: 20px;}
+.footer_nav{width: 1007px; height: 170px; float: left; margin-left: 8px;border-right:1px solid #434748;}
+.footer_nav>ul{width: 102.3px; height: inherit; float: left;margin-right: 50px;}
+.footer_nav>ul>li{color: #898989; padding: 5px 0;}
+.footer_nav>ul>li:first-child{color: #e2e2e2; font-size: 14px; padding-top: 0;}
+.footer_qr{width:100px;height:100px;float: right;margin-top: 30px;}
+.footer_qr img{width:100px;height:100px;float: right;}
+.footer_qr p{color: white;text-align: center;line-height: 30px}
+.shj_index_footer_bottom{width: 100%; height: 50px; background: rgba(0,0,0,0.3); position: absolute; bottom: 0; left: 0;}
+.shj_index_footer_webinfo{height: 50px; text-align: center; color: #fff; line-height: 50px;}

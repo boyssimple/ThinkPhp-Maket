@@ -38,7 +38,10 @@ $(function(){
                 <if condition="$vo.colName eq 'id' ">
                     { "mData": "{$vo.colName}","sWidth": 80},
                     <else/>
-                    { "mData": "{$vo.colName}","sWidth": 200},
+                    <if condition="$vo.isHidden neq 1">
+
+                        { "mData": "{$vo.colName}","sWidth": 200},
+                    </if>
                 </if>
             </volist>
 

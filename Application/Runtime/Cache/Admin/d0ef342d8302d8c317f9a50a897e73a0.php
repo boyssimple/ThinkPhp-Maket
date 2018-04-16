@@ -36,7 +36,7 @@
         aoColumns : [//服务器返回的数据处理 此时返回的是 {}
             <?php if(is_array($fields)): $i = 0; $__LIST__ = $fields;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i; if($vo["colName"] == 'id' ): ?>{ "mData": "<?php echo ($vo["colName"]); ?>","sWidth": 80},
                     <?php else: ?>
-                    { "mData": "<?php echo ($vo["colName"]); ?>","sWidth": 200},<?php endif; endforeach; endif; else: echo "" ;endif; ?>
+                    <?php if($vo["isHidden"] != 1): ?>{ "mData": "<?php echo ($vo["colName"]); ?>","sWidth": 200},<?php endif; endif; endforeach; endif; else: echo "" ;endif; ?>
 
             { "mData": function(obj){
                 return '<a data-toggle="modal" data-target="#myModal"  onclick="edit('+obj.id+')" data-title="' + obj.id + '"  class="btn btn-success" href="#"><i class="icon-edit icon-white"></i>修改</a>' +'&nbsp;&nbsp;'+'<a  onclick="del('+obj.id+')"  data-title="' + obj.id + '"  class="btn btn-danger" href="#"><i class="icon-user icon-white"></i>删除</a>';

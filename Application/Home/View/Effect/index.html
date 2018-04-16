@@ -1,0 +1,230 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <include file="Public:head" />
+    <title> 装修效果图</title>
+    <link rel="stylesheet" href="__HOME__/css/effect.css" />
+</head>
+<body>
+<!--文件路径-->
+<input type="hidden" value="http://www.shj.cn/statics/2017/" id="file_path">
+<!--顶部开始-->
+<include file="Public:header" />
+<!--页面标识-->
+<input type="hidden" id="page_flag" value="lxgt">
+<style>.layui-layer-content{overflow: hidden !important;}</style>
+<div class="shj_lxgt_box">
+    <div class="shj_lxgt_top_bg"></div>
+    <div class="shj_lxgt">
+        <div class="shj_crumbs">
+            当前位置：
+            <span><a href=""  class="seturl"  data-url=''>首页</a></span>
+            <span class="shj_crumbs_icon">></span>
+            <span class="shj_crumbs_now"><a href=""></a></span>
+        </div>
+        <input type="hidden" id="page" value="{$page}">
+        <div class="shj_lxgt_title">
+            <div class="shj_lxgt_select_box">
+                <h4>装修风格 <span>/ STYLE</span></h4>
+                <ul>
+                    <foreach name="styles" item="vo">
+                        <if condition="$vo.id eq $styleId">
+                            <li class="select_blur select_focus" data-id="{$vo.id}">{$vo.name}</li>
+                        <else/>
+                            <li class="select_blur" data-id="{$vo.id}">{$vo.name}</li>
+                        </if>
+                    </foreach>
+                    <input type="hidden" id="style" value="{$styleId}">
+                </ul>
+                <div class="clear"></div>
+                <h4>装修户型 <span>/ TYPE</span></h4>
+                <ul>
+                    <foreach name="types" item="vo">
+                        <if condition="$vo.id eq $typeId">
+                            <li class="select_blur select_focus" data-id="{$vo.id}">{$vo.name}</li>
+                            <else/>
+                            <li class="select_blur" data-id="{$vo.id}">{$vo.name}</li>
+                        </if>
+                    </foreach>
+                    <input type="hidden" id="type" value="{$typeId}">
+                </ul>
+                <div class="clear"></div>
+                <h4>空间 <span>/ SPACE</span></h4>
+                <ul>
+                    <foreach name="spaces" item="vo">
+                        <if condition="$vo.id eq $spaceId">
+                            <li class="select_blur select_focus" data-id="{$vo.id}">{$vo.name}</li>
+                            <else/>
+                            <li class="select_blur" data-id="{$vo.id}">{$vo.name}</li>
+                        </if>
+                    </foreach>
+                    <input type="hidden" id="space" value="{$spaceId}">
+                </ul>
+                <input type="hidden" value="0" id="p">
+            </div>
+            <div class="shj_index_xgt_swiper_box shj_lxgt_swiper_box">
+                <div class="swiper-container" >
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <a href="http://www.shj.cn/styletest/" target="_blank"><img src="http://www.shj.cn/uploadfile/2017/27/20170727022239946.jpg" alt="" width="910" height="425" /></a>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <a href="http://www.shj.cn/zt/dzmj.html" target="_blank"><img src="http://www.shj.cn/uploadfile/2017/16/20171216045540612.jpg" alt="" width="910" height="425" /></a>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <a href="http://www.shj.cn/zt/sfsj.html" target="_blank"><img src="http://www.shj.cn/uploadfile/2018/06/20180206032424496.jpg" alt="" width="910" height="425" /></a>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <a href="http://xiaoguotu.shj.cn/30.html" target="_blank"><img src="http://www.shj.cn/uploadfile/2017/16/20170116013307105.jpg" alt="" width="910" height="425" /></a>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <a href="http://xiaoguotu.shj.cn/330.html" target="_blank"><img src="http://www.shj.cn/uploadfile/2017/20/20170720013211435.jpg" alt="" width="910" height="425" /></a>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <a href="http://xiaoguotu.shj.cn/22.html" target="_blank"><img src="http://www.shj.cn/uploadfile/2017/16/20170116015535522.jpg" alt="" width="910" height="425" /></a>
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+        <div class="shj_lxgt_lists_wrap">
+            <ul class ="shj_lxgt_lists">
+                <foreach name="effects" item="vo">
+                    <li class="shj_lxgt_item">
+                        <a href="__APP__/Effect/detail?id={$vo.id}" title="济南生活家装饰保利中心华府欧式风格">
+                            <img src="__SERVER____ROOT__/Uploads/{$vo.url}" alt="济南生活家装饰保利中心华府欧式风格">
+                            <div class="shj_lxgt_info">
+                                {$vo.name}									<span>{$vo.imgs|count}张</span>
+                            </div>
+                        </a>
+                    </li>
+                </foreach>
+            </ul>
+            <div class="shj_lxgt_none" style="display: none;"><h3>没事找到相关效果图</h3></div>
+        </div>
+        <input type="hidden" id="thisPutData">
+    </div>
+    <div class="clear"></div>
+
+    <div class="paganation">
+        <if condition="$page gt 1">
+            <a href="javascript:;" class="prev">&lt;</a>
+        </if>
+        <if condition="$ps gt 2">
+            <span>...</span>
+        </if>
+        <for start="$ps" end="$pe">
+            <if condition="$i eq $page">
+                <span class="active">{$i}</span>
+            <else/>
+            <a href="javascript:;" onclick="pageChage({$i})" data-page="1">{$i}</a>
+            </if>
+        </for>
+
+        <if condition="$pe lt ($totalPage+1)">
+            <span>...</span>
+        </if>
+
+        <if condition="$totalPage gt 1">
+            <a href="javascript:;" class="next">&gt;</a>
+        </if>
+
+        <!--
+
+        <a href="javascript:;" class="prev">&lt;</a>
+        <a href="javascript:;" data-page="1">1</a>
+        <a href="javascript:;" data-page="2">2</a>
+        <a href="javascript:;" data-page="3">3</a>
+        <span class="active">4</span><a href="javascript:;" data-page="5">5</a>
+        <a href="javascript:;" data-page="6">6</a>
+        <a href="javascript:;" data-page="7">7</a>
+        <a href="javascript:;" data-page="8">8</a><span>...</span>
+        <a href="javascript:;" data-page="20">20</a>
+        <a href="javascript:;" class="next">&gt;</a>
+
+        -->
+    </div>
+</div>
+<!--底部开始-->
+<include file="Public:footer" />
+<!--底部结束-->
+
+<script type="text/javascript" src="__JS__/swiper-3.2.5/swiper-3.2.5.min.js"></script>
+<script type="text/javascript" src="__JS__/layer/layer.js"></script>
+<script type="text/javascript" src="__HOME__/js/jsq.js"></script>
+<script type="text/javascript" src="__HOME__/js/bj.js"></script>
+<!--<script type='text/javascript' src='http://chat.53kf.com/kf.php?arg=sdlcjt&style=22'></script>-->
+<script>
+    $(function(){
+        new Swiper ('.swiper-container', {
+            loop: true,
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+            autoplay: 5000,
+            pagination: '.swiper-pagination',
+            paginationClickable: true
+        });
+
+        $('.select_blur').each(function(){
+            $(this).click(function () {
+                var that = $(this);
+                that.siblings('li').each(function(){
+                    $(this).removeClass('select_focus');
+                });
+
+                that.siblings('input').each(function(){
+                    $(this).val(that.attr('data-id'));
+                });
+                that.addClass('select_focus');
+                var url = "/Effect?req=1";
+                var style = $("#style").val();
+                var type = $("#type").val();
+                var space = $("#space").val();
+                if(style != undefined && style != ""){
+                    url += "&styleId="+style;
+                }
+                if(type != undefined && type != ""){
+                    url += "&typeId="+type;
+                }
+                if(space != undefined && space != ""){
+                    url += "&spaceId="+space;
+                }
+                var page = $("#page").val();
+                if(page != undefined && page != ""){
+                    url += "&page="+page;
+                }
+                window.location = ENV+url;
+            })
+        });
+    })
+
+    function pageChage(page){
+        var url = "/Effect?req=1";
+        var style = $("#style").val();
+        var type = $("#type").val();
+        var space = $("#space").val();
+        if(style != undefined && style != ""){
+            url += "&styleId="+style;
+        }
+        if(type != undefined && type != ""){
+            url += "&typeId="+type;
+        }
+        if(space != undefined && space != ""){
+            url += "&spaceId="+space;
+        }
+        url += "&page="+page;
+
+        window.location = ENV+url;
+    }
+</script>
+</body>
+</html>

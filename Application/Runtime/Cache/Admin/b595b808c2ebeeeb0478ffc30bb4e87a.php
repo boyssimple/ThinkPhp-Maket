@@ -10,23 +10,23 @@
 <title><?php echo ($system["sysName"]); ?></title>
 
     <!-- Bootstrap -->
-    <link href="/Supermaket/Public/Vendor/gentelella/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/Design/Public/Vendor/gentelella/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="/Supermaket/Public/Vendor/gentelella/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Design/Public/Vendor/gentelella/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
-    <link href="/Supermaket/Public/Vendor/gentelella/vendors/nprogress/nprogress.css" rel="stylesheet">
+    <link href="/Design/Public/Vendor/gentelella/vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- iCheck -->
-    <link href="/Supermaket/Public/Vendor/gentelella/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+    <link href="/Design/Public/Vendor/gentelella/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
 
     <!-- bootstrap-progressbar -->
-    <link href="/Supermaket/Public/Vendor/gentelella/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    <link href="/Design/Public/Vendor/gentelella/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
     <!-- JQVMap -->
-    <link href="/Supermaket/Public/Vendor/gentelella/vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
+    <link href="/Design/Public/Vendor/gentelella/vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
     <!-- bootstrap-daterangepicker -->
-    <link href="/Supermaket/Public/Vendor/gentelella/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+    <link href="/Design/Public/Vendor/gentelella/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
-    <link href="/Supermaket/Public/Vendor/gentelella/build/css/custom.min.css" rel="stylesheet">
+    <link href="/Design/Public/Vendor/gentelella/build/css/custom.min.css" rel="stylesheet">
 </head>
 
 <body class="nav-md">
@@ -36,7 +36,7 @@
         <div class="col-md-3 left_col">
     <div class="left_col scroll-view">
         <div class="navbar nav_title" style="border: 0;">
-            <a href="/Supermaket/admin.php" class="site_title"><i class="fa fa-paw"></i> <span>Gentelella Alela!</span></a>
+            <a href="/Design/admin.php" class="site_title"><i class="fa fa-paw"></i> <span>Gentelella Alela!</span></a>
         </div>
 
         <div class="clearfix"></div>
@@ -62,9 +62,17 @@
                 <ul class="nav side-menu">
                     <?php if(is_array($menus)): $i = 0; $__LIST__ = $menus;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$m): $mod = ($i % 2 );++$i;?><li><a><i class="fa fa-clone"></i><?php echo ($m["name"]); ?> <?php if( $m["children"] > 0 ): ?><span class="fa fa-chevron-down"></span><?php endif; ?></a>
                             <?php if( $m["children"] > 0 ): ?><ul class="nav child_menu">
-                                    <?php if(is_array($m["children"])): $i = 0; $__LIST__ = $m["children"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$ms): $mod = ($i % 2 );++$i;?><li><a  <?php if( $ms["menuUrl"] != '' ): ?>href="/Supermaket/admin.php/<?php echo ($ms["menuUrl"]); ?>"<?php endif; ?> ><?php echo ($ms["name"]); if( $ms["children"] > 0 ): ?><span class="fa fa-chevron-down"></span><?php endif; ?></a>
+                                    <?php if(is_array($m["children"])): $i = 0; $__LIST__ = $m["children"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$ms): $mod = ($i % 2 );++$i;?><li><a  <?php if( $ms["menuUrl"] != '' ): ?>href="/Design/admin.php/<?php echo ($ms["menuUrl"]); ?>"<?php endif; ?> ><?php echo ($ms["name"]); if( $ms["children"] > 0 ): ?><span class="fa fa-chevron-down"></span><?php endif; ?></a>
                                             <?php if( $ms["children"] > 0 ): ?><ul class="nav child_menu">
-                                                    <?php if(is_array($ms["children"])): $i = 0; $__LIST__ = $ms["children"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$mss): $mod = ($i % 2 );++$i;?><li class="sub_menu"><a href="/Supermaket/admin.php/<?php echo ($mss["menuUrl"]); ?>"><?php echo ($mss["name"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+                                                    <!--<?php if(is_array($ms["children"])): $i = 0; $__LIST__ = $ms["children"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$mss): $mod = ($i % 2 );++$i;?>-->
+                                                        <!--<li class="sub_menu"><a href="/Design/admin.php/<?php echo ($mss["menuUrl"]); ?>"><?php echo ($mss["name"]); ?></a></li>-->
+                                                    <!--<?php endforeach; endif; else: echo "" ;endif; ?>-->
+
+                                                    <?php if(is_array($ms["children"])): foreach($ms["children"] as $key=>$mss): ?><li><a  <?php if( $mss["menuUrl"] != '' ): ?>href="/Design/admin.php/<?php echo ($mss["menuUrl"]); ?>"<?php endif; ?> ><?php echo ($mss["name"]); if( $mss["children"] > 0 ): ?><span class="fa fa-chevron-down"></span><?php endif; ?></a>
+                                                            <?php if( $mss["children"] > 0 ): ?><ul class="nav child_menu">
+                                                                    <?php if(is_array($mss["children"])): foreach($mss["children"] as $key=>$msss): ?><li class="sub_menu"><a href="/Design/admin.php/<?php echo ($msss["menuUrl"]); ?>"><?php echo ($msss["name"]); ?></a></li><?php endforeach; endif; ?>
+                                                                </ul><?php endif; ?>
+                                                        </li><?php endforeach; endif; ?>
                                                 </ul><?php endif; ?>
                                         </li><?php endforeach; endif; else: echo "" ;endif; ?>
                                 </ul><?php endif; ?>
@@ -889,7 +897,7 @@
         <!-- footer content -->
         <footer>
     <div class="pull-right">
-        <?php echo ($system["sysVison"]); ?>
+        <?php echo ($system["sysVision"]); ?>
     </div>
     <div class="clearfix"></div>
 </footer>
@@ -898,45 +906,45 @@
 </div>
 
 <!-- jQuery -->
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/jquery/dist/jquery.min.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap -->
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- FastClick -->
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/fastclick/lib/fastclick.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/fastclick/lib/fastclick.js"></script>
 <!-- NProgress -->
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/nprogress/nprogress.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/nprogress/nprogress.js"></script>
 <!-- Chart.js -->
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/Chart.js/dist/Chart.min.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/Chart.js/dist/Chart.min.js"></script>
 <!-- gauge.js -->
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/gauge.js/dist/gauge.min.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/gauge.js/dist/gauge.min.js"></script>
 <!-- bootstrap-progressbar -->
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
 <!-- iCheck -->
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/iCheck/icheck.min.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/iCheck/icheck.min.js"></script>
 <!-- Skycons -->
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/skycons/skycons.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/skycons/skycons.js"></script>
 <!-- Flot -->
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/Flot/jquery.flot.js"></script>
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/Flot/jquery.flot.pie.js"></script>
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/Flot/jquery.flot.time.js"></script>
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/Flot/jquery.flot.stack.js"></script>
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/Flot/jquery.flot.resize.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/Flot/jquery.flot.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/Flot/jquery.flot.pie.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/Flot/jquery.flot.time.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/Flot/jquery.flot.stack.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/Flot/jquery.flot.resize.js"></script>
 <!-- Flot plugins -->
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/flot.curvedlines/curvedLines.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/flot.curvedlines/curvedLines.js"></script>
 <!-- DateJS -->
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/DateJS/build/date.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/DateJS/build/date.js"></script>
 <!-- JQVMap -->
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/jqvmap/dist/jquery.vmap.js"></script>
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/jqvmap/dist/jquery.vmap.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
 <!-- bootstrap-daterangepicker -->
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/moment/min/moment.min.js"></script>
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/moment/min/moment.min.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
 
 <!-- Custom Theme Scripts -->
-<script src="/Supermaket/Public/Vendor/gentelella/build/js/custom.min.js"></script>
+<script src="/Design/Public/Vendor/gentelella/build/js/custom.min.js"></script>
 
 </body>
 </html>

@@ -11,25 +11,25 @@
 
 
     <!-- Bootstrap -->
-    <link href="/Supermaket/Public/Vendor/gentelella/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/Design/Public/Vendor/gentelella/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="/Supermaket/Public/Vendor/gentelella/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Design/Public/Vendor/gentelella/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
-    <link href="/Supermaket/Public/Vendor/gentelella/vendors/nprogress/nprogress.css" rel="stylesheet">
+    <link href="/Design/Public/Vendor/gentelella/vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- iCheck -->
-    <link href="/Supermaket/Public/Vendor/gentelella/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+    <link href="/Design/Public/Vendor/gentelella/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
     <!-- Datatables -->
-    <link href="/Supermaket/Public/Vendor/gentelella/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
-    <link href="/Supermaket/Public/Vendor/gentelella/vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
-    <link href="/Supermaket/Public/Vendor/gentelella/vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
-    <link href="/Supermaket/Public/Vendor/gentelella/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
-    <link href="/Supermaket/Public/Vendor/gentelella/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
+    <link href="/Design/Public/Vendor/gentelella/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <link href="/Design/Public/Vendor/gentelella/vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
+    <link href="/Design/Public/Vendor/gentelella/vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
+    <link href="/Design/Public/Vendor/gentelella/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
+    <link href="/Design/Public/Vendor/gentelella/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
-    <link href="/Supermaket/Public/Vendor/gentelella/build/css/custom.min.css" rel="stylesheet">
+    <link href="/Design/Public/Vendor/gentelella/build/css/custom.min.css" rel="stylesheet">
 
     <script type="text/javascript">
-        var ENV = '/Supermaket/admin.php';
+        var ENV = '/Design/admin.php';
     </script>
 
 </head>
@@ -41,7 +41,7 @@
         <div class="col-md-3 left_col">
     <div class="left_col scroll-view">
         <div class="navbar nav_title" style="border: 0;">
-            <a href="/Supermaket/admin.php" class="site_title"><i class="fa fa-paw"></i> <span>Gentelella Alela!</span></a>
+            <a href="/Design/admin.php" class="site_title"><i class="fa fa-paw"></i> <span>Gentelella Alela!</span></a>
         </div>
 
         <div class="clearfix"></div>
@@ -67,9 +67,17 @@
                 <ul class="nav side-menu">
                     <?php if(is_array($menus)): $i = 0; $__LIST__ = $menus;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$m): $mod = ($i % 2 );++$i;?><li><a><i class="fa fa-clone"></i><?php echo ($m["name"]); ?> <?php if( $m["children"] > 0 ): ?><span class="fa fa-chevron-down"></span><?php endif; ?></a>
                             <?php if( $m["children"] > 0 ): ?><ul class="nav child_menu">
-                                    <?php if(is_array($m["children"])): $i = 0; $__LIST__ = $m["children"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$ms): $mod = ($i % 2 );++$i;?><li><a  <?php if( $ms["menuUrl"] != '' ): ?>href="/Supermaket/admin.php/<?php echo ($ms["menuUrl"]); ?>"<?php endif; ?> ><?php echo ($ms["name"]); if( $ms["children"] > 0 ): ?><span class="fa fa-chevron-down"></span><?php endif; ?></a>
+                                    <?php if(is_array($m["children"])): $i = 0; $__LIST__ = $m["children"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$ms): $mod = ($i % 2 );++$i;?><li><a  <?php if( $ms["menuUrl"] != '' ): ?>href="/Design/admin.php/<?php echo ($ms["menuUrl"]); ?>"<?php endif; ?> ><?php echo ($ms["name"]); if( $ms["children"] > 0 ): ?><span class="fa fa-chevron-down"></span><?php endif; ?></a>
                                             <?php if( $ms["children"] > 0 ): ?><ul class="nav child_menu">
-                                                    <?php if(is_array($ms["children"])): $i = 0; $__LIST__ = $ms["children"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$mss): $mod = ($i % 2 );++$i;?><li class="sub_menu"><a href="/Supermaket/admin.php/<?php echo ($mss["menuUrl"]); ?>"><?php echo ($mss["name"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+                                                    <!--<?php if(is_array($ms["children"])): $i = 0; $__LIST__ = $ms["children"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$mss): $mod = ($i % 2 );++$i;?>-->
+                                                        <!--<li class="sub_menu"><a href="/Design/admin.php/<?php echo ($mss["menuUrl"]); ?>"><?php echo ($mss["name"]); ?></a></li>-->
+                                                    <!--<?php endforeach; endif; else: echo "" ;endif; ?>-->
+
+                                                    <?php if(is_array($ms["children"])): foreach($ms["children"] as $key=>$mss): ?><li><a  <?php if( $mss["menuUrl"] != '' ): ?>href="/Design/admin.php/<?php echo ($mss["menuUrl"]); ?>"<?php endif; ?> ><?php echo ($mss["name"]); if( $mss["children"] > 0 ): ?><span class="fa fa-chevron-down"></span><?php endif; ?></a>
+                                                            <?php if( $mss["children"] > 0 ): ?><ul class="nav child_menu">
+                                                                    <?php if(is_array($mss["children"])): foreach($mss["children"] as $key=>$msss): ?><li class="sub_menu"><a href="/Design/admin.php/<?php echo ($msss["menuUrl"]); ?>"><?php echo ($msss["name"]); ?></a></li><?php endforeach; endif; ?>
+                                                                </ul><?php endif; ?>
+                                                        </li><?php endforeach; endif; ?>
                                                 </ul><?php endif; ?>
                                         </li><?php endforeach; endif; else: echo "" ;endif; ?>
                                 </ul><?php endif; ?>
@@ -232,7 +240,7 @@
         <!-- footer content -->
         <footer>
     <div class="pull-right">
-        <?php echo ($system["sysVison"]); ?>
+        <?php echo ($system["sysVision"]); ?>
     </div>
     <div class="clearfix"></div>
 </footer>
@@ -241,35 +249,35 @@
 </div>
 
 <!-- jQuery -->
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/jquery/dist/jquery.min.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap -->
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- FastClick -->
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/fastclick/lib/fastclick.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/fastclick/lib/fastclick.js"></script>
 <!-- NProgress -->
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/nprogress/nprogress.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/nprogress/nprogress.js"></script>
 <!-- iCheck -->
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/iCheck/icheck.min.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/iCheck/icheck.min.js"></script>
 <!-- Datatables -->
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/datatables.net/js/jquery.dataTables.min.js"></script>
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/datatables.net-buttons/js/buttons.flash.min.js"></script>
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/jszip/dist/jszip.min.js"></script>
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/pdfmake/build/pdfmake.min.js"></script>
-<script src="/Supermaket/Public/Vendor/gentelella/vendors/pdfmake/build/vfs_fonts.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/datatables.net-buttons/js/buttons.flash.min.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/jszip/dist/jszip.min.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/pdfmake/build/pdfmake.min.js"></script>
+<script src="/Design/Public/Vendor/gentelella/vendors/pdfmake/build/vfs_fonts.js"></script>
 
 <!-- Custom Theme Scripts -->
-<script src="/Supermaket/Public/Vendor/gentelella/build/js/custom.min.js"></script>
-<script src="/Supermaket/Public/Admin//js/syscolumn.js"></script>
+<script src="/Design/Public/Vendor/gentelella/build/js/custom.min.js"></script>
+<script src="/Design/Public/Admin//js/syscolumn.js"></script>
 
 </body>
 </html>

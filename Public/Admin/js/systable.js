@@ -43,6 +43,7 @@ $(function(){
                 action += '&nbsp;&nbsp;'+'<a data-toggle="modal" data-target="#myModal"  onclick="edit('+obj.id+')" data-title="' + obj.id + '"  class="btn btn-success" href="#"><i class="icon-edit icon-white"></i>修改</a>';
                 action += '&nbsp;&nbsp;'+'<a  onclick="execute('+obj.id+')"  data-title="' + obj.id + '"  class="btn btn-danger" href="#"><i class="icon-user icon-white"></i>生成数据表</a>';
                 action += '&nbsp;&nbsp;'+'<a  onclick="geneHtml('+obj.id+')"  data-title="' + obj.id + '"  class="btn btn-danger" href="#"><i class="icon-user icon-white"></i>生成页面</a>';
+                action += '&nbsp;&nbsp;'+'<a  onclick="clearData('+obj.id+')"  data-title="' + obj.id + '"  class="btn btn-danger" href="#"><i class="icon-user icon-white"></i>清空数据</a>';
                 action += '&nbsp;&nbsp;'+'<a  onclick="del('+obj.id+')"  data-title="' + obj.id + '"  class="btn btn-danger" href="#"><i class="icon-user icon-white"></i>删除</a>';
                 return action;
             }}
@@ -65,6 +66,18 @@ function del(id){
                 $('#datatable1').DataTable().ajax.reload();
             }else{
                 alert("删除失败！");
+            }
+        },'json');
+    }
+}
+
+function clearData(id){
+    if (window.confirm("确定清空数据？")){
+        $.post(ENV + '/Systable/clearData',{id:id},function(result){
+            if(result.success == true || result.success == 'true'){
+                alert("清理成功！");
+            }else{
+                alert("清理失败！");
             }
         },'json');
     }

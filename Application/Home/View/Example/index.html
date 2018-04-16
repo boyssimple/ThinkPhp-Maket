@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <include file="Public:head" />
+    <title> 装修设计案例</title>
+    <link rel="stylesheet" href="__HOME__/css/example.css" />
+</head>
+<body>
+<!--文件路径-->
+<input type="hidden" value="http://www.shj.cn/statics/2017/" id="file_path">
+<!--顶部开始-->
+
+<include file="Public:header" />
+<!--页面标识-->
+
+<input type="hidden" id="page" value="1">
+<input type="hidden" id="liCount" value="0">
+<input type="hidden" id="page_flag" value="lanli">
+<input type="hidden" id="city" value="3775">
+<div class="shj_lrj_box">
+    <div class="shj_lrj">
+
+        <div class="example_bg"></div>
+
+        <div class="shj_lsjs_box">
+            <div class="shj_lrj_select_menu">
+                <ul id="fcptx">
+                    <li class="shj_lrj_select_menu_first">产品套系</li>
+                    <li class="shj_lrj_select_menu_blur shj_lrj_select_menu_focus">全部</li>
+
+                    <foreach name="series" item="vo">
+                        <li class="shj_lrj_select_menu_blur" data-v="{$vo.id}">{$vo.name}</li>
+                    </foreach>
+                    <input type="hidden" id="cptx" value="0"/>
+                </ul>
+                <ul id="fmjfw">
+                    <li class="shj_lrj_select_menu_first">面积范围</li>
+                    <li class="shj_lrj_select_menu_blur shj_lrj_select_menu_focus">全部</li>
+
+
+                    <foreach name="areas" item="vo">
+                        <li class="shj_lrj_select_menu_blur" data-v="{$vo.id}">{$vo.name}</li>
+                    </foreach>
+
+
+                    <input type="hidden" id="mjfw" value="0"/>
+                </ul>
+                <ul id="ffwhx">
+                    <li class="shj_lrj_select_menu_first">房屋户型</li>
+                    <li class="shj_lrj_select_menu_blur shj_lrj_select_menu_focus">全部</li>
+
+                    <foreach name="hoursettype" item="vo">
+                        <li class="shj_lrj_select_menu_blur" data-v="{$vo.id}">{$vo.name}</li>
+                    </foreach>
+
+
+                    <input type="hidden" id="fwhx" value="0"/>
+                </ul>
+                <ul id="fzxfg">
+                    <li class="shj_lrj_select_menu_first">装修风格</li>
+                    <li class="shj_lrj_select_menu_blur shj_lrj_select_menu_focus">全部</li>
+
+
+                    <foreach name="styles" item="vo">
+                        <li class="shj_lrj_select_menu_blur" data-v="{$vo.id}">{$vo.name}</li>
+                    </foreach>
+
+
+                    <input type="hidden" id="zxfg" value="0"/>
+                </ul>
+            </div>
+            <div class="shj_lsjs_search_box">
+                <div class="shj_lsjs_search_choose">
+                    <span>当前筛选</span>
+                    <h6 id="shj_lsjs_search_tx">套系&nbsp<span></span></h6>
+                    <span>+</span>
+                    <h6 id="shj_lsjs_search_hx">户型&nbsp<span></span></h6>
+                    <span>+</span>
+                    <h6 id="shj_lsjs_search_fg">风格&nbsp<span></span></h6>
+                    <span>+</span>
+                    <h6 id="shj_lsjs_search_mj">面积&nbsp<span></span></h6>
+                    <span>共找到以下案例</span>
+                </div>
+                <div class="shj_lsjs_search_input_box">
+                    <input type="text" class="shj_lsjs_search_input" placeholder="关键词">
+                    <input type="button" class="shj_lsjs_search_btn" id="shj_lanli_searchBtn" value="找案例">
+                </div>
+            </div>
+            <div class="shj_lsjs_lists">
+                <ul class="shj_lal_list_ul">
+                    <foreach name="examples" item="vo">
+                        <li>
+                            <div class="shj_lal_item">
+                                <div class="shj_lal_alimg">
+                                    <div class="shj_lal_alimg_imgbox">
+                                        <a href="__APP__/Example/detail?id={$vo.id}"><img src="http://www.shj.cn/uploadfile/2018/22/20180322100714331.jpg" alt="{$vo.name}" /></a>
+                                    </div>
+                                   <!-- <div class="shj_lal_sjsimg">
+                                        <a href="#"><img src="http://www.shj.cn/uploadfile/2018/19/20180119092158741.jpg" title="主创设计师： 邱胜敏" ></a>
+                                    </div>-->
+                                </div>
+                                <div class="shj_lal_info_box">
+                                    <h4 class="shj_lal_info_title">
+                                        {$vo.name}								</h4>
+                                    <div class="shj_lal_info_btn_box">
+                                        <h5>所属系列—{$vo.seriesId}</h5>
+                                        <a href="#" target="_blank" class="shj_ljfgz_item_btn shj_lal_info_btn2">预约设计</a>
+                                        <a href="__APP__/Example/detail?id={$vo.id}" class="shj_ljfgz_item_btn">查看详情</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </foreach>
+
+
+                </ul>
+            </div>
+        </div>
+        <div class="clear"></div>
+
+        <div class="shj_page">
+            <a class="a1">703条</a> <a href="index.html" class="a1">上一页</a> <span>1</span> <a href="index_2.html">2</a> <a href="index_3.html">3</a> <a href="index_4.html">4</a> <a href="index_5.html">5</a> <a href="index_6.html">6</a> <a href="index_7.html">7</a> <a href="index_8.html">8</a> <a href="index_9.html">9</a> <a href="index_10.html">10</a> ..<a href="index_79.html">79</a> <a href="index_2.html" class="a1">下一页</a>			</div>
+    </div>
+</div>
+<!--底部开始-->
+<include file="Public:footer" />
+<!--底部结束-->
+<script type="text/javascript" src="__JS__/swiper-3.2.5/swiper-3.2.5.min.js"></script>
+<script type="text/javascript" src="__HOME__/js/index.js"></script>
+<script type="text/javascript" src="__JS__/layer/layer.js"></script>
+<script type="text/javascript" src="__HOME__/js/jsq.js"></script>
+<script type="text/javascript" src="__HOME__/js/bj.js"></script>
+<!--<script type='text/javascript' src='http://chat.53kf.com/kf.php?arg=sdlcjt&style=22'></script>-->
+
+</body>
+</html>

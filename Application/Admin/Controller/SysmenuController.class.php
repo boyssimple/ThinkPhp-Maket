@@ -127,7 +127,10 @@ class SysmenuController extends CommonController {
             $ID = isset($_POST['id']) ? $_POST['id']:"";
             if (!empty($ID)){
                 $model = D("Sysmenu");
+
+
                 $r = $model->where('id='.$ID)->delete();
+                $this->deleChild($ID);
                 if ($r > 0){
                     $result = true;
                     $msg= '删除成功！';
@@ -138,4 +141,18 @@ class SysmenuController extends CommonController {
         $data['msg'] = $msg;
         echo json_encode($data);
     }
+
+    public function deleChild($parentId){
+        $model = D("Sysmenu");
+        $list = $model->where('parentId='.$parentId)->select();
+        foreach ($list as $item){
+            $count = $model->where('parentId='.$item['id']).count();
+            if($count > 0){
+                $this->deleChild($item['id']);
+            }else{
+                $model->where('id='.$item['id'])->delete();
+            }
+        }
+    }
 }
+

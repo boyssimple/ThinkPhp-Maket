@@ -1,0 +1,236 @@
+[ 2018-04-09T11:13:38+08:00 ] ::1 /Design/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000213s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001931s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.011417s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011544s ]
+SQL: SHOW COLUMNS FROM `s_system` [ RunTime:0.149235s ]
+SQL: SELECT * FROM `s_system` LIMIT 1   [ RunTime:0.003746s ]
+SQL: SHOW COLUMNS FROM `s_navigation` [ RunTime:0.065918s ]
+SQL: SELECT * FROM `s_navigation`  [ RunTime:0.000556s ]
+SQL: SHOW COLUMNS FROM `s_gallery` [ RunTime:0.054102s ]
+SQL: SELECT * FROM `s_gallery`  [ RunTime:0.000655s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000606s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000670s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.100234s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.100295s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000152s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000185s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.041256s ]
+INFO: [ app_end ] --END-- [ RunTime:0.041353s ]
+
+[ 2018-04-09T11:15:13+08:00 ] ::1 /Design/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000979s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001420s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001569s ]
+SQL: SHOW COLUMNS FROM `s_system` [ RunTime:0.002859s ]
+SQL: SELECT * FROM `s_system` LIMIT 1   [ RunTime:0.000191s ]
+SQL: SHOW COLUMNS FROM `s_navigation` [ RunTime:0.001653s ]
+SQL: SELECT * FROM `s_navigation`  [ RunTime:0.000142s ]
+SQL: SHOW COLUMNS FROM `s_gallery` [ RunTime:0.001854s ]
+SQL: SELECT * FROM `s_gallery`  [ RunTime:0.000192s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000608s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000677s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.106428s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.106480s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.020264s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.020364s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003772s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003908s ]
+
+[ 2018-04-09T11:15:21+08:00 ] ::1 /Design/index.php/Example
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000377s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000853s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000914s ]
+SQL: SHOW COLUMNS FROM `s_system` [ RunTime:0.240962s ]
+SQL: SELECT * FROM `s_system` LIMIT 1   [ RunTime:0.000253s ]
+SQL: SHOW COLUMNS FROM `s_navigation` [ RunTime:0.001824s ]
+SQL: SELECT * FROM `s_navigation`  [ RunTime:0.000160s ]
+SQL: SHOW COLUMNS FROM `s_exproseries` [ RunTime:0.055625s ]
+SQL: SELECT * FROM `s_exproseries`  [ RunTime:0.000414s ]
+SQL: SHOW COLUMNS FROM `s_exarea` [ RunTime:0.016841s ]
+SQL: SELECT * FROM `s_exarea`  [ RunTime:0.000434s ]
+SQL: SHOW COLUMNS FROM `s_exhoursetype` [ RunTime:0.020180s ]
+SQL: SELECT * FROM `s_exhoursetype`  [ RunTime:0.000442s ]
+SQL: SHOW COLUMNS FROM `s_exbuildstyle` [ RunTime:0.024992s ]
+SQL: SELECT * FROM `s_exbuildstyle`  [ RunTime:0.000426s ]
+SQL: SHOW COLUMNS FROM `s_exbuild` [ RunTime:0.039694s ]
+SQL: SELECT * FROM `s_exbuild`  [ RunTime:0.014842s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000163s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000225s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.067986s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.068081s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000247s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000303s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001282s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001540s ]
+
+[ 2018-04-09T11:15:25+08:00 ] ::1 /Design/index.php/Effect
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000349s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000428s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000464s ]
+SQL: SHOW COLUMNS FROM `s_system` [ RunTime:0.001817s ]
+SQL: SELECT * FROM `s_system` LIMIT 1   [ RunTime:0.000160s ]
+SQL: SHOW COLUMNS FROM `s_navigation` [ RunTime:0.001715s ]
+SQL: SELECT * FROM `s_navigation`  [ RunTime:0.000138s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000187s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000253s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.061723s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.061812s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000222s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000274s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001420s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001527s ]
+
+[ 2018-04-09T11:15:29+08:00 ] ::1 /Design/index.php/Knowledge
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000324s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000428s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000464s ]
+SQL: SHOW COLUMNS FROM `s_system` [ RunTime:0.001872s ]
+SQL: SELECT * FROM `s_system` LIMIT 1   [ RunTime:0.000161s ]
+SQL: SHOW COLUMNS FROM `s_navigation` [ RunTime:0.001387s ]
+SQL: SELECT * FROM `s_navigation`  [ RunTime:0.000133s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000206s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000262s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.064131s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.064235s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000276s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000344s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001562s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001716s ]
+
+[ 2018-04-09T11:15:33+08:00 ] ::1 /Design/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000381s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000452s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000488s ]
+SQL: SHOW COLUMNS FROM `s_system` [ RunTime:0.001877s ]
+SQL: SELECT * FROM `s_system` LIMIT 1   [ RunTime:0.000152s ]
+SQL: SHOW COLUMNS FROM `s_navigation` [ RunTime:0.001494s ]
+SQL: SELECT * FROM `s_navigation`  [ RunTime:0.000129s ]
+SQL: SHOW COLUMNS FROM `s_gallery` [ RunTime:0.001506s ]
+SQL: SELECT * FROM `s_gallery`  [ RunTime:0.000143s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000631s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000700s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.065042s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.065093s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000150s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000184s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001004s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001105s ]
+
+[ 2018-04-09T12:02:07+08:00 ] ::1 /Design/index.php/About
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001135s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001085s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001176s ]
+SQL: SHOW COLUMNS FROM `s_system` [ RunTime:0.008756s ]
+SQL: SELECT * FROM `s_system` LIMIT 1   [ RunTime:0.000265s ]
+SQL: SHOW COLUMNS FROM `s_navigation` [ RunTime:0.001839s ]
+SQL: SELECT * FROM `s_navigation`  [ RunTime:0.000133s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000106s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000171s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.118403s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.118517s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.041019s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.041135s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006939s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007040s ]
+
+[ 2018-04-09T15:03:00+08:00 ] ::1 /Design/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.042631s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.190635s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.190813s ]
+SQL: SHOW COLUMNS FROM `s_system` [ RunTime:0.009621s ]
+SQL: SELECT * FROM `s_system` LIMIT 1   [ RunTime:0.000352s ]
+SQL: SHOW COLUMNS FROM `s_navigation` [ RunTime:0.002802s ]
+SQL: SELECT * FROM `s_navigation`  [ RunTime:0.000225s ]
+SQL: SHOW COLUMNS FROM `s_gallery` [ RunTime:0.069633s ]
+SQL: SELECT * FROM `s_gallery`  [ RunTime:0.000635s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000929s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001032s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.719892s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.719997s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.125996s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.126340s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.191051s ]
+INFO: [ app_end ] --END-- [ RunTime:0.191151s ]
+
+[ 2018-04-09T15:04:22+08:00 ] ::1 /Design/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000363s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000731s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000908s ]
+SQL: SHOW COLUMNS FROM `s_system` [ RunTime:0.357601s ]
+SQL: SELECT * FROM `s_system` LIMIT 1   [ RunTime:0.000223s ]
+SQL: SHOW COLUMNS FROM `s_navigation` [ RunTime:0.228051s ]
+SQL: SELECT * FROM `s_navigation`  [ RunTime:0.000201s ]
+SQL: SHOW COLUMNS FROM `s_gallery` [ RunTime:0.164171s ]
+SQL: SELECT * FROM `s_gallery`  [ RunTime:0.000868s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000801s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000885s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.679412s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.679500s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000180s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000215s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000633s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000692s ]
+

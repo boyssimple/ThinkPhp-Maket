@@ -95,9 +95,12 @@ class SystableController extends CommonController {
                 foreach ($columns as $col){
                     $typedId = $col['colType'];
                     $typeModel = M('Systype')->where('id='.$typedId)->find();
-                    $sub = $sub . "`".$col['colName']."` ".$typeModel['name']."(".$col['colLength'].")";
+                    $sub = $sub . "`".$col['colName']."` ".$typeModel['name'];
+                    if($col['colLength'] > 0){
+                        $sub = $sub."(".$col['colLength'].")";
+                    }
                     if($col['defaultValue'] != ""){
-                        $sub = $sub . "DEFAULT "."'".$col['defaultValue']."''";
+                        $sub = $sub . " DEFAULT "."'".$col['defaultValue']."'";
                     }
                     if($col['remark'] != ""){
                         $sub = $sub . " COMMENT "."'".$col['remark']."'";
@@ -173,6 +176,26 @@ class SystableController extends CommonController {
         echo json_encode($data);
     }
 
+    public function clearData(){
+        $flag = false;
+        $msg = '清理失败';
+        if (IS_POST) {
+            $ID = isset($_POST['id']) ? $_POST['id'] : "";
+            if (!empty($ID)) {
+
+                $model = D("Systable");
+                $table = $model->where('id='.$ID)->find();
+                $tableName = "s_".$table['name'];
+                M()->execute("TRUNCATE TABLE ".$tableName);
+                $flag = true;
+                $msg = '清理成功';
+            }
+        }
+        $data['success'] = $flag;
+        $data['msg'] = $msg;
+        echo json_encode($data);
+    }
+
     public function existsTable(){
 
     }
@@ -206,6 +229,9 @@ class SystableController extends CommonController {
                 $model = D("Systable");
                 $r = $model->where('id='.$ID)->delete();
                 if ($r > 0){
+
+
+                    D("Syscolumn")->where('parentId='.$ID)->delete();
                     $result = true;
                     $msg= '删除成功！';
                 }
